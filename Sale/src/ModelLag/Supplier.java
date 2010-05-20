@@ -15,10 +15,11 @@ public class Supplier extends Person {
     private String businessName;
     private int iD;
 
-    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName) {
+    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName, int iD) {
         super(name, addres, phone);
         this.cvrNumber = cvrNumber;
         this.businessName = businessName;
+        this.iD = iD;
     }
 
     public int getiD() {
@@ -45,5 +46,9 @@ public class Supplier extends Person {
         this.cvrNumber = cvrNumber;
     }
 
+    public String getInfo()
+    {
+        return businessName;
+    }
 
 }
