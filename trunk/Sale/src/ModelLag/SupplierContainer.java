@@ -9,6 +9,8 @@ import java.util.ArrayList;
  *
  * @author nn119171
  */
+
+
 public class SupplierContainer {
 
     private ArrayList<Supplier> supplierList;
@@ -26,14 +28,6 @@ public class SupplierContainer {
               instance = new SupplierContainer();
             }
         return instance;
-    }
-
-    public ArrayList<Supplier> getSupplierList() {
-        return supplierList;
-    }
-
-    public void setSupplierList(ArrayList<Supplier> supplierList) {
-        this.supplierList = supplierList;
     }
 
     public void addSupplier(Supplier newSupplier)
@@ -59,5 +53,26 @@ public class SupplierContainer {
         }
         return null;
     }
+
+     public static void main(String[] args) {
+        SupplierContainer supContainer = SupplierContainer.getInstance();
+        //create customer
+        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto", 1);
+        supContainer.addSupplier(supObj1);
+        String obj2 = supObj1.getInfo();
+        System.out.println("Customer: " + obj2);
+        //delete customer
+        supContainer.removeSupplier(1);
+
+
+//        //prints for test
+//        System.out.println(cusObj1.getName());
+//        System.out.println(cusObj1.getTotalBalance());
+//        System.out.println(cusObj1.getTotalDisp());
+//        accontObj.withdraw(4500);
+//        System.out.println(cusObj1.getTotalBalance());
+//        System.out.println(cusObj1.getTotalDisp());
+    }
+
 }
 
