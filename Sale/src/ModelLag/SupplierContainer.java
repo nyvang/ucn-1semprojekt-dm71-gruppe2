@@ -46,6 +46,7 @@ public class SupplierContainer {
            if(supObjekt.getiD() == id)
            {
                supplierList.remove(index);
+               System.out.println("Object removed");
            }
            else {
            index++;
