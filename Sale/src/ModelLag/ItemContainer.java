@@ -5,62 +5,39 @@
 
 package ModelLag;
 import java.util.ArrayList;
-
 /**
  *
- * @author Gruppe 2, dm71
- * @date May 2010
+ * @author Andreas
  */
-public class ItemContainer
-{
-    private ArrayList<Item> serialNumbers;
+public class ItemContainer {
+
+    private ArrayList<Item> itemList;
+     private static ItemContainer serialNumber;
 
     public ItemContainer()
     {
-        serialNumbers = new ArrayList<Item>();
+        itemList = new ArrayList<Item>();
     }
 
-    /**
-     * @return the serialNumbers
-     */
-    public ArrayList<Item> getSerialNumbers()
+    public static ItemContainer getSerialNumber()
     {
-        return serialNumbers;
-    }
-
-    /**
-     * @param serialNumbers the serialNumbers to set
-     */
-    public void setSerialNumbers(ArrayList<Item> serialNumbers)
-    {
-        this.serialNumbers = serialNumbers;
-    }
-
-    public void addItem(Item i)
-    {
-        getSerialNumbers().add(i);
-    }
-
-    public void setItemSerial(String serial)
-    {
-        Item i = new Item(serial);
-
-        addItem(i);
-    }
-
-    public String findSerialNumber(String serialNum)
-    {
-        String serial = null;
-        for (Item serialNums : serialNumbers)
-        {
-            if(serialNums.getSerialNumber().equals(serialNum))
-            {
-                serial = serialNum;
+        if(serialNumber == null)
+           {
+              serialNumber = new ItemContainer();
             }
-        }
-        return serial;
+        return serialNumber;
     }
 
-    
-}
+    public ArrayList<Item> getitemList() {
+        return itemList;
+    }
 
+    public void setitemList(ArrayList<Item> itemList) {
+        this.itemList = itemList;
+    }
+
+    public void addItem(Item newItem)
+    {
+        itemList.add(newItem);
+    }
+}
