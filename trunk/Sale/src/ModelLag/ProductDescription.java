@@ -7,22 +7,25 @@ package ModelLag;
 
 /**
  *
- * @author nn119171
+ * @author gruppe 2, dm71
+ * @date may 2010
  */
-public class ProductDescription {
+public class ProductDescription
+{
+    private String name;
+    private double salesPrice;
+    private double buyPrice;
+    private int minStock;
+    private int maxStock;
+    private int barCode;
+    private Supplier supplier;
+    private int row;
+    private int shelve;
+    private int amount;
+    private ItemContainer serials;
 
-    String name;
-    int salesPrice;
-    int buyPrice;
-    int minStock;
-    int maxStock;
-    int barCode;
-    String supplier;
-    int row;
-    int shelve;
-    int amount;
-
-    public ProductDescription(String name, int salesPrice, int buyPrice, int minStock, int maxStock, int barCode, String supplier, int row, int shelve, int amount) {
+    public ProductDescription(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount, ItemContainer serials)
+    {
         this.name = name;
         this.salesPrice = salesPrice;
         this.buyPrice = buyPrice;
@@ -33,87 +36,141 @@ public class ProductDescription {
         this.row = row;
         this.shelve = shelve;
         this.amount = amount;
+        this.serials = serials;
     }
 
-    public int getAmount() {
+    public int getAmount()
+    {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(int amount)
+    {
         this.amount = amount;
     }
 
-    public int getBarCode() {
+    public int getBarCode()
+    {
         return barCode;
     }
 
-    public void setBarCode(int barCode) {
+    public void setBarCode(int barCode)
+    {
         this.barCode = barCode;
     }
 
-    public int getBuyPrice() {
+    public double getBuyPrice()
+    {
         return buyPrice;
     }
 
-    public void setBuyPrice(int buyPrice) {
+    public void setBuyPrice(double buyPrice)
+    {
         this.buyPrice = buyPrice;
     }
 
-    public int getMaxStock() {
+    public int getMaxStock()
+    {
         return maxStock;
     }
 
-    public void setMaxStock(int maxStock) {
+    public void setMaxStock(int maxStock)
+    {
         this.maxStock = maxStock;
     }
 
-    public int getMinStock() {
+    public int getMinStock()
+    {
         return minStock;
     }
 
-    public void setMinStock(int minStock) {
+    public void setMinStock(int minStock)
+    {
         this.minStock = minStock;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public int getRow() {
+    public int getRow()
+    {
         return row;
     }
 
-    public void setRow(int row) {
+    public void setRow(int row)
+    {
         this.row = row;
     }
 
-    public int getSalesPrice() {
+    public double getSalesPrice()
+    {
         return salesPrice;
     }
 
-    public void setSalesPrice(int salesPrice) {
+    public void setSalesPrice(double salesPrice)
+    {
         this.salesPrice = salesPrice;
     }
 
-    public int getShelve() {
+    public int getShelve()
+    {
         return shelve;
     }
 
-    public void setShelve(int shelve) {
+    public void setShelve(int shelve)
+    {
         this.shelve = shelve;
     }
 
-    public String getSupplier() {
+    public Supplier getSupplier()
+    {
         return supplier;
     }
 
-    public void setSupplier(String supplier) {
+    public void setSupplier(Supplier supplier)
+    {
         this.supplier = supplier;
     }
 
+    /**
+     * @return the serials
+     */
+    public ItemContainer getSerials()
+    {
+        return serials;
+    }
 
+    /**
+     * @param serials the serials to set
+     */
+    public void setSerials(ItemContainer serials)
+    {
+        this.serials = serials;
+    }
+
+    public String findItemSerial(String serial)
+    {
+        String serialNum = null;
+        
+        if (serials.findSerialNumber(serial).equals(serial))
+        {
+            serialNum = serial;
+        }
+        
+        return serialNum;
+
+    }
+
+    public void addItemSerialNumber(String serial)
+    {
+        serials.setItemSerial(serial);
+    }
+ 
 }

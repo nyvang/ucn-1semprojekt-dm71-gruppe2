@@ -9,23 +9,24 @@ package ModelLag;
  *
  * @author nn119171
  */
-public class Item {
+public class Item
+{
 
-    private int serialNumber;
+    private String serialNumber;
 
-    public Item(int serialNumber) {
+    public Item(String serialNumber)
+    {
         this.serialNumber = serialNumber;
     }
 
-    public int getSerialNumber() {
+    public String getSerialNumber()
+    {
         return serialNumber;
     }
 
-    public void setSerialNumber(int serialNumber) {
+    public void setSerialNumber(String serialNumber)
+    {
         this.serialNumber = serialNumber;
     }
-
-
-
 
 }
