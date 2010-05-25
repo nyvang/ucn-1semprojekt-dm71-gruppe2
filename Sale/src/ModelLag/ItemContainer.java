@@ -9,35 +9,39 @@ import java.util.ArrayList;
  *
  * @author Andreas
  */
-public class ItemContainer {
+public class ItemContainer
+{
 
     private ArrayList<Item> itemList;
-     private static ItemContainer serialNumber;
-
+    
     public ItemContainer()
     {
         itemList = new ArrayList<Item>();
     }
 
-    public static ItemContainer getSerialNumber()
+   
+    public ArrayList<Item> getitemList()
     {
-        if(serialNumber == null)
-           {
-              serialNumber = new ItemContainer();
-            }
-        return serialNumber;
+        return getItemList();
     }
 
-    public ArrayList<Item> getitemList() {
-        return itemList;
-    }
-
-    public void setitemList(ArrayList<Item> itemList) {
+    public void setItemList(ArrayList<Item> itemList)
+    {
         this.itemList = itemList;
+    }
+
+    /**
+     * @return the itemList
+     */
+    public ArrayList<Item> getItemList()
+    {
+        return itemList;
     }
 
     public void addItem(Item newItem)
     {
-        itemList.add(newItem);
+        getItemList().add(newItem);
     }
+
+    
 }
