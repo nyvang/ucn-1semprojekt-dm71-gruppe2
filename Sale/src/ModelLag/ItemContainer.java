@@ -5,43 +5,61 @@
 
 package ModelLag;
 import java.util.ArrayList;
+
 /**
  *
- * @author Andreas
+ * @author Gruppe 2, dm71
+ * @date May 2010
  */
 public class ItemContainer
 {
+    private ArrayList<Item> serialNumbers;
 
-    private ArrayList<Item> itemList;
-    
     public ItemContainer()
     {
-        itemList = new ArrayList<Item>();
-    }
-
-   
-    public ArrayList<Item> getitemList()
-    {
-        return getItemList();
-    }
-
-    public void setItemList(ArrayList<Item> itemList)
-    {
-        this.itemList = itemList;
+        serialNumbers = new ArrayList<Item>();
     }
 
     /**
-     * @return the itemList
+     * @return the serialNumbers
      */
-    public ArrayList<Item> getItemList()
+    public ArrayList<Item> getSerialNumbers()
     {
-        return itemList;
+        return serialNumbers;
     }
 
-    public void addItem(Item newItem)
+    /**
+     * @param serialNumbers the serialNumbers to set
+     */
+    public void setSerialNumbers(ArrayList<Item> serialNumbers)
     {
-        getItemList().add(newItem);
+        this.serialNumbers = serialNumbers;
     }
 
-    
+    public void addItem(Item i)
+    {
+        getSerialNumbers().add(i);
+    }
+
+    public void setItemSerial(String serial)
+    {
+        Item i = new Item(serial);
+
+        addItem(i);
+    }
+
+    public String findSerialNumber(String serialNum)
+    {
+        String serial = null;
+        for (Item serialNums : serialNumbers)
+        {
+            if(serialNums.getSerialNumber().equals(serialNum))
+            {
+                serial = serialNum;
+            }
+        }
+        return serial;
+    }
+
+
 }
