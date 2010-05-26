@@ -12,6 +12,7 @@ package ModelLag;
 public class Customer extends Person {
 
     private int customerID;
+    private Group group;
 
     public Customer(String name, String addres, int phone, int customerID) {
         super(name, addres, phone);
@@ -30,6 +31,20 @@ public class Customer extends Person {
      */
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
+    }
+
+    /**
+     * @return the group
+     */
+    public Group getGroup() {
+        return group;
+    }
+
+    /**
+     * @param group the group to set
+     */
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
     
