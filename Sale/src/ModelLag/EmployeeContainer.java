@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 import java.util.ArrayList;
 /**
@@ -42,6 +37,25 @@ public class EmployeeContainer
     public void addEmployee(Employee newEmployee)
     {
         employeeList.add(newEmployee);
+    }
+
+    public void findEmployee(int id)
+    {
+        Employee supObjekt = null;
+        int index = 0;
+        boolean found = false;
+        while(index < employeeList.size() && !found)
+        {
+           supObjekt = employeeList.get(index);
+           if(supObjekt.getAccount() == id)
+           {
+               employeeList.get(index);
+           }
+           else {
+           index++;
+        }
+        }
+        return null;
     }
 
      public Employee removeEmployee(int id)
