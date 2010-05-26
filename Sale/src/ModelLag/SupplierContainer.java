@@ -66,7 +66,7 @@ public class SupplierContainer
      public static void main(String[] args) {
         SupplierContainer supContainer = SupplierContainer.getInstance();
         //create customer
-        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto", 1);
+        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
         supContainer.addSupplier(supObj1);
         String obj2 = supObj1.getInfo();
         System.out.println("Customer: " + obj2);

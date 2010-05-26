@@ -15,11 +15,11 @@ public class Supplier extends Person {
     private String businessName;
     private int iD;
 
-    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName, int iD) {
+    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName) {
         super(name, addres, phone);
         this.cvrNumber = cvrNumber;
         this.businessName = businessName;
-        this.iD = iD;
+        iD = generateID();
     }
 
     public int generateID()
@@ -29,8 +29,8 @@ public class Supplier extends Person {
         if(SupplierContainer.getInstance().getSupplierList().size() != 0)
         {
             index = SupplierContainer.getInstance().getSupplierList().size() - 1;
-            Supplier s = SupplierContainer.getInstance().getSupplierList().get(index);
-            newID = s.getSupplierID() + 1;
+            SupplierContainer.getInstance().getSupplierList().get(index);
+            newID = getiD() + 1;
         } //end if
         else
         {
@@ -45,9 +45,9 @@ public class Supplier extends Person {
         return iD;
     }
 
-    public void setiD(int iD) {
-        this.iD = iD;
-    }
+//    public void setiD(int iD) {
+//        this.iD = iD;
+//    }
 
     public String getBusinessName() {
         return businessName;
