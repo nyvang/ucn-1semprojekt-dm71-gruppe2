@@ -8,65 +8,69 @@ import java.util.ArrayList;
 
 /**
  *
- * @author gruppe 2, dm71
+ * @author Anita gruppe 2, dm71
  * @date may 2010
  */
 public class ProductContainer
 {
     private ArrayList<ProductDescription> stockList;
-//    private ArrayList<String> addressList;
-//    private ArrayList<String> buildingList;
-//    private String address;
-//    private String building;
+    private String address;
+    private String building;
 
     public ProductContainer( String address, String building) 
     {
-        stockList = new ArrayList<ProductDescription>();
-//        addressList = new ArrayList<String>();
-//        buildingList = new ArrayList<String>();
-//        this.address = address;
-//        this.building = building;
+        this.stockList = new ArrayList<ProductDescription>();
+        this.address = address;
+        this.building = building;
     }
 
     
     /**
      * @return the address
      */
-//    public String getAddress()
-//    {
-//        return address;
-//    }
+    public String getAddress()
+    {
+        return address;
+    }
 
     /**
      * @param address the address to set
      */
-//    public void setAddress(String address)
-//    {
-//        this.address = address;
-//    }
+    public void setAddress(String address)
+    {
+        this.address = address;
+    }
 
     /**
      * @return the building
      */
-//    public String getBuilding()
-//    {
-//        return building;
-//    }
+    public String getBuilding()
+    {
+        return building;
+    }
 
     /**
      * @param building the building to set
      */
-//    public void setBuilding(String building)
-//    {
-//        this.building = building;
-//    }
+    public void setBuilding(String building)
+    {
+        this.building = building;
+    }
 
     /**
      *@param find ProductDescription
      */
     public void findProductDescription()
     {
-
+        String serial = null;
+        for (Item serialNums : serialNumbers)
+        {
+            if(serialNums.getSerialNumber().equals(serialNum))
+            {
+                serial = serialNum;
+            }
+        }
+        return serial;
     }
 
     /**
@@ -74,7 +78,21 @@ public class ProductContainer
      */
     public void addProductDescription(ProductDescription proddescr)
     {
-        stockList.add(proddescr);
+        getStockList().add(proddescr);
+    }
+
+    /**
+     * @return the stockList
+     */
+    public ArrayList<ProductDescription> getStockList() {
+        return stockList;
+    }
+
+    /**
+     * @param stockList the stockList to set
+     */
+    public void setStockList(ArrayList<ProductDescription> stockList) {
+        this.stockList = stockList;
     }
 
 

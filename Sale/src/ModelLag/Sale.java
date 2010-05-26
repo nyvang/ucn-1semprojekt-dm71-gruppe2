@@ -2,11 +2,11 @@ package ModelLag;
 
 import java.util.ArrayList;
 import java.util.Date;
-import javax.management.timer.Timer;
 
 /**
  *
- * @author nn119171
+ * @author Anita, gruppe 2, dm71
+ * @date May 2010
  */
 public class Sale
 {
@@ -17,12 +17,12 @@ public class Sale
     private double subtotal;
     private ArrayList<Sale> quantitylist;
 
-    public Sale( Login clerk, double subtotal)
+    public Sale( Login clerk)
     {
         this.saleID = generateID();
         this.clerk = new Login();
         this.time = new Date();
-        this.subtotal = subtotal;
+        this.subtotal = 0;
         this.quantitylist = new ArrayList<Sale>();
     }
 
@@ -140,6 +140,8 @@ public class Sale
         }
         return newID;
     }
+
+    public
 
     
 }
