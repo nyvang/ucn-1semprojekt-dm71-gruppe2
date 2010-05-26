@@ -61,7 +61,7 @@ public class ItemContainer
         return serial;
     }
 
-    public void removeItem(String serial)
+    public Item removeItem(String serial)
     {
         Item supObjekt = null;
         int index = 0;
@@ -72,13 +72,48 @@ public class ItemContainer
            if(supObjekt.getSerialNumber().equals(serial))
            {
                serialNumbers.remove(index);
+               System.out.println("Object removed");
            }
            else 
            {
                index++;
            }
         }
+
+        return null;
     }
+
+//    public Supplier removeSupplier(int id)
+//    {
+//        Supplier supObjekt = null;
+//        int index = 0;
+//        boolean found = false;
+//        while(index < supplierList.size() && !found)
+//        {
+//           supObjekt = supplierList.get(index);
+//           if(supObjekt.getiD() == id)
+//           {
+//               supplierList.remove(index);
+//               System.out.println("Object removed");
+//           }
+//           else {
+//           index++;
+//        }
+//        }
+//        return null;
+//    }
+
+     public static void main(String[] args)
+     {
+        ItemContainer supContainer = new ItemContainer();
+        //create item
+        Item supObj1 = new Item("12345678abc");
+        supContainer.addItem(supObj1);
+        String obj2 = supObj1.getSerialNumber();
+        System.out.println("Itemserial : " + obj2);
+        //delete item
+        supContainer.removeItem("12345678abc");
+     }
 
 
 }
