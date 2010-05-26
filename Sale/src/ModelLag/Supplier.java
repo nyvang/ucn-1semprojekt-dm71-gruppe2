@@ -22,6 +22,25 @@ public class Supplier extends Person {
         this.iD = iD;
     }
 
+    public int generateID()
+    {
+        int index = 0;
+        int newID = 0;
+        if(SupplierContainer.getInstance().getSupplierList().size() != 0)
+        {
+            index = SupplierContainer.getInstance().getSupplierList().size() - 1;
+            Supplier s = SupplierContainer.getInstance().getSupplierList().get(index);
+            newID = s.getSupplierID() + 1;
+        } //end if
+        else
+        {
+            newID = 1;
+        } //end else
+        return newID;
+    }
+
+
+
     public int getiD() {
         return iD;
     }

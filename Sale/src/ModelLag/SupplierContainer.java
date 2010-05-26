@@ -11,7 +11,8 @@ import java.util.ArrayList;
  */
 
 
-public class SupplierContainer {
+public class SupplierContainer
+{
 
     private ArrayList<Supplier> supplierList;
     private static SupplierContainer instance;
@@ -35,6 +36,12 @@ public class SupplierContainer {
         supplierList.add(newSupplier);
     }
 
+    public ArrayList<Supplier> getSupplierList()
+    {
+        return supplierList;
+    }
+
+
      public Supplier removeSupplier(int id)
     {
         Supplier supObjekt = null;
@@ -45,13 +52,14 @@ public class SupplierContainer {
            supObjekt = supplierList.get(index);
            if(supObjekt.getiD() == id)
            {
+               found = true;
                supplierList.remove(index);
-               System.out.println("Object removed");
-           }
-           else {
-           index++;
-        }
-        }
+               System.out.println("Object removed"); //Skal fjernes
+           }//end if
+                else {
+                    index++;
+                }//end else
+        }//end while
         return null;
     }
 
