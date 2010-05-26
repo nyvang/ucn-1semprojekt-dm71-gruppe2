@@ -14,10 +14,18 @@ public class Person {
     private String address;
     private int phone;
 
-    public Person(String name, String address, int phone) {
+    public Person(String name, String address, int phone)
+    {
         this.name = name;
         this.address = address;
         this.phone = phone;
+    }
+
+    public Person()
+    {
+        this.name = null;
+        this.address = null;
+        this.phone = 0;
     }
 
     /**

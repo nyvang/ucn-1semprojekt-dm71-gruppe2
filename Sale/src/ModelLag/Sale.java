@@ -1,65 +1,145 @@
 package ModelLag;
 
 import java.util.ArrayList;
+import java.util.Date;
+import javax.management.timer.Timer;
+
 /**
  *
  * @author nn119171
  */
-public class Sale {
+public class Sale
+{
 
     private int saleID;
-    private String clerk;
-    private int time;
-    private int subtotal;
+    private Login clerk;
+    private Date time;
+    private double subtotal;
     private ArrayList<Sale> quantitylist;
 
-    public Sale(int saleID, String clerk, int time, int subtotal, ArrayList<Sale> quantitylist) {
-        this.saleID = saleID;
-        this.clerk = clerk;
-        this.time = time;
+    public Sale( Login clerk, double subtotal)
+    {
+        this.saleID = generateID();
+        this.clerk = new Login();
+        this.time = new Date();
         this.subtotal = subtotal;
-        this.quantitylist = quantitylist;
+        this.quantitylist = new ArrayList<Sale>();
     }
 
-    public String getClerk() {
-        return clerk;
+    public Sale()
+    {
+        this.saleID = generateID();
+        this.clerk = new Login();
+        this.time = new Date();
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<Sale>();
     }
 
-    public void setClerk(String clerk) {
-        this.clerk = clerk;
-    }
 
-    public ArrayList<Sale> getQuantitylist() {
-        return quantitylist;
-    }
-
-    public void setQuantitylist(ArrayList<Sale> quantitylist) {
-        this.quantitylist = quantitylist;
-    }
-
-    public int getSaleID() {
+    /**
+     * @return the saleID
+     */
+    public int getSaleID()
+    {
         return saleID;
     }
 
-    public void setSaleID(int saleID) {
-        this.saleID = saleID;
+    /**
+     * @param saleID the saleID to set
+     */
+    public void setSaleID()
+    {
+        this.saleID = generateID();
     }
 
-    public int getSubtotal() {
-        return subtotal;
+    /**
+     * @return the clerk
+     */
+    public Login getClerk()
+    {
+        return clerk;
     }
 
-    public void setSubtotal(int subtotal) {
-        this.subtotal = subtotal;
+    /**
+     * @param clerk the clerk to set
+     */
+    public void setClerk(Login clerk)
+    {
+        this.clerk = clerk;
     }
 
-    public int getTime() {
+    /**
+     * @return the time
+     */
+    public Date getTime()
+    {
         return time;
     }
 
-    public void setTime(int time) {
+    /**
+     * @return the time in real time
+     */
+    public String getRealTime()
+    {
+        return time.toString();
+    }
+
+    /**
+     * @param time the time to set
+     */
+    public void setTime(Date time)
+    {
         this.time = time;
     }
 
+    /**
+     * @return the subtotal
+     */
+    public double getSubtotal()
+    {
+        return subtotal;
+    }
 
+    /**
+     * @param subtotal the subtotal to set
+     */
+    public void setSubtotal(double subtotal)
+    {
+        this.subtotal = subtotal;
+    }
+
+    /**
+     * @return the quantitylist
+     */
+    public ArrayList<Sale> getQuantitylist()
+    {
+        return quantitylist;
+    }
+
+    /**
+     * @param quantitylist the quantitylist to set
+     */
+    public void setQuantitylist(ArrayList<Sale> quantitylist)
+    {
+        this.quantitylist = quantitylist;
+    }
+
+    public int generateID()
+    {
+        int index = 0;
+        int newID = 0;
+        if(SalesContainer.getInstance().getSalesList().size() != 0)
+        {
+        index = SalesContainer.getInstance().getSalesList().size() - 1;
+        Sale s = SalesContainer.getInstance().getSalesList().get(index);
+        newID = s.getSaleID() + 1;
+        }
+        else
+        {
+            newID = 1;
+        }
+        return newID;
+    }
+
+    
 }

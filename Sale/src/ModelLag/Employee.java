@@ -11,48 +11,62 @@ package ModelLag;
  */
 public class Employee extends Person {
 
-    int account;
+    private int account;
     private String userName;
     private String password;
 
-    public Employee(String name, String address, int phone, int account) {
+    public Employee(String name, String address, int phone, int account)
+    {
         super(name, address, phone);
         this.account = account;
     }
 
-    public int getAccount() {
+    public Employee()
+    {
+        super();
+        this.account = 0;
+    }
+
+
+    public int getAccount()
+    {
         return account;
     }
 
-    public void setAccount(int account) {
+    public void setAccount(int account)
+    {
         this.account = account;
     }
 
     /**
      * @return the userName
      */
-    public String getUserName() {
+    public String getUserName()
+    {
         return userName;
     }
 
     /**
      * @param userName the userName to set
      */
-    public void setUserName(String userName) {
+    public void setUserName(String userName)
+    {
         this.userName = userName;
     }
 
     /**
      * @return the password
      */
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
     }
 
     /**
      * @param password the password to set
      */
-    public void setPassword(String password) {
+    public void setPassword(String password)
+    {
         this.password = password;
     }
 
