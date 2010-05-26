@@ -9,7 +9,8 @@ import java.util.ArrayList;
  *
  * @author nn119171
  */
-public class EmployeeContainer {
+public class EmployeeContainer
+{
 
     private ArrayList<Employee> employeeList;
     private static EmployeeContainer instance;
@@ -24,15 +25,17 @@ public class EmployeeContainer {
         if(instance == null)
            {
               instance = new EmployeeContainer();
-            }
+           }
         return instance;
     }
 
-    public ArrayList<Employee> getemployeeList() {
+    public ArrayList<Employee> getEmployeeList()
+    {
         return employeeList;
     }
 
-    public void setemployeeList(ArrayList<Employee> employeeList) {
+    public void setEmployeeList(ArrayList<Employee> employeeList)
+    {
         this.employeeList = employeeList;
     }
 
@@ -53,9 +56,10 @@ public class EmployeeContainer {
            {
                employeeList.remove(index);
            }
-           else {
-           index++;
-        }
+           else
+           {
+               index++;
+           }
         }
         return null;
     }

@@ -61,5 +61,24 @@ public class ItemContainer
         return serial;
     }
 
+    public void removeItem(String serial)
+    {
+        Item supObjekt = null;
+        int index = 0;
+        boolean found = false;
+        while(index < serialNumbers.size() && !found)
+        {
+           supObjekt = serialNumbers.get(index);
+           if(supObjekt.getSerialNumber().equals(serial))
+           {
+               serialNumbers.remove(index);
+           }
+           else 
+           {
+               index++;
+           }
+        }
+    }
+
 
 }
