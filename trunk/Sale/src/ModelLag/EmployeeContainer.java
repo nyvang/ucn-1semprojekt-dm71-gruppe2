@@ -39,7 +39,7 @@ public class EmployeeContainer
         employeeList.add(newEmployee);
     }
 
-    public void findEmployee(int id)
+    public Employee findEmployee(int id)
     {
         Employee supObjekt = null;
         int index = 0;
