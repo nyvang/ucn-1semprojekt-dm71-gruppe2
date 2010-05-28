@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 import java.util.ArrayList;
 
@@ -24,7 +19,12 @@ public class ProductContainer
         this.building = building;
     }
 
-    
+    public ProductContainer() 
+    {
+        this.stockList = new ArrayList<ProductDescription>();
+        this.address = null;
+        this.building = null;
+    }
     /**
      * @return the address
      */
@@ -60,17 +60,25 @@ public class ProductContainer
     /**
      *@param find ProductDescription
      */
-    public void findProductDescription()
+    public ProductDescription findProductDescription(int barCode, String serial)
     {
-        String serial = null;
-        for (Item serialNums : serialNumbers)
+        ProductDescription productD = null;
+        int index = 0;
+        boolean found = false;
+
+        while(index < stockList.size() && !found)
         {
-            if(serialNums.getSerialNumber().equals(serialNum))
+            productD = stockList.get(index);
+            if(productD.getBarCode() ==  barCode && productD.findItemSerial(serial).equals(serial))
             {
-                serial = serialNum;
-            }
+                found = true;
+            }//end if
+            else
+            {
+                index++;
+            }//end
         }
-        return serial;
+        return productD;
     }
 
     /**
