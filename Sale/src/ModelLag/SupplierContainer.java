@@ -63,7 +63,8 @@ public class SupplierContainer
         return null;
     }
 
-     public static void main(String[] args) {
+     public static void main(String[] args)
+     {
         SupplierContainer supContainer = SupplierContainer.getInstance();
         //create customer
         Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");

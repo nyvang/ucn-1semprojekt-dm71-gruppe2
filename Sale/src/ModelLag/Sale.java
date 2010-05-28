@@ -15,15 +15,17 @@ public class Sale
     private Login clerk;
     private Date time;
     private double subtotal;
-    private ArrayList<Sale> quantitylist;
+    private ArrayList<SalesLineItem> quantitylist;
+    private SalesLineItem newSalesLine;
 
-    public Sale( Login clerk)
+    public Sale(Login clerk)
     {
         this.saleID = generateID();
         this.clerk = new Login();
         this.time = new Date();
         this.subtotal = 0;
-        this.quantitylist = new ArrayList<Sale>();
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
     }
 
     public Sale()
@@ -32,7 +34,8 @@ public class Sale
         this.clerk = new Login();
         this.time = new Date();
         this.subtotal = 0;
-        this.quantitylist = new ArrayList<Sale>();
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
     }
 
 
@@ -111,7 +114,7 @@ public class Sale
     /**
      * @return the quantitylist
      */
-    public ArrayList<Sale> getQuantitylist()
+    public ArrayList<SalesLineItem> getQuantitylist()
     {
         return quantitylist;
     }
@@ -119,7 +122,7 @@ public class Sale
     /**
      * @param quantitylist the quantitylist to set
      */
-    public void setQuantitylist(ArrayList<Sale> quantitylist)
+    public void setQuantitylist(ArrayList<SalesLineItem> quantitylist)
     {
         this.quantitylist = quantitylist;
     }
@@ -141,7 +144,16 @@ public class Sale
         return newID;
     }
 
-    public
+    public SalesLineItem newSalesLine(int quantity, int barCode, String serial)
+    {
+        newSalesLine = new SalesLineItem(quantity, barCode);
+        return newSalesLine;
+    }
 
+    public double calculateSubbTotal()
+    {
+        subtotal +=  newSalesLine.getSubTotal();
+        return subtotal;
+    }
 }
 

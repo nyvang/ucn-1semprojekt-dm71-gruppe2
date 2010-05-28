@@ -39,6 +39,21 @@ public class ProductDescription
         this.serials = serials;
     }
 
+    public ProductDescription()
+    {
+        this.name = null;
+        this.salesPrice = 0;
+        this.buyPrice = 0;
+        this.minStock = 0;
+        this.maxStock = 0;
+        this.barCode = 0;
+        this.supplier = null;
+        this.row = 0;
+        this.shelve = 0;
+        this.amount = 0;
+        this.serials = null;
+    }
+
     public int getAmount()
     {
         return amount;
@@ -165,7 +180,6 @@ public class ProductDescription
         }
         
         return serialNum;
-
     }
 
     public void addItemSerialNumber(String serial)
