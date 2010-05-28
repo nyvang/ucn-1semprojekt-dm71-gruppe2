@@ -56,8 +56,9 @@ public void salesMenu()
             return choise;
     }
 
- public void startNewSales()
+ public SalesCtr startNewSales()
     {
+
     }
 
  public void alterLogin()
