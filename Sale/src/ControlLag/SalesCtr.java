@@ -15,32 +15,62 @@ public class SalesCtr
 {
 
     private SalesContainer salesList;
+    private Sale salesObject;
+
 
     public SalesCtr()
     {
         salesList = SalesContainer.getInstance();
     }
 
-    public void startNewSales(int saleID, Login clerk, Date time,
+    public void startNewSale(int saleID, Login clerk, Date time,
                         double subtotal, Sale quantityList)
     {
-        Sale salesObject = new Sale(clerk, time);
+        salesObject = new Sale(clerk, time);
+        newSalesLine();
         salesList.addSale(salesObject);
     }
 
-//     public Sale getSubtotal()
-//     {
-//        return subtotal;
-//     }
-
- public void alterLogin()
+    public void newSalesLine(int barCode)
     {
+        salesObject.newSalesLine(, barCode, null)    
+    }
+    public double getSubtotal()
+     {
+        Sale subtotal = new Sale();
+        return subtotal.getSubtotal();
+     }
+
+ /**
+ *
+ * @param Changes the login
+ */
+ public void alterLogin(int id)
+    {
+     LoginCtr newLogin = new LoginCtr();
+     newLogin.doLogin(id);
     }
 
- public void endSale()
+ /**
+ *
+ * @param Closes the sale, and chooses paymentmethod
+ */
+ public void endSale(int choice)
     {
+     if(choice < 1 || choice > 3)
+     {}//metoden fra SalesUI
+     if(choice == 1)
+        {salesObject.payForSaleCreditCard();}// end if
+     if(choice == 2)
+        {salesObject.payForSaleCash();}// end if
+     if(choice == 3)
+        {salesObject.payForSaleAccount();}// end if
 
-    }
+
+
+
+
+ }
 
  public void newSalesLine()
     {
