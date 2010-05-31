@@ -61,7 +61,6 @@ public void salesMenu()
 
  public SalesCtr startNewSales()
     {
-
     }
 
  public void alterLogin()
