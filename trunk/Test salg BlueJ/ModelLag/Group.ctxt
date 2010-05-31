@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=discount\ daysOfCredit\ maxCredit
+comment0.target=Group(double,\ int,\ double)
+comment1.target=int\ generateID()
+comment2.target=int\ getId()
+comment3.target=int\ getDaysOfCredit()
+comment4.params=daysOfCredit
+comment4.target=void\ setDaysOfCredit(int)
+comment5.target=double\ getDiscount()
+comment6.params=discount
+comment6.target=void\ setDiscount(double)
+comment7.target=double\ getMaxCredit()
+comment8.params=maxCredit
+comment8.target=void\ setMaxCredit(double)
+numComments=9

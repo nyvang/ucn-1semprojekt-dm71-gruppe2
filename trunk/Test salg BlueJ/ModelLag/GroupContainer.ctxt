@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GroupContainer()
+comment1.target=GroupContainer\ getInstance()
+comment2.params=newGroup
+comment2.target=void\ addGroup(Group)
+comment3.target=ArrayList<Group>\ getGroupList()
+comment4.params=id
+comment4.target=Supplier\ removeGroup(int)
+numComments=5
