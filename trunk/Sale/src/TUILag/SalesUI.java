@@ -13,7 +13,10 @@ public class SalesUI
         personCtr = new PersonCtr();
         productCtr = new ProductCtr();
 
-
+public void main(String[] args)
+{
+    salesMenu();
+}
 public void start()
     {
         salesMenu();

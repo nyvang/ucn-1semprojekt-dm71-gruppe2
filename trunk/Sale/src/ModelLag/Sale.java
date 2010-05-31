@@ -38,6 +38,15 @@ public class Sale
         this.newSalesLine = new SalesLineItem();
     }
 
+public Sale(Login clerk, Date time) //Tilføjet af NN
+    {
+        this.saleID = generateID();
+        this.clerk = clerk;
+        this.time = time;
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
+    }
 
     /**
      * @return the saleID
