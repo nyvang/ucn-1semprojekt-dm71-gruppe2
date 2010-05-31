@@ -5,6 +5,7 @@
 
 package ControlLag;
 import ModelLag.*;
+import java.util.Date;
 
 /**
  *
@@ -15,39 +16,22 @@ public class SalesCtr
 
     private SalesContainer salesList;
 
-public SalesCtr()
-{
-    salesList = SalesContainer.getInstance();
-}
-
-public void startNewSales(int saleID, Login clerk, int time,
-                        double subtotal, Sale quantityList)
-{
-    Sale salesObject = new Sale(ID, clerk, time, subtotal, quantityList);
-    salesList.addSale(salesObject);
-}
-
-
-//    public LoanCtr()
-//    {
-//        loanSamling = LoanCollection.getInstance();
-//        dvdCol = DVDCollection.getInstance();
-//        personCol = PersonCollection.getInstance();
-//
-//    }
-//
-//    public void createLoan(int id, int date, String period,
-//                Person personObject, Specimen specimenObject)
-//    {
-//        Loan loanObject = new Loan(id, date, period, personObject, specimenObject);
-//        loanSamling.addLoan(loanObject);
-//    }
-//
-
- public void startNewSales()
+    public SalesCtr()
     {
-
+        salesList = SalesContainer.getInstance();
     }
+
+    public void startNewSales(int saleID, Login clerk, Date time,
+                        double subtotal, Sale quantityList)
+    {
+        Sale salesObject = new Sale(clerk, time);
+        salesList.addSale(salesObject);
+    }
+
+//     public Sale getSubtotal()
+//     {
+//        return subtotal;
+//     }
 
  public void alterLogin()
     {
@@ -55,6 +39,7 @@ public void startNewSales(int saleID, Login clerk, int time,
 
  public void endSale()
     {
+
     }
 
  public void newSalesLine()
