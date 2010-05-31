@@ -9,7 +9,8 @@ package ModelLag;
  *
  * @author nn119171
  */
-public class Supplier extends Person {
+public class Supplier extends Person
+{
 
     private int cvrNumber;
     private String businessName;

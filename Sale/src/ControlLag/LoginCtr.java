@@ -1,14 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ControlLag;
 import ModelLag.*;
 
 /**
  *
- * @author nn119171
+ * @author gruppe 2, dm71
+ * @date May 2010
  */
 public class LoginCtr
 {
