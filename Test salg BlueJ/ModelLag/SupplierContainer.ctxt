@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SupplierContainer()
+comment1.target=SupplierContainer\ getInstance()
+comment2.params=newSupplier
+comment2.target=void\ addSupplier(Supplier)
+comment3.target=ArrayList<Supplier>\ getSupplierList()
+comment4.params=id
+comment4.target=Supplier\ removeSupplier(int)
+comment5.params=args
+comment5.target=void\ main(String[])
+numComments=6

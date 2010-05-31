@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=name\ addres\ phone\ cvrNumber\ businessName
+comment0.target=Supplier(String,\ String,\ int,\ int,\ String)
+comment1.target=int\ generateID()
+comment2.target=int\ getiD()
+comment3.target=String\ getBusinessName()
+comment4.params=businessName
+comment4.target=void\ setBusinessName(String)
+comment5.target=int\ getCvrNumber()
+comment6.params=cvrNumber
+comment6.target=void\ setCvrNumber(int)
+comment7.target=String\ getInfo()
+numComments=8

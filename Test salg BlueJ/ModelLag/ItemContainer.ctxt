@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ItemContainer()
+comment1.target=ArrayList<Item>\ getSerialNumbers()
+comment1.text=\n@return\ the\ serialNumbers\n\n
+comment2.params=serialNumbers
+comment2.target=void\ setSerialNumbers(ArrayList<Item>)
+comment2.text=\n@param\ serialNumbers\ the\ serialNumbers\ to\ set\n\n
+comment3.params=i
+comment3.target=void\ addItem(Item)
+comment4.params=serial
+comment4.target=void\ setItemSerial(String)
+comment5.params=serialNum
+comment5.target=String\ findSerialNumber(String)
+comment6.params=serial
+comment6.target=Item\ removeItem(String)
+comment7.params=args
+comment7.target=void\ main(String[])
+numComments=8

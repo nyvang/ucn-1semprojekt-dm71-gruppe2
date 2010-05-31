@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SalesContainer()
+comment1.target=SalesContainer\ getInstance()
+comment2.target=ArrayList<Sale>\ getSalesList()
+comment2.text=\n@return\ the\ salesList\n\n
+comment3.target=int\ generateID()
+comment3.text=\nGenerates\ ID\ for\ next\ Sale\ created\ in\ system\n\n
+comment4.params=s
+comment4.target=void\ addSale(Sale)
+numComments=5

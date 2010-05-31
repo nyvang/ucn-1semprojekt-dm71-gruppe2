@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=EmployeeContainer()
+comment1.target=EmployeeContainer\ getInstance()
+comment2.target=ArrayList<Employee>\ getEmployeeList()
+comment3.params=employeeList
+comment3.target=void\ setEmployeeList(ArrayList<Employee>)
+comment4.params=newEmployee
+comment4.target=void\ addEmployee(Employee)
+comment5.params=id
+comment5.target=Employee\ findEmployee(int)
+comment6.params=id
+comment6.target=Employee\ removeEmployee(int)
+numComments=7
