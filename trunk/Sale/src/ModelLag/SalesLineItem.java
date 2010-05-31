@@ -18,14 +18,13 @@ public class SalesLineItem
     private int barCode;
     private ProductDescription product;
 
-    public SalesLineItem(double subTotal, int quantity, int barCode, String
-            serial)
+    public SalesLineItem(double subTotal, int quantity, int barCode, String serial)
     {
         this.subTotal = subTotal;
         this.quantity = quantity;
         this.barCode = barCode;
         this.product = new ProductDescription();
-        product = findProductDescription(barCode, serial);
+//        this.product = findProductDescription(barCode, serial);
     }
     
     public SalesLineItem(int quantity, int barCode)
