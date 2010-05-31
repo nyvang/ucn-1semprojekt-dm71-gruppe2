@@ -31,10 +31,11 @@ public class SalesCtr
         salesList.addSale(salesObject);
     }
 
-    public void newSalesLine(int barCode)
+    public void newSalesLine(int quantity, int barCode, String serial)
     {
-        salesObject.newSalesLine(, barCode, null)    
+        salesObject.newSalesLine(quantity, barCode, serial);
     }
+    
     public double getSubtotal()
      {
         Sale subtotal = new Sale();
