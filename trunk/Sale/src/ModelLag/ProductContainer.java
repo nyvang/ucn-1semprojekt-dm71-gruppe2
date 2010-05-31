@@ -11,20 +11,32 @@ public class ProductContainer
     private ArrayList<ProductDescription> stockList;
     private String address;
     private String building;
+    private static ProductContainer instance;
 
-    public ProductContainer( String address, String building) 
+    private ProductContainer( String address, String building)
     {
         this.stockList = new ArrayList<ProductDescription>();
         this.address = address;
         this.building = building;
     }
 
-    public ProductContainer() 
+    private ProductContainer()
     {
         this.stockList = new ArrayList<ProductDescription>();
         this.address = null;
         this.building = null;
     }
+
+    public static ProductContainer getInstance()
+    {
+        if(instance == null)
+           {
+              instance = new ProductContainer();
+            }
+        return instance;
+    }
+
+
     /**
      * @return the address
      */
@@ -77,7 +89,7 @@ public class ProductContainer
             {
                 index++;
             }//end
-        }
+        }// end while
         return productD;
     }
 

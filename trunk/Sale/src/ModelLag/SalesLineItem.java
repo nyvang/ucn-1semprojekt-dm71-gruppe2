@@ -13,17 +13,19 @@ package ModelLag;
 public class SalesLineItem
 {
 
-    private int subTotal;
+    private double subTotal;
     private int quantity;
     private int barCode;
     private ProductDescription product;
 
-    public SalesLineItem(int subTotal, int quantity, int barCode)
+    public SalesLineItem(double subTotal, int quantity, int barCode, String
+            serial)
     {
         this.subTotal = subTotal;
         this.quantity = quantity;
         this.barCode = barCode;
         this.product = new ProductDescription();
+        product = findProductDescription(barCode, serial);
     }
     
     public SalesLineItem(int quantity, int barCode)
@@ -62,7 +64,7 @@ public class SalesLineItem
         this.quantity = quantity;
     }
 
-    public int getSubTotal()
+    public double getSubTotal()
     {
         return subTotal;
     }
@@ -74,7 +76,8 @@ public class SalesLineItem
 
     public ProductDescription findProductDecription(int barCode, String serial)
     {
-        ProductDescription newProd == ProductContainer().findProductDescription(barCode, serial);
+        ProductContainer productcont = ProductContainer.getInstance();
+        ProductDescription newProd = productcont.findProductDescription(barCode, serial);
         product = newProd;
         return product;
     }
@@ -97,7 +100,7 @@ public class SalesLineItem
 
     public double calculateSubtotal(int amount, int barCode, String serial)
     {
-        subTotal = amount * (findProductDescription().getSalesPrice());
+        subTotal = amount * (product.getSalesPrice());
         return subTotal;
     }
 

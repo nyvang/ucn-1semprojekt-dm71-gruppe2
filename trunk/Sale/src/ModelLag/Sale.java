@@ -164,5 +164,20 @@ public Sale(Login clerk, Date time) //Tilføjet af NN
         subtotal +=  newSalesLine.getSubTotal();
         return subtotal;
     }
+
+    public void payForSaleCreditCard()
+    {
+
+    }
+
+    public void payForSaleCash()
+    {
+
+    }
+
+    public void payForSaleAccount()
+    {
+
+    }
 }
 
