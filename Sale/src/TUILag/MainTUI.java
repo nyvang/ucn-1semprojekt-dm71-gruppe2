@@ -36,7 +36,7 @@ public class MainTUI {
                     else{
                         if(choise == 3){
                             startLaan();
-                        //start loanController
+.                        //start loanController
                             }//end if
                         else{
                             writeEnd();
