@@ -2,7 +2,6 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- *
  * @author gruppe 2, dm71
  * @date May 2010
  */
@@ -53,6 +52,24 @@ public class ProductDescription
         this.row = 0;
         this.shelve = 0;
         this.amount = 0;
+        this.serials = null;
+    }
+    
+    /**
+     * @param construct class ProductDescription without parameters
+     */
+    public ProductDescription(Supplier supplier)
+    {
+        this.name = "hammer";
+        this.salesPrice = 45.56;
+        this.buyPrice = 10;
+        this.minStock = 4;
+        this.maxStock = 9;
+        this.barCode = 1;
+        this.supplier = supplier;
+        this.row = 3;
+        this.shelve = 5;
+        this.amount = 7;
         this.serials = null;
     }
 

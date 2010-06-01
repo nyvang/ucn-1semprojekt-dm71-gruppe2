@@ -1,11 +1,14 @@
 package TUILag;
 import java.util.Scanner;
 import ControlLag.*;
+
 /**
  *
- * @author nn119171
+ * @author Anita gruppe 2, dm71
+ * @date May 2010
  */
-public class MainTUI {
+public class MainTUI
+{
 
   //the reference to the ControlLayer
    private PersonUI perUI;//references to other UI objects
