@@ -1,15 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 
 /**
- *
- * @author Anita gruppe 2, dm71
- * @date may 2010
- */
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
 public class SalesLineItem
 {
 
@@ -19,31 +13,30 @@ public class SalesLineItem
     private ProductDescription product;
 
     /**
-     * @param construct class SalesLineItem with parameters
+     * Construct class SalesLineItem with parameters
      */
     public SalesLineItem(double subTotal, int quantity, int barCode, String serial)
     {
+        this.product = findProductDescription(barCode, serial);
         this.subTotal = subTotal;
         this.quantity = quantity;
         this.barCode = barCode;
-        this.product = new ProductDescription();
-        findProductDescription(barCode, serial);
     }
 
     /**
-     * @param construct class SalesLineItem with parameters
+     * Construct class SalesLineItem with parameters
      */
     public SalesLineItem(int quantity, int barCode, String serial)
     {
-        this.subTotal = 0;
+        this.product = findProductDescription(barCode, serial);
+        this.subTotal = calculateSubtotal(quantity);
         this.quantity = quantity;
         this.barCode = barCode;
-        this.product = new ProductDescription();
-        findProductDescription(barCode, serial);
+        
     }
 
     /**
-     * @param construct class SalesLineItem with parameters
+     * Construct class SalesLineItem with parameters
      */
     public SalesLineItem(int quantity, int barCode)
     {
@@ -54,7 +47,7 @@ public class SalesLineItem
     }
 
     /**
-     * @param construct class SalesLineItem without parameters
+     * Construct class SalesLineItem without parameters
      */
     public SalesLineItem()
     {
@@ -148,6 +141,5 @@ public class SalesLineItem
         setSubTotal(amount * (getProduct().getSalesPrice()));
         return getSubTotal();
     }
-
 
 }

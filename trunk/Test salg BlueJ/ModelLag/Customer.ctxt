@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.params=name\ addres\ phone\ customerID
 comment0.target=Customer(String,\ String,\ int,\ int)
+comment0.text=\n@param\ name\ -\ name\ of\ the\ customer\n@param\ addres\ -\ adress\ of\ the\ customer\n@param\ phone\ -\ phone\ of\ the\ customer\n@param\ customerID\ -\ ID\ of\ the\ customer\n\n
 comment1.target=int\ getCustomerID()
 comment1.text=\n@return\ the\ customerID\n\n
 comment2.params=customerID

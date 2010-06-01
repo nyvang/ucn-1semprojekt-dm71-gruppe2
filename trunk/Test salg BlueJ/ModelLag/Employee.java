@@ -1,63 +1,82 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
-
-import java.util.ArrayList;
 /**
- *
- * @author nn119171
- */
-public class CustomerContainer {
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
+public class Employee extends Person {
 
-    private ArrayList<Customer> customerList;
-    private static CustomerContainer instance;
+    private int account;
+    private String userName;
+    private String password;
 
-    public CustomerContainer()
+    /**
+     *
+     * @param name - name of the employee
+     * @param address - address of the employee
+     * @param phone - phone of the employee
+     * @param account - accountnumeber of the employee
+     */
+    public Employee(String name, String address, int phone, int account)
     {
-        customerList = new ArrayList<Customer>();
+        super(name, address, phone);
+        this.account = account;
     }
 
-    public static CustomerContainer getInstance()
+    public Employee()
     {
-        if(instance == null)
-           {
-              instance = new CustomerContainer();
-            }
-        return instance;
+        super();
+        this.account = 0;
     }
 
-    public ArrayList<Customer> getcustomerList() {
-        return customerList;
-    }
-
-    public void setcustomerList(ArrayList<Customer> customerList) {
-        this.customerList = customerList;
-    }
-
-    public void addCustomer(Customer newCustomer)
+    /**
+     *
+     * @return accountnumber
+     */
+    public int getAccount()
     {
-        customerList.add(newCustomer);
+        return account;
     }
 
-     public Customer removeCustomer(int id)
+    /**
+     *
+     * @param sets the account to "acount"
+     */
+    public void setAccount(int account)
     {
-        Customer supObjekt = null;
-        int index = 0;
-        boolean found = false;
-        while(index < customerList.size() && !found)
-        {
-           supObjekt = customerList.get(index);
-           if(supObjekt.getCustomerID() == id)
-           {
-               customerList.remove(index);
-           }
-           else {
-           index++;
-        }
-        }
-        return null;
+        this.account = account;
     }
+
+    /**
+     * @return the userName
+     */
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    /**
+     * @param userName the userName to set
+     */
+    public void setUserName(String userName)
+    {
+        this.userName = userName;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword()
+    {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
+
+
 }

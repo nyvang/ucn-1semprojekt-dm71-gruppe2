@@ -1,4 +1,5 @@
 package ModelLag;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,12 +18,12 @@ public class ProductDescription
     private int row;
     private int shelve;
     private int amount;
-    private ItemContainer serials;
+    private ArrayList<Item> serials;
 
     /**
-     * @param construct class ProductDescription with parameters
+     * Construct class ProductDescription with parameters
      */
-    public ProductDescription(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount, ItemContainer serials)
+    public ProductDescription(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount)
     {
         this.name = name;
         this.salesPrice = salesPrice;
@@ -34,7 +35,7 @@ public class ProductDescription
         this.row = row;
         this.shelve = shelve;
         this.amount = amount;
-        this.serials = serials;
+        this.serials = new ArrayList<Item>();
     }
 
     /**
@@ -218,32 +219,50 @@ public class ProductDescription
     /**
      * @return the serials
      */
-    public ItemContainer getSerials()
+    public ArrayList<Item> getSerials()
     {
         return serials;
     }
 
     /**
-     * @param serials the serials to set
+     * @param serials sets the serialnumbers in the ArrayList
      */
-    public void setSerials(ItemContainer serials)
+    public void setSerialNumbers(ArrayList<Item> serials)
     {
         this.serials = serials;
     }
 
     /**
+     * @param adds item "i" to the serialnumber list
+     */
+    public void addItem(Item i)
+    {
+        getSerials().add(i);
+    }
+
+    /**
      * @param serial find out if the serial is correct
      */
-    public String findItemSerial(String serial)
+    public String findItemSerial(String serialNum)
     {
-        String serialNum = null;
-
-        if (getSerials().findSerialNumber(serial).equals(serial))
+        String serial = null;
+        for (Item serialNums : serials)
         {
-            serialNum = serial;
-        }//end if
+            if(serialNums.getSerialNumber().equals(serialNum))
+            {
+                serial = serialNum;
+            }//end if
+        }//end for
+        return serial;
+    }
 
-        return serialNum;
+    /**
+     * @param serial - adds serialitem i to the serials list
+     */
+    public void setItemSerial(String serial)
+    {
+        Item i = new Item(serial);
+        addItem(i);
     }
 
     /**
@@ -251,7 +270,7 @@ public class ProductDescription
      */
     public void addItemSerialNumber(String serial)
     {
-        getSerials().setItemSerial(serial);
+        setItemSerial(serial);
     }
  
 }
