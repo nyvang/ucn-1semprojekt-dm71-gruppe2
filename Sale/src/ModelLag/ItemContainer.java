@@ -1,16 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 import java.util.ArrayList;
-
 /**
- *
- * @author Gruppe 2, dm71
- * @date May 2010
- */
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
 public class ItemContainer
 {
     private ArrayList<Item> serialNumbers;
@@ -29,18 +22,24 @@ public class ItemContainer
     }
 
     /**
-     * @param serialNumbers the serialNumbers to set
+     * @param sets the serialnumbers in the ArrayList
      */
     public void setSerialNumbers(ArrayList<Item> serialNumbers)
     {
         this.serialNumbers = serialNumbers;
     }
-
+/**
+ *
+ * @param adds item "i" to the serialnumber list
+ */
     public void addItem(Item i)
     {
         getSerialNumbers().add(i);
     }
-
+    /**
+     *
+     * @param sets the "serial" to the item "i"
+     */
     public void setItemSerial(String serial)
     {
         Item i = new Item(serial);
@@ -48,6 +47,11 @@ public class ItemContainer
         addItem(i);
     }
 
+    /**
+     *
+     * @param for-each loop that searches for "serialNum" in serialNumbers-list
+     * @return the specific serialnumber if found
+     */
     public String findSerialNumber(String serialNum)
     {
         String serial = null;
@@ -61,6 +65,11 @@ public class ItemContainer
         return serial;
     }
 
+    /**
+     *
+     * @param while-loop that searches for "serial" in the serialNumbers-list
+     * @return the serial if found
+     */
     public Item removeItem(String serial)
     {
         Item supObjekt = null;
@@ -103,6 +112,10 @@ public class ItemContainer
 //        return null;
 //    }
 
+    /**
+     *
+     * @param main method, that allow testing of this class (ItemContainer) and the Item class
+     */
      public static void main(String[] args)
      {
         ItemContainer supContainer = new ItemContainer();

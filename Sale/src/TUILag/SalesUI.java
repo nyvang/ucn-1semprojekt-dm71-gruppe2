@@ -9,9 +9,9 @@ import ModelLag.*;
  */
 public class SalesUI
 {
-        salesCtr = new salesCtr();
-        personCtr = new PersonCtr();
-        productCtr = new ProductCtr();
+//        salesCtr = new salesCtr();
+//        personCtr = new PersonCtr();
+//        productCtr = new ProductCtr();
 
 public void main(String[] args)
 {

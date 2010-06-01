@@ -1,9 +1,9 @@
 package ModelLag;
 import java.util.ArrayList;
 /**
- *
- * @author nn119171
- */
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
 public class EmployeeContainer
 {
 
@@ -15,6 +15,10 @@ public class EmployeeContainer
         employeeList = new ArrayList<Employee>();
     }
 
+    /**
+     *
+     * @return instance (singleton)
+     */
     public static EmployeeContainer getInstance()
     {
         if(instance == null)
@@ -24,21 +28,38 @@ public class EmployeeContainer
         return instance;
     }
 
+    /**
+     *
+     * @return employeeList
+     */
     public ArrayList<Employee> getEmployeeList()
     {
         return employeeList;
     }
 
+    /**
+     *
+     * @param sets the employeeList
+     */
     public void setEmployeeList(ArrayList<Employee> employeeList)
     {
         this.employeeList = employeeList;
     }
 
+    /**
+     *
+     * @param adds newEmployee to the employeeList
+     */
     public void addEmployee(Employee newEmployee)
     {
         employeeList.add(newEmployee);
     }
 
+    /**
+     *
+     * @param id
+     * @return null, but finds the emlpoyee in the employeeList with "id" using a while loop
+     */
     public Employee findEmployee(int id)
     {
         Employee supObjekt = null;
@@ -50,15 +71,21 @@ public class EmployeeContainer
            if(supObjekt.getAccount() == id)
            {
                employeeList.get(index);
-           }
-           else {
-           index++;
-        }
-        }
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
         return null;
     }
 
-     public Employee removeEmployee(int id)
+    /**
+     *
+     * @param id
+     * @return null, but removes the employee with "id" from the employeeList
+     */
+    public Employee removeEmployee(int id)
     {
         Employee supObjekt = null;
         int index = 0;
