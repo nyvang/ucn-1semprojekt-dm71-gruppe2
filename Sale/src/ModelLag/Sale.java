@@ -1,5 +1,4 @@
 package ModelLag;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -18,6 +17,9 @@ public class Sale
     private ArrayList<SalesLineItem> quantitylist;
     private SalesLineItem newSalesLine;
 
+    /**
+     * @param construct class Sale with parameters
+     */
     public Sale(Login clerk)
     {
         this.saleID = generateID();
@@ -28,6 +30,9 @@ public class Sale
         this.newSalesLine = new SalesLineItem();
     }
 
+    /**
+     * @param construct class Sale without parameters
+     */
     public Sale()
     {
         this.saleID = generateID();
@@ -38,7 +43,10 @@ public class Sale
         this.newSalesLine = new SalesLineItem();
     }
 
-public Sale(Login clerk, Date time) //Tilføjet af NN
+    /**
+     * @param construct class Sale with parameters
+     */
+    public Sale(Login clerk, Date time) //Tilføjet af NN
     {
         this.saleID = generateID();
         this.clerk = clerk;
@@ -46,6 +54,19 @@ public Sale(Login clerk, Date time) //Tilføjet af NN
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = new SalesLineItem();
+    }
+
+    /**
+     * @param construct class Sale with parameters
+     */
+    public Sale(int quantity, int barCode, String serial)
+    {
+        this.saleID = generateID();
+        this.clerk = new Login();
+        this.time = new Date();
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = newSalesLine(quantity, barCode, serial);
     }
 
     /**
@@ -136,6 +157,9 @@ public Sale(Login clerk, Date time) //Tilføjet af NN
         this.quantitylist = quantitylist;
     }
 
+    /**
+     * @param newID generate a new ID for this Sale
+     */
     public int generateID()
     {
         int index = 0;
@@ -145,36 +169,57 @@ public Sale(Login clerk, Date time) //Tilføjet af NN
         index = SalesContainer.getInstance().getSalesList().size() - 1;
         Sale s = SalesContainer.getInstance().getSalesList().get(index);
         newID = s.getSaleID() + 1;
-        }
+        }//end if
         else
         {
             newID = 1;
-        }
+        }//end else
         return newID;
     }
 
+    /**
+     * @param quantity set the quantity in the SalesLineItem
+     * @param barCode set the barCode in the SalesLineItem
+     * @param serial set the serial in the SalesLineItem
+     * @param newSalesLine is added to quantitylist
+     * @param calulateSubTotal adds SalesLineItem subTotal to Sale subtotal
+     */
     public SalesLineItem newSalesLine(int quantity, int barCode, String serial)
     {
-        newSalesLine = new SalesLineItem(quantity, barCode);
+        newSalesLine = new SalesLineItem(quantity, barCode, serial);
+        getQuantitylist().add(newSalesLine);
+        calculateSubTotal();
         return newSalesLine;
     }
 
-    public double calculateSubbTotal()
+    /**
+     * @param subtotal calculate the subtotal of Sale
+     */
+    public double calculateSubTotal()
     {
         subtotal +=  newSalesLine.getSubTotal();
         return subtotal;
     }
 
+    /**
+     * @param
+     */
     public void payForSaleCreditCard()
     {
 
     }
 
+    /**
+     * @param
+     */
     public void payForSaleCash()
     {
 
     }
 
+    /**
+     * @param
+     */
     public void payForSaleAccount()
     {
 

@@ -1,27 +1,28 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 import java.util.ArrayList;
+
 /**
  *
- * @author nn119171
+ * @author gruppe 2, dm 71
+ * @date May 2010
  */
-
-
 public class SupplierContainer
 {
 
     private ArrayList<Supplier> supplierList;
     private static SupplierContainer instance;
 
+    /**
+     * @param construct class Supplier with parameters
+     */
     public SupplierContainer()
     {
         supplierList = new ArrayList<Supplier>();
     }
 
+    /**
+     * @param instance create singleton
+     */
     public static SupplierContainer getInstance()
     {
         if(instance == null)
@@ -31,29 +32,37 @@ public class SupplierContainer
         return instance;
     }
 
-    public void addSupplier(Supplier newSupplier)
-    {
-        supplierList.add(newSupplier);
-    }
-
+     /**
+     * @return the supplierList
+     */
     public ArrayList<Supplier> getSupplierList()
     {
         return supplierList;
     }
 
+    /**
+     * @param newSupplier adds newSpupplier to supplierList
+     */
+    public void addSupplier(Supplier newSupplier)
+    {
+        getSupplierList().add(newSupplier);
+    }
 
-     public Supplier removeSupplier(int id)
+    /**
+     * @param id use SupplierID to remove supplier
+     */
+    public Supplier removeSupplier(int id)
     {
         Supplier supObjekt = null;
         int index = 0;
         boolean found = false;
-        while(index < supplierList.size() && !found)
+        while(index < getSupplierList().size() && !found)
         {
-           supObjekt = supplierList.get(index);
+           supObjekt = getSupplierList().get(index);
            if(supObjekt.getiD() == id)
            {
                found = true;
-               supplierList.remove(index);
+                getSupplierList().remove(index);
                System.out.println("Object removed"); //Skal fjernes
            }//end if
                 else {
@@ -63,16 +72,19 @@ public class SupplierContainer
         return null;
     }
 
-     public static void main(String[] args)
-     {
-        SupplierContainer supContainer = SupplierContainer.getInstance();
-        //create customer
-        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
-        supContainer.addSupplier(supObj1);
-        String obj2 = supObj1.getInfo();
-        System.out.println("Customer: " + obj2);
-        //delete customer
-        supContainer.removeSupplier(1);
+    /**
+     *main to test
+     */
+//     public static void main(String[] args)
+//     {
+//        SupplierContainer supContainer = SupplierContainer.getInstance();
+//        //create customer
+//        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
+//        supContainer.addSupplier(supObj1);
+//        String obj2 = supObj1.getInfo();
+//        System.out.println("Customer: " + obj2);
+//        //delete customer
+//        supContainer.removeSupplier(1);
 
 
 //        //prints for test
@@ -82,7 +94,9 @@ public class SupplierContainer
 //        accontObj.withdraw(4500);
 //        System.out.println(cusObj1.getTotalBalance());
 //        System.out.println(cusObj1.getTotalDisp());
-    }
+//    }
+
+   
 
 }
 

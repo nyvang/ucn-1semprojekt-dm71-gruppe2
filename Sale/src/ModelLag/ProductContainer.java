@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Anita gruppe 2, dm71
- * @date may 2010
+ * @date May 2010
  */
 public class ProductContainer
 {
@@ -13,6 +13,9 @@ public class ProductContainer
     private String building;
     private static ProductContainer instance;
 
+    /**
+     * @param construct class ProductContainer with parameters
+     */
     private ProductContainer( String address, String building)
     {
         this.stockList = new ArrayList<ProductDescription>();
@@ -20,6 +23,9 @@ public class ProductContainer
         this.building = building;
     }
 
+    /**
+     * @param construct class ProductContainer without parameters
+     */
     private ProductContainer()
     {
         this.stockList = new ArrayList<ProductDescription>();
@@ -27,12 +33,15 @@ public class ProductContainer
         this.building = null;
     }
 
+    /**
+     * @param instance create singleton
+     */
     public static ProductContainer getInstance()
     {
         if(instance == null)
            {
               instance = new ProductContainer();
-            }
+           }//end if
         return instance;
     }
 
@@ -104,19 +113,17 @@ public class ProductContainer
     /**
      * @return the stockList
      */
-    public ArrayList<ProductDescription> getStockList() {
+    public ArrayList<ProductDescription> getStockList()
+    {
         return stockList;
     }
 
     /**
      * @param stockList the stockList to set
      */
-    public void setStockList(ArrayList<ProductDescription> stockList) {
+    public void setStockList(ArrayList<ProductDescription> stockList)
+    {
         this.stockList = stockList;
     }
-
-
-
-
 
 }
