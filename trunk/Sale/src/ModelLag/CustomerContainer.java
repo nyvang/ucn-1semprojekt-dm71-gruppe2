@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
-
 import java.util.ArrayList;
+
 /**
- *
- * @author nn119171
- */
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
 public class CustomerContainer {
 
     private ArrayList<Customer> customerList;
@@ -20,6 +15,10 @@ public class CustomerContainer {
         customerList = new ArrayList<Customer>();
     }
 
+    /**
+     *
+     * @return instance (singleton)
+     */
     public static CustomerContainer getInstance()
     {
         if(instance == null)
@@ -29,20 +28,37 @@ public class CustomerContainer {
         return instance;
     }
 
+    /**
+     *
+     * @return customerList
+     */
     public ArrayList<Customer> getcustomerList() {
         return customerList;
     }
 
+    /**
+     *
+     * @param sets the customerList to this.customerList
+     */
     public void setcustomerList(ArrayList<Customer> customerList) {
         this.customerList = customerList;
     }
 
+    /**
+     *
+     * @param adds newCustomer to customerList
+     */
     public void addCustomer(Customer newCustomer)
     {
         customerList.add(newCustomer);
     }
 
-     public Customer removeCustomer(int id)
+    /**
+     *
+     * @param id 
+     * @return null, but removes customer with this.id from the customerList using a while loop
+     */
+    public Customer removeCustomer(int id)
     {
         Customer supObjekt = null;
         int index = 0;
@@ -53,11 +69,12 @@ public class CustomerContainer {
            if(supObjekt.getCustomerID() == id)
            {
                customerList.remove(index);
-           }
-           else {
-           index++;
-        }
-        }
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
         return null;
     }
 }

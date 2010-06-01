@@ -1,14 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
-
 /**
- *
- * @author nn119171
- */
+* @author Gruppe 2 / DM71
+* @date May 2010
+*/
 public class Group {
 
     double discount;
@@ -23,51 +17,83 @@ public Group(double discount, int daysOfCredit, double maxCredit) {
         id = generateID();
     }
 
-public int generateID()
+    /**
+     *
+     * @return newID (Generates and returns newID)
+     */
+    public int generateID()
+        {
+            int index = 0;
+            int newID = 0;
+            if(GroupContainer.getInstance().getGroupList().size() != 0)
+            {
+                index = GroupContainer.getInstance().getGroupList().size() - 1;
+                GroupContainer.getInstance().getGroupList().get(index);
+                newID = getId() + 1;
+            } //end if
+                else
+                {
+                    newID = 1;
+                } //end else
+            return newID;
+        }
+
+    /**
+     *
+     * @return Id for a specific group
+     */
+    public int getId()
     {
-        int index = 0;
-        int newID = 0;
-        if(GroupContainer.getInstance().getGroupList().size() != 0)
-        {
-            index = GroupContainer.getInstance().getGroupList().size() - 1;
-            GroupContainer.getInstance().getGroupList().get(index);
-            newID = getId() + 1;
-        } //end if
-        else
-        {
-            newID = 1;
-        } //end else
-        return newID;
+        return id;
     }
 
-public int getId()
-{
-    return id;
-}
+    /**
+     *
+     * @return daysOfCredit for a specific group
+     */
+    public int getDaysOfCredit() {
+            return daysOfCredit;
+        }
 
-public int getDaysOfCredit() {
-        return daysOfCredit;
-    }
+    /**
+     *
+     * @param sets daysOfCredit for at specific group
+     */
+    public void setDaysOfCredit(int daysOfCredit) {
+            this.daysOfCredit = daysOfCredit;
+        }
 
-public void setDaysOfCredit(int daysOfCredit) {
-        this.daysOfCredit = daysOfCredit;
-    }
+    /**
+     *
+     * @return discount for at specific group
+     */
+    public double getDiscount() {
+            return discount;
+        }
 
-public double getDiscount() {
-        return discount;
-    }
+    /**
+     *
+     * @param sets discount for at specific group
+     */
+    public void setDiscount(double discount) {
+            this.discount = discount;
+        }
 
-public void setDiscount(double discount) {
-        this.discount = discount;
-    }
+    /**
+     *
+     * @return maxCredit for at specific group
+     */
+    public double getMaxCredit() {
+            return maxCredit;
+        }
 
-public double getMaxCredit() {
-        return maxCredit;
-    }
-
-public void setMaxCredit(double maxCredit) {
-        this.maxCredit = maxCredit;
-    }
+    /**
+     *
+     * @param sets maxCredit for at specific group
+     */
+    public void setMaxCredit(double maxCredit) {
+            this.maxCredit = maxCredit;
+        }
 
 
 
