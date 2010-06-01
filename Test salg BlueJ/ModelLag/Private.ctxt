@@ -1,7 +1,10 @@
 #BlueJ class context
-comment0.params=name\ addres\ phone\ customerID\ cprNumber
+comment0.params=name\ address\ phone\ customerID\ cprNumber
 comment0.target=Private(String,\ String,\ int,\ int,\ int)
+comment0.text=\n@param\ construct\ class\ Private\ with\ parameters\n\n
 comment1.target=int\ getCprNumber()
+comment1.text=\n@return\ the\ cprNumber\n\n
 comment2.params=cprNumber
 comment2.target=void\ setCprNumber(int)
+comment2.text=\n@param\ cprNumber\ the\ cprNumber\ to\ set\n\n
 numComments=3

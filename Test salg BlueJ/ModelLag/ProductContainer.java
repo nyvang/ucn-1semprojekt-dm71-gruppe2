@@ -4,22 +4,48 @@ import java.util.ArrayList;
 /**
  *
  * @author Anita gruppe 2, dm71
- * @date may 2010
+ * @date May 2010
  */
 public class ProductContainer
 {
     private ArrayList<ProductDescription> stockList;
     private String address;
     private String building;
+    private static ProductContainer instance;
 
-    public ProductContainer( String address, String building) 
+    /**
+     * @param construct class ProductContainer with parameters
+     */
+    private ProductContainer( String address, String building)
     {
         this.stockList = new ArrayList<ProductDescription>();
         this.address = address;
         this.building = building;
     }
 
-    
+    /**
+     * @param construct class ProductContainer without parameters
+     */
+    private ProductContainer()
+    {
+        this.stockList = new ArrayList<ProductDescription>();
+        this.address = null;
+        this.building = null;
+    }
+
+    /**
+     * @param instance create singleton
+     */
+    public static ProductContainer getInstance()
+    {
+        if(instance == null)
+           {
+              instance = new ProductContainer();
+           }//end if
+        return instance;
+    }
+
+
     /**
      * @return the address
      */
@@ -55,17 +81,25 @@ public class ProductContainer
     /**
      *@param find ProductDescription
      */
-    public void findProductDescription()
+    public ProductDescription findProductDescription(int barCode, String serial)
     {
-        String serial = null;
-        for (Item serialNums : serialNumbers)
+        ProductDescription productD = null;
+        int index = 0;
+        boolean found = false;
+
+        while(index < stockList.size() && !found)
         {
-            if(serialNums.getSerialNumber().equals(serialNum))
+            productD = stockList.get(index);
+            if(productD.getBarCode() ==  barCode && productD.findItemSerial(serial).equals(serial))
             {
-                serial = serialNum;
-            }
-        }
-        return serial;
+                found = true;
+            }//end if
+            else
+            {
+                index++;
+            }//end
+        }// end while
+        return productD;
     }
 
     /**
@@ -79,19 +113,17 @@ public class ProductContainer
     /**
      * @return the stockList
      */
-    public ArrayList<ProductDescription> getStockList() {
+    public ArrayList<ProductDescription> getStockList()
+    {
         return stockList;
     }
 
     /**
      * @param stockList the stockList to set
      */
-    public void setStockList(ArrayList<ProductDescription> stockList) {
+    public void setStockList(ArrayList<ProductDescription> stockList)
+    {
         this.stockList = stockList;
     }
-
-
-
-
 
 }

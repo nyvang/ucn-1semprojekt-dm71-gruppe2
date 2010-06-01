@@ -3,7 +3,7 @@ package ModelLag;
 /**
  *
  * @author gruppe 2, dm71
- * @date may 2010
+ * @date May 2010
  */
 public class ProductDescription
 {
@@ -19,6 +19,9 @@ public class ProductDescription
     private int amount;
     private ItemContainer serials;
 
+    /**
+     * @param construct class ProductDescription with parameters
+     */
     public ProductDescription(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount, ItemContainer serials)
     {
         this.name = name;
@@ -34,104 +37,182 @@ public class ProductDescription
         this.serials = serials;
     }
 
-    public int getAmount()
+    /**
+     * @param construct class ProductDescription without parameters
+     */
+    public ProductDescription()
     {
-        return amount;
+        this.name = null;
+        this.salesPrice = 0;
+        this.buyPrice = 0;
+        this.minStock = 0;
+        this.maxStock = 0;
+        this.barCode = 0;
+        this.supplier = null;
+        this.row = 0;
+        this.shelve = 0;
+        this.amount = 0;
+        this.serials = null;
     }
 
-    public void setAmount(int amount)
-    {
-        this.amount = amount;
-    }
-
-    public int getBarCode()
-    {
-        return barCode;
-    }
-
-    public void setBarCode(int barCode)
-    {
-        this.barCode = barCode;
-    }
-
-    public double getBuyPrice()
-    {
-        return buyPrice;
-    }
-
-    public void setBuyPrice(double buyPrice)
-    {
-        this.buyPrice = buyPrice;
-    }
-
-    public int getMaxStock()
-    {
-        return maxStock;
-    }
-
-    public void setMaxStock(int maxStock)
-    {
-        this.maxStock = maxStock;
-    }
-
-    public int getMinStock()
-    {
-        return minStock;
-    }
-
-    public void setMinStock(int minStock)
-    {
-        this.minStock = minStock;
-    }
-
+    /**
+     * @return the name
+     */
     public String getName()
     {
         return name;
     }
 
+    /**
+     * @param name the name to set
+     */
     public void setName(String name)
     {
         this.name = name;
     }
 
-    public int getRow()
-    {
-        return row;
-    }
-
-    public void setRow(int row)
-    {
-        this.row = row;
-    }
-
+    /**
+     * @return the salesPrice
+     */
     public double getSalesPrice()
     {
         return salesPrice;
     }
 
+    /**
+     * @param salesPrice the salesPrice to set
+     */
     public void setSalesPrice(double salesPrice)
     {
         this.salesPrice = salesPrice;
     }
 
-    public int getShelve()
+    /**
+     * @return the buyPrice
+     */
+    public double getBuyPrice()
     {
-        return shelve;
+        return buyPrice;
     }
 
-    public void setShelve(int shelve)
+    /**
+     * @param buyPrice the buyPrice to set
+     */
+    public void setBuyPrice(double buyPrice)
     {
-        this.shelve = shelve;
+        this.buyPrice = buyPrice;
     }
 
+    /**
+     * @return the minStock
+     */
+    public int getMinStock()
+    {
+        return minStock;
+    }
+
+    /**
+     * @param minStock the minStock to set
+     */
+    public void setMinStock(int minStock)
+    {
+        this.minStock = minStock;
+    }
+
+    /**
+     * @return the maxStock
+     */
+    public int getMaxStock()
+    {
+        return maxStock;
+    }
+
+    /**
+     * @param maxStock the maxStock to set
+     */
+    public void setMaxStock(int maxStock)
+    {
+        this.maxStock = maxStock;
+    }
+
+    /**
+     * @return the barCode
+     */
+    public int getBarCode()
+    {
+        return barCode;
+    }
+
+    /**
+     * @param barCode the barCode to set
+     */
+    public void setBarCode(int barCode)
+    {
+        this.barCode = barCode;
+    }
+
+    /**
+     * @return the supplier
+     */
     public Supplier getSupplier()
     {
         return supplier;
     }
 
+    /**
+     * @param supplier the supplier to set
+     */
     public void setSupplier(Supplier supplier)
     {
         this.supplier = supplier;
+    }
+
+    /**
+     * @return the row
+     */
+    public int getRow()
+    {
+        return row;
+    }
+
+    /**
+     * @param row the row to set
+     */
+    public void setRow(int row)
+    {
+        this.row = row;
+    }
+
+    /**
+     * @return the shelve
+     */
+    public int getShelve()
+    {
+        return shelve;
+    }
+
+    /**
+     * @param shelve the shelve to set
+     */
+    public void setShelve(int shelve)
+    {
+        this.shelve = shelve;
+    }
+
+    /**
+     * @return the amount
+     */
+    public int getAmount()
+    {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(int amount)
+    {
+        this.amount = amount;
     }
 
     /**
@@ -150,22 +231,27 @@ public class ProductDescription
         this.serials = serials;
     }
 
+    /**
+     * @param serial find out if the serial is correct
+     */
     public String findItemSerial(String serial)
     {
         String serialNum = null;
-        
-        if (serials.findSerialNumber(serial).equals(serial))
+
+        if (getSerials().findSerialNumber(serial).equals(serial))
         {
             serialNum = serial;
-        }
-        
-        return serialNum;
+        }//end if
 
+        return serialNum;
     }
 
+    /**
+     * @param serial add the serial to the ItemContainer serials
+     */
     public void addItemSerialNumber(String serial)
     {
-        serials.setItemSerial(serial);
+        getSerials().setItemSerial(serial);
     }
  
 }

@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.target=SupplierContainer()
+comment0.text=\n@param\ construct\ class\ Supplier\ with\ parameters\n\n
 comment1.target=SupplierContainer\ getInstance()
-comment2.params=newSupplier
-comment2.target=void\ addSupplier(Supplier)
-comment3.target=ArrayList<Supplier>\ getSupplierList()
+comment1.text=\n@param\ instance\ create\ singleton\n\n
+comment2.target=ArrayList<Supplier>\ getSupplierList()
+comment2.text=\n@return\ the\ supplierList\n\n
+comment3.params=newSupplier
+comment3.target=void\ addSupplier(Supplier)
+comment3.text=\n@param\ newSupplier\ adds\ newSpupplier\ to\ supplierList\n\n
 comment4.params=id
 comment4.target=Supplier\ removeSupplier(int)
-comment5.params=args
-comment5.target=void\ main(String[])
-numComments=6
+comment4.text=\n@param\ id\ use\ SupplierID\ to\ remove\ supplier\n\n
+numComments=5

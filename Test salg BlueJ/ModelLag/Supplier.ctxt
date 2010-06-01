@@ -1,13 +1,21 @@
 #BlueJ class context
 comment0.params=name\ addres\ phone\ cvrNumber\ businessName
 comment0.target=Supplier(String,\ String,\ int,\ int,\ String)
-comment1.target=int\ generateID()
-comment2.target=int\ getiD()
+comment0.text=\n@param\ construct\ class\ Supplier\ with\ parameters\n\n
+comment1.target=int\ getCvrNumber()
+comment1.text=\n@return\ the\ cvrNumber\n\n
+comment2.params=cvrNumber
+comment2.target=void\ setCvrNumber(int)
+comment2.text=\n@param\ cvrNumber\ the\ cvrNumber\ to\ set\n\n
 comment3.target=String\ getBusinessName()
+comment3.text=\n@return\ the\ businessName\n\n
 comment4.params=businessName
 comment4.target=void\ setBusinessName(String)
-comment5.target=int\ getCvrNumber()
-comment6.params=cvrNumber
-comment6.target=void\ setCvrNumber(int)
+comment4.text=\n@param\ businessName\ the\ businessName\ to\ set\n\n
+comment5.target=int\ getiD()
+comment5.text=\n@return\ the\ iD\n\n
+comment6.target=int\ generateID()
+comment6.text=\n@param\ newID\ generate\ a\ new\ ID\ for\ this\ Supplier\n\n
 comment7.target=String\ getInfo()
+comment7.text=\n@param\ Info\ find\ BusinessName\ of\ Supplier\n\n
 numComments=8
