@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=subTotal\ quantity\ barCode\ serial
 comment0.target=SalesLineItem(double,\ int,\ int,\ String)
-comment0.text=\n@param\ construct\ class\ SalesLineItem\ with\ parameters\n\n
+comment0.text=\nConstruct\ class\ SalesLineItem\ with\ parameters\n\n
 comment1.params=quantity\ barCode\ serial
 comment1.target=SalesLineItem(int,\ int,\ String)
-comment1.text=\n@param\ construct\ class\ SalesLineItem\ with\ parameters\n\n
+comment1.text=\nConstruct\ class\ SalesLineItem\ with\ parameters\n\n
 comment10.target=ProductDescription\ getProduct()
 comment10.text=\n@return\ the\ product\n\n
 comment11.params=product
@@ -18,9 +18,9 @@ comment13.target=double\ calculateSubtotal(int)
 comment13.text=\n@param\ amount\ calculat\ the\ subtotal\ using\ the\ amount\ to\ get\ rigth\ subTotal\n\n
 comment2.params=quantity\ barCode
 comment2.target=SalesLineItem(int,\ int)
-comment2.text=\n@param\ construct\ class\ SalesLineItem\ with\ parameters\n\n
+comment2.text=\nConstruct\ class\ SalesLineItem\ with\ parameters\n\n
 comment3.target=SalesLineItem()
-comment3.text=\n@param\ construct\ class\ SalesLineItem\ without\ parameters\n\n
+comment3.text=\nConstruct\ class\ SalesLineItem\ without\ parameters\n\n
 comment4.target=double\ getSubTotal()
 comment4.text=\n@return\ the\ subTotal\n\n
 comment5.params=subTotal
