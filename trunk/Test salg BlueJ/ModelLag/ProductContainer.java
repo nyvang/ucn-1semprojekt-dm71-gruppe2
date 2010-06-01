@@ -16,7 +16,7 @@ public class ProductContainer
     /**
      * @param construct class ProductContainer with parameters
      */
-    private ProductContainer( String address, String building)
+    private ProductContainer(String address, String building)
     {
         this.stockList = new ArrayList<ProductDescription>();
         this.address = address;

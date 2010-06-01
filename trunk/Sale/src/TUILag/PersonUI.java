@@ -1,14 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package TUILag;
 
 /**
  *
- * @author nn119171
+ * @author Anita gruppe 2, dm71
+ * @date May 2010
  */
-public class PersonUI {
+public class PersonUI
+{
 
 }
