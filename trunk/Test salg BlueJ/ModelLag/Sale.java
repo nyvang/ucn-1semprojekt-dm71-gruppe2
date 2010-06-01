@@ -1,5 +1,4 @@
 package ModelLag;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -15,26 +14,60 @@ public class Sale
     private Login clerk;
     private Date time;
     private double subtotal;
-    private ArrayList<Sale> quantitylist;
+    private ArrayList<SalesLineItem> quantitylist;
+    private SalesLineItem newSalesLine;
 
+    /**
+     * @param construct class Sale with parameters
+     */
     public Sale(Login clerk)
     {
         this.saleID = generateID();
         this.clerk = new Login();
         this.time = new Date();
         this.subtotal = 0;
-        this.quantitylist = new ArrayList<Sale>();
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
     }
 
+    /**
+     * @param construct class Sale without parameters
+     */
     public Sale()
     {
         this.saleID = generateID();
         this.clerk = new Login();
         this.time = new Date();
         this.subtotal = 0;
-        this.quantitylist = new ArrayList<Sale>();
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
     }
 
+    /**
+     * @param construct class Sale with parameters
+     */
+    public Sale(Login clerk, Date time) //Tilføjet af NN
+    {
+        this.saleID = generateID();
+        this.clerk = clerk;
+        this.time = time;
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = new SalesLineItem();
+    }
+
+    /**
+     * @param construct class Sale with parameters
+     */
+    public Sale(int quantity, int barCode, String serial)
+    {
+        this.saleID = generateID();
+        this.clerk = new Login();
+        this.time = new Date();
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = newSalesLine(quantity, barCode, serial);
+    }
 
     /**
      * @return the saleID
@@ -111,7 +144,7 @@ public class Sale
     /**
      * @return the quantitylist
      */
-    public ArrayList<Sale> getQuantitylist()
+    public ArrayList<SalesLineItem> getQuantitylist()
     {
         return quantitylist;
     }
@@ -119,11 +152,14 @@ public class Sale
     /**
      * @param quantitylist the quantitylist to set
      */
-    public void setQuantitylist(ArrayList<Sale> quantitylist)
+    public void setQuantitylist(ArrayList<SalesLineItem> quantitylist)
     {
         this.quantitylist = quantitylist;
     }
 
+    /**
+     * @param newID generate a new ID for this Sale
+     */
     public int generateID()
     {
         int index = 0;
@@ -133,15 +169,60 @@ public class Sale
         index = SalesContainer.getInstance().getSalesList().size() - 1;
         Sale s = SalesContainer.getInstance().getSalesList().get(index);
         newID = s.getSaleID() + 1;
-        }
+        }//end if
         else
         {
             newID = 1;
-        }
+        }//end else
         return newID;
     }
 
+    /**
+     * @param quantity set the quantity in the SalesLineItem
+     * @param barCode set the barCode in the SalesLineItem
+     * @param serial set the serial in the SalesLineItem
+     * @param newSalesLine is added to quantitylist
+     * @param calulateSubTotal adds SalesLineItem subTotal to Sale subtotal
+     */
+    public SalesLineItem newSalesLine(int quantity, int barCode, String serial)
+    {
+        newSalesLine = new SalesLineItem(quantity, barCode, serial);
+        getQuantitylist().add(newSalesLine);
+        calculateSubTotal();
+        return newSalesLine;
+    }
 
+    /**
+     * @param subtotal calculate the subtotal of Sale
+     */
+    public double calculateSubTotal()
+    {
+        subtotal +=  newSalesLine.getSubTotal();
+        return subtotal;
+    }
 
+    /**
+     * @param
+     */
+    public void payForSaleCreditCard()
+    {
+
+    }
+
+    /**
+     * @param
+     */
+    public void payForSaleCash()
+    {
+
+    }
+
+    /**
+     * @param
+     */
+    public void payForSaleAccount()
+    {
+
+    }
 }
 

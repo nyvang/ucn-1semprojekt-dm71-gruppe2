@@ -1,17 +1,19 @@
 #BlueJ class context
 comment0.params=name\ address\ phone
 comment0.target=Person(String,\ String,\ int)
+comment0.text=\n@param\ construct\ class\ Person\ with\ parameters\n\n
 comment1.target=Person()
+comment1.text=\n@param\ construct\ class\ Person\ without\ parameters\n\n
 comment2.target=String\ getName()
 comment2.text=\n@return\ the\ name\n\n
 comment3.params=name
 comment3.target=void\ setName(String)
 comment3.text=\n@param\ name\ the\ name\ to\ set\n\n
-comment4.target=String\ getAddres()
-comment4.text=\n@return\ the\ addres\n\n
-comment5.params=addres
-comment5.target=void\ setAddres(String)
-comment5.text=\n@param\ addres\ the\ addres\ to\ set\n\n
+comment4.target=String\ getAddress()
+comment4.text=\n@return\ the\ address\n\n
+comment5.params=address
+comment5.target=void\ setAddress(String)
+comment5.text=\n@param\ address\ the\ address\ to\ set\n\n
 comment6.target=int\ getPhone()
 comment6.text=\n@return\ the\ phone\n\n
 comment7.params=phone

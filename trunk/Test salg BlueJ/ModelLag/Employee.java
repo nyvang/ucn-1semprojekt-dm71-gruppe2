@@ -1,69 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package ModelLag;
 
+import java.util.ArrayList;
 /**
  *
  * @author nn119171
  */
-public class Employee extends Person {
+public class CustomerContainer {
 
-    private int account;
-    private String userName;
-    private String password;
+    private ArrayList<Customer> customerList;
+    private static CustomerContainer instance;
 
-    public Employee(String name, String address, int phone, int account)
+    public CustomerContainer()
     {
-        super(name, address, phone);
-        this.account = account;
+        customerList = new ArrayList<Customer>();
     }
 
-    public Employee()
+    public static CustomerContainer getInstance()
     {
-        super();
-        this.account = 0;
+        if(instance == null)
+           {
+              instance = new CustomerContainer();
+            }
+        return instance;
     }
 
-
-    public int getAccount()
-    {
-        return account;
+    public ArrayList<Customer> getcustomerList() {
+        return customerList;
     }
 
-    public void setAccount(int account)
-    {
-        this.account = account;
+    public void setcustomerList(ArrayList<Customer> customerList) {
+        this.customerList = customerList;
     }
 
-    /**
-     * @return the userName
-     */
-    public String getUserName()
+    public void addCustomer(Customer newCustomer)
     {
-        return userName;
+        customerList.add(newCustomer);
     }
 
-    /**
-     * @param userName the userName to set
-     */
-    public void setUserName(String userName)
+     public Customer removeCustomer(int id)
     {
-        this.userName = userName;
+        Customer supObjekt = null;
+        int index = 0;
+        boolean found = false;
+        while(index < customerList.size() && !found)
+        {
+           supObjekt = customerList.get(index);
+           if(supObjekt.getCustomerID() == id)
+           {
+               customerList.remove(index);
+           }
+           else {
+           index++;
+        }
+        }
+        return null;
     }
-
-    /**
-     * @return the password
-     */
-    public String getPassword()
-    {
-        return password;
-    }
-
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password)
-    {
-        this.password = password;
-    }
-
-
 }
