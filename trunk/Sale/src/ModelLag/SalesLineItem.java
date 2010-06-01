@@ -18,15 +18,33 @@ public class SalesLineItem
     private int barCode;
     private ProductDescription product;
 
+    /**
+     * @param construct class SalesLineItem with parameters
+     */
     public SalesLineItem(double subTotal, int quantity, int barCode, String serial)
     {
         this.subTotal = subTotal;
         this.quantity = quantity;
         this.barCode = barCode;
         this.product = new ProductDescription();
-//        this.product = findProductDescription(barCode, serial);
+        findProductDescription(barCode, serial);
     }
-    
+
+    /**
+     * @param construct class SalesLineItem with parameters
+     */
+    public SalesLineItem(int quantity, int barCode, String serial)
+    {
+        this.subTotal = 0;
+        this.quantity = quantity;
+        this.barCode = barCode;
+        this.product = new ProductDescription();
+        findProductDescription(barCode, serial);
+    }
+
+    /**
+     * @param construct class SalesLineItem with parameters
+     */
     public SalesLineItem(int quantity, int barCode)
     {
         this.subTotal = 0;
@@ -35,6 +53,9 @@ public class SalesLineItem
         this.product = new ProductDescription();
     }
 
+    /**
+     * @param construct class SalesLineItem without parameters
+     */
     public SalesLineItem()
     {
         this.subTotal = 0;
@@ -42,43 +63,53 @@ public class SalesLineItem
         this.barCode = 0;
         this.product = new ProductDescription();
     }
-    
-    public int getBarCode()
-    {
-        return barCode;
-    }
-
-    public void setBarCode(int barCode)
-    {
-        this.barCode = barCode;
-    }
-
-    public int getQuantity()
-    {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity)
-    {
-        this.quantity = quantity;
-    }
-
+      
+     /**
+     * @return the subTotal
+     */
     public double getSubTotal()
     {
         return subTotal;
     }
 
-    public void setSubTotal(int subTotal)
+    /**
+     * @param subTotal the subTotal to set
+     */
+    public void setSubTotal(double subTotal)
     {
         this.subTotal = subTotal;
     }
 
-    public ProductDescription findProductDecription(int barCode, String serial)
+    /**
+     * @return the quantity
+     */
+    public int getQuantity()
     {
-        ProductContainer productcont = ProductContainer.getInstance();
-        ProductDescription newProd = productcont.findProductDescription(barCode, serial);
-        product = newProd;
-        return product;
+        return quantity;
+    }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
+    }
+
+    /**
+     * @return the barCode
+     */
+    public int getBarCode()
+    {
+        return barCode;
+    }
+
+    /**
+     * @param barCode the barCode to set
+     */
+    public void setBarCode(int barCode)
+    {
+        this.barCode = barCode;
     }
 
     /**
@@ -97,10 +128,26 @@ public class SalesLineItem
         this.product = product;
     }
 
-    public double calculateSubtotal(int amount, int barCode, String serial)
+    /**
+     * @param barCode the barCode to find rigth ProductDesription
+     * @param serial the serial to find in ProductDesription
+     */
+    public ProductDescription findProductDescription(int barCode, String serial)
     {
-        subTotal = amount * (product.getSalesPrice());
-        return subTotal;
+        ProductContainer productcont = ProductContainer.getInstance();
+        ProductDescription newProd = productcont.findProductDescription(barCode, serial);
+        setProduct(newProd);
+        return getProduct();
     }
+
+    /**
+     * @param amount calculat the subtotal using the amount to get rigth subTotal
+     */
+    public double calculateSubtotal(int amount)
+    {
+        setSubTotal(amount * (getProduct().getSalesPrice()));
+        return getSubTotal();
+    }
+
 
 }

@@ -36,7 +36,7 @@ public class MainTUI {
                     else{
                         if(choise == 3){
                             startLaan();
-.                        //start loanController
+                        //start loanController
                             }//end if
                         else{
                             writeEnd();
@@ -63,26 +63,26 @@ public class MainTUI {
             return choise;
     }
 
-    private void startAddressBook()
-    {
-        adrUI= new AddressBookUI();
-        adrUI.AddressBookUIStart();
-
-
-    }
-
-    private void startDvd()
-    {
-        dvdUI= new DvdUI();
-        dvdUI.start();
-
-    }
-
-    private void startLaan()
-    {
-        lnUI= new LoanUI();
-        lnUI.start();
-    }
+//    private void startAddressBook()
+//    {
+//        adrUI= new AddressBookUI();
+//        adrUI.AddressBookUIStart();
+//
+//
+//    }
+//
+//    private void startDvd()
+//    {
+//        dvdUI= new DvdUI();
+//        dvdUI.start();
+//
+//    }
+//
+//    private void startLaan()
+//    {
+//        lnUI= new LoanUI();
+//        lnUI.start();
+//    }
 
     private void writeEnd()
     {

@@ -1,13 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 
 /**
  *
- * @author nn119171
+ * @author gruppe 2, dm 71
+ * @date May 2010
  */
 public class Supplier extends Person
 {
@@ -16,13 +12,68 @@ public class Supplier extends Person
     private String businessName;
     private int iD;
 
-    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName) {
+    /**
+     * @param construct class Supplier with parameters
+     */
+    public Supplier(String name, String addres, int phone, int cvrNumber, String businessName)
+    {
         super(name, addres, phone);
         this.cvrNumber = cvrNumber;
         this.businessName = businessName;
         iD = generateID();
     }
 
+    /**
+     * @return the cvrNumber
+     */
+    public int getCvrNumber()
+    {
+        return cvrNumber;
+    }
+
+    /**
+     * @param cvrNumber the cvrNumber to set
+     */
+    public void setCvrNumber(int cvrNumber)
+    {
+        this.cvrNumber = cvrNumber;
+    }
+
+    /**
+     * @return the businessName
+     */
+    public String getBusinessName()
+    {
+        return businessName;
+    }
+
+    /**
+     * @param businessName the businessName to set
+     */
+    public void setBusinessName(String businessName)
+    {
+        this.businessName = businessName;
+    }
+
+    /**
+     * @return the iD
+     */
+    public int getiD()
+    {
+        return iD;
+    }
+
+    /**
+     * @param iD the iD to set
+     */
+//    public void setiD()
+//    {
+//        this.iD = generateID();
+//    }
+
+    /**
+     * @param newID generate a new ID for this Supplier
+     */
     public int generateID()
     {
         int index = 0;
@@ -39,36 +90,15 @@ public class Supplier extends Person
         } //end else
         return newID;
     }
-
-
-
-    public int getiD() {
-        return iD;
-    }
-
-//    public void setiD(int iD) {
-//        this.iD = iD;
-//    }
-
-    public String getBusinessName() {
-        return businessName;
-    }
-
-    public void setBusinessName(String businessName) {
-        this.businessName = businessName;
-    }
-
-    public int getCvrNumber() {
-        return cvrNumber;
-    }
-
-    public void setCvrNumber(int cvrNumber) {
-        this.cvrNumber = cvrNumber;
-    }
-
+  
+    /**
+     * @param Info find BusinessName of Supplier
+     */
     public String getInfo()
     {
-        return businessName;
+        return getBusinessName();
     }
+
+    
 
 }
