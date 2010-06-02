@@ -232,5 +232,14 @@ public class Sale
     {
 
     }
+    
+    /**
+     * Get size of quantityList
+     */
+    public int antalSalesLine()
+    {
+        return quantitylist.size();
+    }
+
 }
 
