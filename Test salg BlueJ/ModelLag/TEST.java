@@ -72,7 +72,7 @@ public class TEST extends junit.framework.TestCase
 		productC1.addProductDescription(productD1);
 		productD2 = new ModelLag.ProductDescription(supplier1);
 		productC1.addProductDescription(productD2);
-        Sale saleObj = new Sale(1,1,null);
+    //    Sale saleObj = new Sale(1,1,null);
     }
 
     /**
