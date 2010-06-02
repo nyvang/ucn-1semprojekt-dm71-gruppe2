@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=TEST()
+comment0.text=\nDefault\ constructor\ for\ test\ class\ TEST\n\n
+comment1.target=void\ testSalg()
+comment2.target=void\ setUp()
+comment2.text=\nSets\ up\ the\ test\ fixture.\n\nCalled\ before\ every\ test\ case\ method.\n\n
+comment3.target=void\ tearDown()
+comment3.text=\nTears\ down\ the\ test\ fixture.\n\nCalled\ after\ every\ test\ case\ method.\n\n
+numComments=4
