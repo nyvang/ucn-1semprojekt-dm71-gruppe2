@@ -22,18 +22,34 @@ public class SalesCtr
         salesList = SalesContainer.getInstance();
     }
 
-    public void startNewSale(int saleID, Login clerk, Date time,
-                        double subtotal, Sale quantityList, int quantity, int barCode, String serial)
+////    public void startNewSale(int saleID, Login clerk, Date time,
+////                        double subtotal, Sale quantityList, int quantity, int barCode, String serial)
+////    {
+////        salesObject = new Sale(quantity, barCode, serial);
+////        newSalesLine(quantity, barCode, serial);
+////        salesList.addSale(salesObject);
+////    }
+
+    public void startNewSale(int quantity, int barCode, String serial)
     {
         salesObject = new Sale(quantity, barCode, serial);
         newSalesLine(quantity, barCode, serial);
         salesList.addSale(salesObject);
+
     }
 
     public void newSalesLine(int quantity, int barCode, String serial)
     {
         salesObject.newSalesLine(quantity, barCode, serial);
     }
+
+    /**
+     * @return the number of items in the salesList
+     */
+    public int getAmount()
+        {
+            return salesObject.getQuantitylist().size();
+        }
     /**
      *
      * comment
