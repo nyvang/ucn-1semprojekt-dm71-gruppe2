@@ -16,12 +16,19 @@ public class SalesCtr
 
     private SalesContainer salesList;
     private Sale salesObject;
+    private ProductDescription createTestProduct;
 
     public SalesCtr()
     {
         salesList = SalesContainer.getInstance();
+        
     }
 
+//    public void createProduct(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount)
+//    {
+//        createTestProduct.ProductDescription("Brækjern", 45.42, 20.14, 5, 9, 123, null, 3, 4, 1);
+//    }
+    
 ////    public void startNewSale(int saleID, Login clerk, Date time,
 ////                        double subtotal, Sale quantityList, int quantity, int barCode, String serial)
 ////    {
