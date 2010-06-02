@@ -61,12 +61,20 @@ public class Sale
      */
     public Sale(int quantity, int barCode, String serial)
     {
-        this.saleID = generateID();
-        this.clerk = new Login();
-        this.time = new Date();
-        this.subtotal = 0;
-        this.quantitylist = new ArrayList<SalesLineItem>();
-        this.newSalesLine = newSalesLine(quantity, barCode, serial);
+         if(getQuantitylist().size() == 0)
+         {
+            this.saleID = generateID();
+            this.clerk = new Login();
+            this.time = new Date();
+            this.subtotal = 0;
+            this.quantitylist = new ArrayList<SalesLineItem>();
+            this.newSalesLine = newSalesLine(quantity, barCode, serial);
+         }//end if
+         else
+         {
+            this.newSalesLine = newSalesLine(quantity, barCode, serial);
+         }//end else
+
     }
 
     /**
