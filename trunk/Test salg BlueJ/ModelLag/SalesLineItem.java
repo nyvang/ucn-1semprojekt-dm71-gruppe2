@@ -139,7 +139,7 @@ public class SalesLineItem
      */
     public double calculateSubtotal(int amount)
     {
-        setSubTotal(amount * (getProduct().getSalesPrice()));
+        subTotal += amount * (getProduct().getSalesPrice());
         return getSubTotal();
     }
 
