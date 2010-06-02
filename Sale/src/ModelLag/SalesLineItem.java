@@ -134,11 +134,11 @@ public class SalesLineItem
     }
 
     /**
-     * @param amount calculat the subtotal using the amount to get rigth subTotal
+     * @param amount - calculate the subtotal using the amount to get new subTotal
      */
     public double calculateSubtotal(int amount)
     {
-        setSubTotal(amount * (getProduct().getSalesPrice()));
+        subTotal += amount * (getProduct().getSalesPrice());
         return getSubTotal();
     }
 
