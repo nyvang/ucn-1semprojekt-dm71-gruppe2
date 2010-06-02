@@ -8,9 +8,11 @@ import ModelLag.*;
  */
 public class LoginCtr
 {
+    
 
 public LoginCtr()
 {
+
 }
 
 public Employee doLogin(int id)
