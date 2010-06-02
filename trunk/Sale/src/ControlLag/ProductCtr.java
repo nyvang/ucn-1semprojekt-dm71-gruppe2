@@ -1,14 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ControlLag;
 
 /**
- *
- * @author nn119171
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
-public class ProductCtr {
+
+public class ProductCtr
+{
 
 }

@@ -1,28 +1,31 @@
-
 package TUILag;
 import java.util.Scanner;
 import ControlLag.*;
 import ModelLag.*;
 
 /**
- *
- * @author Andreas
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
-public class LoginUI {
+
+public class LoginUI
+{
 
     private LoginUI logUI;
 
 
-    public LoginUI getLogUI() {
+    public LoginUI getLogUI()
+    {
         return logUI;
     }
 
-    public void setLogUI(LoginUI logUI) {
+    public void setLogUI(LoginUI logUI)
+    {
         this.logUI = logUI;
     }
 
 
- private int loginMenu()
+    private int loginMenu()
     {
            // creates an object keyboard to read data from the keyboard
             Scanner keyboard = new Scanner(System.in);
@@ -33,6 +36,6 @@ public class LoginUI {
 
             int choise = keyboard.nextInt();
             return choise;
- }
+    }
 
 }

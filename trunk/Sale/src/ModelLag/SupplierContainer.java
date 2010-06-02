@@ -2,10 +2,10 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- *
- * @author gruppe 2, dm 71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class SupplierContainer
 {
 
@@ -13,7 +13,7 @@ public class SupplierContainer
     private static SupplierContainer instance;
 
     /**
-     * @param construct class Supplier with parameters
+     * Construct class Supplier with parameters
      */
     public SupplierContainer()
     {
@@ -21,7 +21,7 @@ public class SupplierContainer
     }
 
     /**
-     * @param instance create singleton
+     * Instance create singleton
      */
     public static SupplierContainer getInstance()
     {
@@ -62,12 +62,13 @@ public class SupplierContainer
            if(supObjekt.getiD() == id)
            {
                found = true;
-                getSupplierList().remove(index);
+               getSupplierList().remove(index);
                System.out.println("Object removed"); //Skal fjernes
            }//end if
-                else {
-                    index++;
-                }//end else
+           else
+           {
+               index++;
+           }//end else
         }//end while
         return null;
     }
