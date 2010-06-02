@@ -1,12 +1,12 @@
 package TUILag;
 import java.util.Scanner;
 import ControlLag.*;
-import ModelLag.*;
 
 /**
- *
- * @author nn119171
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
+
 public class SalesUI
 {
         SalesCtr salesCtr = new SalesCtr();

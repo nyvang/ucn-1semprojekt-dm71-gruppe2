@@ -2,10 +2,10 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- *
- * @author gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class ProductDescription
 {
     private String name;
@@ -39,7 +39,7 @@ public class ProductDescription
     }
 
     /**
-     * @param construct class ProductDescription without parameters
+     * Construct class ProductDescription without parameters
      */
     public ProductDescription()
     {

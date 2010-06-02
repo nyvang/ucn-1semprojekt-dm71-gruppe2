@@ -1,8 +1,10 @@
 package ModelLag;
+
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
 public class Customer extends Person
 {
 
@@ -51,5 +53,6 @@ public class Customer extends Person
     public void setGroup(Group group)
     {
         this.group = group;
-    }  
+    }
+
 }

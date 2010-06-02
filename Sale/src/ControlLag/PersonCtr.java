@@ -1,9 +1,11 @@
 package ControlLag;
 
 /**
- *
- * @author nn119171
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
-public class PersonCtr {
+
+public class PersonCtr
+{
 
 }

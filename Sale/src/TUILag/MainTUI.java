@@ -2,10 +2,10 @@ package TUILag;
 import java.util.Scanner;
 
 /**
- *
- * @author Anita gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class MainTUI
 {
 
@@ -69,7 +69,7 @@ public class MainTUI
 //    }
 
 
-   private int writeMainMenu()
+    private int writeMainMenu()
     {
             // creates a keyboard object to read input
             Scanner keyboard = new Scanner(System.in);
@@ -86,7 +86,7 @@ public class MainTUI
             if(asString.trim().length() == 0)
             {
                 throw new NullPointerException ("Nothing entered.. Please try again");
-            }
+            }//end if
             return choise;
     }
 

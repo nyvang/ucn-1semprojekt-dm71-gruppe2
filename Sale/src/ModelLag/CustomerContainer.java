@@ -2,14 +2,19 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
-public class CustomerContainer {
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
+public class CustomerContainer
+{
 
     private ArrayList<Customer> customerList;
     private static CustomerContainer instance;
 
+    /**
+     * Constructing CustomContainer
+     */
     public CustomerContainer()
     {
         customerList = new ArrayList<Customer>();
@@ -24,7 +29,7 @@ public class CustomerContainer {
         if(instance == null)
            {
               instance = new CustomerContainer();
-            }
+           }//end if
         return instance;
     }
 
@@ -32,7 +37,8 @@ public class CustomerContainer {
      *
      * @return customerList
      */
-    public ArrayList<Customer> getcustomerList() {
+    public ArrayList<Customer> getCustomerList()
+    {
         return customerList;
     }
 
@@ -40,7 +46,8 @@ public class CustomerContainer {
      *
      * @param sets the customerList to this.customerList
      */
-    public void setcustomerList(ArrayList<Customer> customerList) {
+    public void setCustomerList(ArrayList<Customer> customerList)
+    {
         this.customerList = customerList;
     }
 
@@ -77,4 +84,5 @@ public class CustomerContainer {
         }//end while
         return null;
     }
+
 }

@@ -1,9 +1,11 @@
 package ModelLag;
 import java.util.ArrayList;
+
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
 public class EmployeeContainer
 {
 
@@ -96,12 +98,13 @@ public class EmployeeContainer
            if(supObjekt.getAccount() == id)
            {
                employeeList.remove(index);
-           }
+           }//end if
            else
            {
                index++;
-           }
-        }
+           }//end else
+        }//end while
         return null;
     }
+
 }

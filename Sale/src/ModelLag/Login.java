@@ -1,9 +1,10 @@
 package ModelLag;
 
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
 public class Login
 {
     private Employee nameOfLogin;
@@ -59,4 +60,5 @@ public class Login
         Employee employee = instance.findEmployee(employeeId);
         return employee;
     }
+
 }

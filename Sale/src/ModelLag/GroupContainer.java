@@ -1,10 +1,13 @@
 package ModelLag;
 import java.util.ArrayList;
+
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
-public class GroupContainer {
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
+public class GroupContainer
+{
 
     private ArrayList<Group> groupList;
     private static GroupContainer instance;
@@ -51,7 +54,7 @@ public class GroupContainer {
      * @return null - removes a group with "id" from the groupList
      */
     public Supplier removeGroup(int id)
-        {
+    {
         Group grpObjekt = null;
         int index = 0;
         boolean found = false;
@@ -69,5 +72,6 @@ public class GroupContainer {
             }//end else
         }//end while
         return null;
-        }
+    }
+
 }

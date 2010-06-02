@@ -1,16 +1,16 @@
 package ModelLag;
 
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
-public class Business extends Customer {
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
 
-    int cvrNumber;
-    String businessName;
+public class Business extends Customer
+{
+    private int cvrNumber;
+    private String businessName;
 
     /**
-     *
      * @param name name of the contact person
      * @param addres address of the business customer
      * @param phone phone of the business customer
@@ -18,7 +18,8 @@ public class Business extends Customer {
      * @param cvrNumber CVR number of the business customer
      * @param businessName name of the business customer
      */
-    public Business(String name, String addres, int phone, int customerID, int cvrNumber, String businessName) {
+    public Business(String name, String addres, int phone, int customerID, int cvrNumber, String businessName)
+    {
         super(name, addres, phone, customerID);
         this.cvrNumber = cvrNumber;
         this.businessName = businessName;
@@ -28,33 +29,34 @@ public class Business extends Customer {
      * @return the businessName (navnet på forretningskunden)
      */
 
-    public String getBusinessName() {
+    public String getBusinessName()
+    {
         return businessName;
     }
     
     /**
-     * 
      * @param sets the businessName (navnet på forretningskunden)
      */
 
-    public void setBusinessName(String businessName) {
+    public void setBusinessName(String businessName)
+    {
         this.businessName = businessName;
     }
 
     /**
-     *
      * @return the CVR number of the Business customer
      */
 
-    public int getCvrNumber() {
+    public int getCvrNumber()
+    {
         return cvrNumber;
     }
 
     /**
-     *
      * @param sets the cvrNumber of the business customer
      */
-    public void setCvrNumber(int cvrNumber) {
+    public void setCvrNumber(int cvrNumber)
+    {
         this.cvrNumber = cvrNumber;
     }
 
