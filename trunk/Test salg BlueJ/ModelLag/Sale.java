@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- *
- * @author Anita, gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class Sale
 {
 
@@ -18,7 +18,7 @@ public class Sale
     private SalesLineItem newSalesLine;
 
     /**
-     * @param construct class Sale with parameters
+     * Construct class Sale with parameters
      */
     public Sale(Login clerk)
     {
@@ -30,21 +30,21 @@ public class Sale
         this.newSalesLine = new SalesLineItem();
     }
 
-    /**
-     * @param construct class Sale without parameters
-     */
-    public Sale()
-    {
-        this.saleID = generateID();
-        this.clerk = new Login();
-        this.time = new Date();
-        this.subtotal = 0;
-        this.quantitylist = new ArrayList<SalesLineItem>();
-        this.newSalesLine = new SalesLineItem();
-    }
+//    /**
+//     * Construct class Sale without parameters
+//     */
+//    public Sale()
+//    {
+//        this.saleID = generateID();
+//        this.clerk = new Login();
+//        this.time = new Date();
+//        this.subtotal = 0;
+//        this.quantitylist = new ArrayList<SalesLineItem>();
+//        this.newSalesLine = new SalesLineItem();
+//    }
 
     /**
-     * @param construct class Sale with parameters
+     * Construct class Sale with parameters
      */
     public Sale(Login clerk, Date time) //Tilføjet af NN
     {
@@ -57,16 +57,16 @@ public class Sale
     }
 
     /**
-     * @param construct class Sale with parameters
+     * Construct class Sale with parameters
      */
-    public Sale(int quantity, int barCode, String serial)
+    public Sale()
     {
-        this.saleID = generateID();
-        this.clerk = new Login();
-        this.time = new Date();
+        this.saleID = 0;
+        this.clerk = null;
+        this.time = null;
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
-        this.newSalesLine = newSalesLine(quantity, barCode, serial);
+        this.newSalesLine = null;
     }
 
     /**
@@ -157,6 +157,24 @@ public class Sale
         this.quantitylist = quantitylist;
     }
 
+    public ArrayList<SalesLineItem> startSale(int quantity, int barCode, String serial)
+    {
+        if(getQuantitylist().size() == 0)
+         {
+            saleID = generateID();
+            clerk = new Login();
+            time = new Date();
+            subtotal = 0;
+            quantitylist = new ArrayList<SalesLineItem>();
+            newSalesLine = newSalesLine(quantity, barCode, serial);
+         }//end if
+         else
+         {
+            newSalesLine = newSalesLine(quantity, barCode, serial);
+         }//end else
+        return quantitylist;
+    }
+
     /**
      * @param newID generate a new ID for this Sale
      */
@@ -224,5 +242,14 @@ public class Sale
     {
 
     }
+    
+    /**
+     * Get size of quantityList
+     */
+    public int antalSalesLine()
+    {
+        return quantitylist.size();
+    }
+
 }
 
