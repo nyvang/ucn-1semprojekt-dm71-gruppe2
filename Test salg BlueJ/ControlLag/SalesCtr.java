@@ -43,7 +43,7 @@ public class SalesCtr
 
     public void startNewSale(int quantity, int barCode, String serial)
     {
-        if(salesObject.equals(null))
+        if(salesObject ==null)
         {
             salesObject = new Sale();
             salesObject.startSale(quantity, barCode, serial);

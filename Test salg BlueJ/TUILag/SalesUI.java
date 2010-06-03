@@ -73,7 +73,11 @@ public void salesMenu()
         System.out.println("Enter Barcode : ");
         int barCode = keyboard.nextInt();
         System.out.println("Enter serialnumber : ");
-        String serialNumber = keyboard.nextLine();
+        String serialNumber = keyboard.next();
+            if(serialNumber.equals(""))
+                {
+                    serialNumber = null;
+                }
         salesCtr.startNewSale(newQuantity, barCode, serialNumber); // skal være startNewSale
         System.out.println("Number of goods : " + salesCtr.getAmount());
         System.out.println("Subtotal : " + salesCtr.getSubtotal());
