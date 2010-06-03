@@ -55,7 +55,7 @@ public void salesMenu()
            // creates an object keyboard to read data from the keyboard
             Scanner keyboard = new Scanner(System.in);
             System.out.println("\f *** Sales Menu ***");
-            System.out.println(" (2) Enter quantity, barcode and serialnumber");
+            System.out.println(" (1) Enter quantity, barcode and serialnumber");
             System.out.println(" (2) End sale and choose payment method");
             System.out.println(" (3) Return");
             System.out.print("\n Make your choise: ");

@@ -246,13 +246,16 @@ public class ProductDescription
     public String findItemSerial(String serialNum)
     {
         String serial = null;
-        for (Item serialNums : serials)
+        if(serialNum != null)
         {
-            if(serialNums.getSerialNumber().equals(serialNum))
+            for (Item serialNums : serials)
             {
-                serial = serialNum;
-            }//end if
-        }//end for
+                if(serialNums.getSerialNumber().equals(serialNum))
+                {
+                    serial = serialNum;
+                }//end if
+            }//end for
+        }//end if
         return serial;
     }
 
