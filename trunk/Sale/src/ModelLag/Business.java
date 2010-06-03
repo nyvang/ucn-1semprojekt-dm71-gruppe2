@@ -26,7 +26,7 @@ public class Business extends Customer
     }
 
     /**
-     * @return the businessName (navnet på forretningskunden)
+     * @return the businessName 
      */
 
     public String getBusinessName()
@@ -35,7 +35,7 @@ public class Business extends Customer
     }
     
     /**
-     * @param sets the businessName (navnet på forretningskunden)
+     * @param sets the businessName 
      */
 
     public void setBusinessName(String businessName)

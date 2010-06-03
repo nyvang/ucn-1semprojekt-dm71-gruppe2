@@ -63,16 +63,19 @@ public class Supplier extends Person
         return iD;
     }
 
-    /**
-     * @param iD the iD to set
-     */
+//    /**
+//     * @param iD the iD to set
+//     */
 //    public void setiD()
 //    {
 //        this.iD = generateID();
 //    }
 
     /**
-     * @param newID generate a new ID for this Supplier
+     * @param newID 
+     * generates a new ID for this Supplier, the loop will
+     * generate the next unused id for the Supplier
+     *
      */
     public int generateID()
     {

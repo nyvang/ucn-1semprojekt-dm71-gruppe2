@@ -13,7 +13,7 @@ public class SupplierContainer
     private static SupplierContainer instance;
 
     /**
-     * Construct class Supplier with parameters
+     * Construct class Supplier 
      */
     public SupplierContainer()
     {
@@ -21,7 +21,7 @@ public class SupplierContainer
     }
 
     /**
-     * Instance create singleton
+     * Instance - ensures singleton
      */
     public static SupplierContainer getInstance()
     {
@@ -74,28 +74,19 @@ public class SupplierContainer
     }
 
     /**
-     *main to test
+     *  main method to test the Supplier- and SupplierContainer class
      */
-//     public static void main(String[] args)
-//     {
-//        SupplierContainer supContainer = SupplierContainer.getInstance();
-//        //create customer
-//        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
-//        supContainer.addSupplier(supObj1);
-//        String obj2 = supObj1.getInfo();
-//        System.out.println("Customer: " + obj2);
-//        //delete customer
-//        supContainer.removeSupplier(1);
-
-
-//        //prints for test
-//        System.out.println(cusObj1.getName());
-//        System.out.println(cusObj1.getTotalBalance());
-//        System.out.println(cusObj1.getTotalDisp());
-//        accontObj.withdraw(4500);
-//        System.out.println(cusObj1.getTotalBalance());
-//        System.out.println(cusObj1.getTotalDisp());
-//    }
+     public static void main(String[] args)
+     {
+        SupplierContainer supContainer = SupplierContainer.getInstance();
+        //create customer
+        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
+        supContainer.addSupplier(supObj1);
+        String obj2 = supObj1.getInfo();
+        System.out.println("Customer: " + obj2);
+        //delete customer
+        supContainer.removeSupplier(1);
+    }
 
    
 

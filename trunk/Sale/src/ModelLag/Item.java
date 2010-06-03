@@ -5,6 +5,10 @@ package ModelLag;
  * @date May 2010
  */
 
+/*
+ * The item class is only used, if an item with a serial number is entered in the UI
+ */
+
 public class Item
 {
 

@@ -5,6 +5,10 @@ package ModelLag;
  * @date May 2010
  */
 
+/*
+ * Subclass of the Person class
+ */
+
 public class Employee extends Person
 {
 
@@ -13,7 +17,6 @@ public class Employee extends Person
     private String password;
 
     /**
-     *
      * @param name - name of the employee
      * @param address - address of the employee
      * @param phone - phone of the employee
