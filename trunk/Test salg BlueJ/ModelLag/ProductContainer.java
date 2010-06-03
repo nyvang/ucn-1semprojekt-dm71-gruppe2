@@ -90,7 +90,7 @@ public class ProductContainer
         while(index < stockList.size() && !found)
         {
             productD = stockList.get(index);
-            if(productD.getBarCode() ==  barCode && productD.findItemSerial(serial).equals(serial))
+            if(productD.getBarCode() ==  barCode) // && productD.findItemSerial(serial).equals(serial))
             {
                 found = true;
             }//end if
