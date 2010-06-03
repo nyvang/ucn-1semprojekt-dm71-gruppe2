@@ -34,7 +34,7 @@ public class ProductContainer
     }
 
     /**
-     * Instance create singleton
+     * Instance - ensures singleton
      */
     public static ProductContainer getInstance()
     {
@@ -80,6 +80,7 @@ public class ProductContainer
 
     /**
      *@param find ProductDescription
+     * @return productdescription of productD
      */
     public ProductDescription findProductDescription(int barCode, String serial)
     {

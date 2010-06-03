@@ -58,9 +58,9 @@ public class EmployeeContainer
     }
 
     /**
-     *
+     * finds the emlpoyee in the employeeList with "id" using a while loop
      * @param id
-     * @return null, but finds the emlpoyee in the employeeList with "id" using a while loop
+     * @return null
      */
     public Employee findEmployee(int id)
     {
@@ -83,9 +83,9 @@ public class EmployeeContainer
     }
 
     /**
-     *
+     * removes the employee with "id" from the employeeList
      * @param id
-     * @return null, but removes the employee with "id" from the employeeList
+     * @return null
      */
     public Employee removeEmployee(int id)
     {

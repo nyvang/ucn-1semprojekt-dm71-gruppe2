@@ -57,7 +57,7 @@ public class Sale
     }
 
     /**
-     * Construct class Sale with parameters
+     * Construct class Sale without parameters
      */
     public Sale()
     {
@@ -157,6 +157,14 @@ public class Sale
         this.quantitylist = quantitylist;
     }
 
+    /*
+     * if the salescontainer "quantitylist" is empty, a new sale is created. If the list isnt
+     * empty, a new salesLineItem is created
+     * @patam quantity
+     * @param barCode
+     * @param serial
+     * @return quantitylist
+     */
     public ArrayList<SalesLineItem> startSale(int quantity, int barCode, String serial)
     {
         if(getQuantitylist().size() == 0)
@@ -177,21 +185,22 @@ public class Sale
 
     /**
      * @param newID generate a new ID for this Sale
+     * @return newID
      */
     public int generateID()
     {
         int index = 0;
         int newID = 0;
         if(SalesContainer.getInstance().getSalesList().size() != 0)
-        {
-        index = SalesContainer.getInstance().getSalesList().size() - 1;
-        Sale s = SalesContainer.getInstance().getSalesList().get(index);
-        newID = s.getSaleID() + 1;
-        }//end if
+            {
+            index = SalesContainer.getInstance().getSalesList().size() - 1;
+            Sale s = SalesContainer.getInstance().getSalesList().get(index);
+            newID = s.getSaleID() + 1;
+            }//end if
         else
-        {
+            {
             newID = 1;
-        }//end else
+            }//end else
         return newID;
     }
 

@@ -13,7 +13,7 @@ public class CustomerContainer
     private static CustomerContainer instance;
 
     /**
-     * Constructing CustomContainer
+     * Constructing the CustomerContainer
      */
     public CustomerContainer()
     {
@@ -61,9 +61,9 @@ public class CustomerContainer
     }
 
     /**
-     *
+     * removes customer with this.id from the customerList using a while loop
      * @param id 
-     * @return null, but removes customer with this.id from the customerList using a while loop
+     * @return null
      */
     public Customer removeCustomer(int id)
     {

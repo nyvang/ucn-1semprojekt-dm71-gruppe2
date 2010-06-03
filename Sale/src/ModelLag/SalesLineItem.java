@@ -125,6 +125,7 @@ public class SalesLineItem
     /**
      * @param barCode the barCode to find rigth ProductDesription
      * @param serial the serial to find in ProductDesription
+     * @return product
      */
     public ProductDescription findProductDescription(int barCode, String serial)
     {
@@ -136,6 +137,7 @@ public class SalesLineItem
 
     /**
      * @param amount - calculate the subtotal using the amount to get new subTotal
+     * @return subTotal
      */
     public double calculateSubtotal(int amount)
     {

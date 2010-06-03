@@ -15,6 +15,9 @@ public class SalesCtr
     private ProductDescription createTestProduct2;
     private ProductContainer productList;
 
+    /*
+     * Constructer of the Sales Controler
+     */
     public SalesCtr()
     {
         salesList = SalesContainer.getInstance();
@@ -25,22 +28,16 @@ public class SalesCtr
         productList = ProductContainer.getInstance();
         productList.addProductDescription(createTestProduct1);
         productList.addProductDescription(createTestProduct2);
-
     }
 
-//    public void createProduct(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount)
-//    {
-//        createTestProduct.ProductDescription("Brækjern", 45.42, 20.14, 5, 9, 123, null, 3, 4, 1);
-//    }
-    
-////    public void startNewSale(int saleID, Login clerk, Date time,
-////                        double subtotal, Sale quantityList, int quantity, int barCode, String serial)
-////    {
-////        salesObject = new Sale(quantity, barCode, serial);
-////        newSalesLine(quantity, barCode, serial);
-////        salesList.addSale(salesObject);
-////    }
-
+    /*
+     * Uses the object of the sales class to start a new sale.
+     * If the sales object equals null (has no value) a new sale is created. If the sales
+     * object isnt null (has a value) a new sale is added (sales line)
+     * @param quantity
+     * @param barcode
+     * @param serial
+     */
     public void startNewSale(int quantity, int barCode, String serial)
     {
         if(salesObject.equals(null))
@@ -55,6 +52,12 @@ public class SalesCtr
 
     }
 
+    /*
+     * Adds a new sales line item to the object of the sales class
+     * @param quantity
+     * @param barcode
+     * @param serial
+     */
     public void newSalesLine(int quantity, int barCode, String serial)
     {
         salesObject.newSalesLine(quantity, barCode, serial);
@@ -68,8 +71,8 @@ public class SalesCtr
             return salesObject.getQuantitylist().size();
         }
     /**
-     *
-     * comment
+     * Creates a new object of the Sales class and calls the sale.getSubtotal() method
+     * @return subtotal
      */
     public double getSubtotal()
      {
@@ -78,8 +81,8 @@ public class SalesCtr
      }
 
      /**
-     *
-     * @param Changes the login
+     * Creates a new object of the LoginCtr class and calls the doLogin() method
+     * @param id the id of the new user
      */
      public void alterLogin(int id)
         {
@@ -88,8 +91,8 @@ public class SalesCtr
         }
 
      /**
-     *
-     * @param Closes the sale, and chooses paymentmethod
+     * Chose the payment method
+     * @param choice the choice from the SalesUI (user input)
      */
      public void endSale(int choice)
         {

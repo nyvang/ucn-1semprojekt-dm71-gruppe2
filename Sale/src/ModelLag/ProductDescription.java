@@ -242,6 +242,7 @@ public class ProductDescription
 
     /**
      * @param serial find out if the serial is correct
+     * @return serial
      */
     public String findItemSerial(String serialNum)
     {

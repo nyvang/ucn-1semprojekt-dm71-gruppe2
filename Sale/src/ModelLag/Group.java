@@ -13,6 +13,12 @@ public class Group
     double maxCredit;
     int id;
 
+    /*
+     * @param discount the discount of the specific customer
+     * @param daysOfCredit the days of credit on the specific customer
+     * @param maxCredit the max amount of days the customer has credit
+     */
+
     public Group(double discount, int daysOfCredit, double maxCredit)
     {
         this.discount = discount;
@@ -22,8 +28,8 @@ public class Group
     }
 
     /**
-     *
-     * @return newID (Generates and returns newID)
+     * Generates newID, the loop ensures that the next unused id is chosen
+     * @return newID 
      */
     public int generateID()
     {
