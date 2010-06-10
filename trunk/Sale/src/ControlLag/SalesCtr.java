@@ -14,6 +14,9 @@ public class SalesCtr
     private ProductDescription createTestProduct1;
     private ProductDescription createTestProduct2;
     private ProductContainer productList;
+    private CustomerContainer customerList;
+    private Private createPrivateTestCustomer;
+    private Business createBusinessTestCustomer;
 
     /*
      * Constructer of the Sales Controler
@@ -28,6 +31,11 @@ public class SalesCtr
         productList = ProductContainer.getInstance();
         productList.addProductDescription(createTestProduct1);
         productList.addProductDescription(createTestProduct2);
+        customerList = CustomerContainer.getInstance();
+        createPrivateTestCustomer = new Private("Ib","Bo",12345678, 12345678, 1234);
+        createBusinessTestCustomer = new Business("Kaj","Mole", 87654321, 87654321, 8907, "Kaj's Corner");
+        customerList.addCustomer(createPrivateTestCustomer);
+        customerList.addCustomer(createBusinessTestCustomer);
     }
 
     /*
@@ -38,7 +46,7 @@ public class SalesCtr
      * @param barcode
      * @param serial
      */
-    public void startNewSale(int quantity, int barCode, String serial)
+    public Sale startNewSale(int quantity, int barCode, String serial)
     {
         if(salesObject.equals(null))
         {
@@ -49,7 +57,7 @@ public class SalesCtr
         {
             salesObject.startSale(quantity, barCode, serial);
         }//end else
-
+        return salesObject;
     }
 
     /*
@@ -58,9 +66,10 @@ public class SalesCtr
      * @param barcode
      * @param serial
      */
-    public void newSalesLine(int quantity, int barCode, String serial)
+    public Sale newSalesLine(int quantity, int barCode, String serial)
     {
         salesObject.newSalesLine(quantity, barCode, serial);
+        return salesObject;
     }
 
     /**
@@ -84,39 +93,47 @@ public class SalesCtr
      * Creates a new object of the LoginCtr class and calls the doLogin() method
      * @param id the id of the new user
      */
-     public void alterLogin(int id)
+     public Employee alterLogin(int id)
         {
+         Employee login = new Employee();
          LoginCtr newLogin = new LoginCtr();
-         newLogin.doLogin(id);
+         login = newLogin.doLogin(id);
+         return login;
         }
 
      /**
      * Chose the payment method
      * @param choice the choice from the SalesUI (user input)
      */
-     public void endSale(int choice)
+     public Sale endSale(int choice)
         {
+         Sale endSale = new Sale();
          if(choice < 1 || choice > 3)
-         {}//metoden fra SalesUI
+         {
+             endSale = salesObject;
+         }//metoden fra SalesUI
          if(choice == 1)
             {
                 salesObject.payForSaleCreditCard();
+                endSale = salesObject;
                 salesList.addSale(salesObject);
                 salesObject = null;
             }// end if
          if(choice == 2)
             {
                 salesObject.payForSaleCash();
+                endSale = salesObject;
                 salesList.addSale(salesObject);
                 salesObject = null;
             }// end if
          if(choice == 3)
             {
                 salesObject.payForSaleAccount();
+                endSale = salesObject;
                 salesList.addSale(salesObject);
                 salesObject = null;
             }// end if
-
+         return endSale;
      }
 
 
