@@ -80,24 +80,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton9" alignment="0" pref="135" max="32767" attributes="1"/>
-                          <Component id="jButton8" alignment="0" pref="135" max="32767" attributes="1"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jButton13" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jButton7" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton6" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton5" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton4" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton3" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton1" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jButton2" alignment="0" pref="135" max="32767" attributes="1"/>
-                          </Group>
-                          <Component id="jButton10" alignment="0" pref="135" max="32767" attributes="1"/>
                           <Component id="jButton11" alignment="1" pref="135" max="32767" attributes="1"/>
                           <Component id="jButton12" alignment="1" pref="135" max="32767" attributes="1"/>
+                          <Component id="jButton9" alignment="0" pref="135" max="32767" attributes="1"/>
+                          <Component id="jButton8" alignment="0" pref="135" max="32767" attributes="1"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jButton7" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton6" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton5" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton4" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton3" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton1" alignment="0" pref="135" max="32767" attributes="1"/>
+                              <Component id="jButton2" alignment="0" min="-2" pref="135" max="-2" attributes="1"/>
+                          </Group>
+                          <Component id="jButton10" alignment="0" pref="135" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -107,8 +107,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton13" min="-2" pref="27" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton13" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton2" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="31" max="-2" attributes="0"/>
@@ -121,18 +121,18 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton7" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jButton7" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton8" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jButton8" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton9" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="jButton9" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton10" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="jButton10" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Component id="jButton11" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="jButton11" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton12" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="236" max="32767" attributes="0"/>
+                      <Component id="jButton12" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace pref="264" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -148,7 +148,16 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="FORSIDE"/>
                 <Property name="actionCommand" type="java.lang.String" value="forside"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder>
+                      <Color PropertyName="highlightOuter" blue="cc" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="highlightInner" blue="99" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="shadowOuter" blue="cc" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="shadowInner" blue="99" green="ff" red="ff" type="rgb"/>
+                    </BevelBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -164,7 +173,16 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGIN"/>
                 <Property name="actionCommand" type="java.lang.String" value="login"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder>
+                      <Color PropertyName="highlightOuter" blue="cc" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="highlightInner" blue="99" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="shadowOuter" blue="cc" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="shadowInner" blue="99" green="ff" red="ff" type="rgb"/>
+                    </BevelBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -180,7 +198,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="SALG"/>
                 <Property name="actionCommand" type="java.lang.String" value="salg"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
@@ -196,7 +216,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="UDLEJNING"/>
                 <Property name="actionCommand" type="java.lang.String" value="udlejning"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
@@ -212,7 +234,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="KUNDER"/>
                 <Property name="actionCommand" type="java.lang.String" value="kunder"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
@@ -228,7 +252,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="VARELAGER"/>
                 <Property name="actionCommand" type="java.lang.String" value="varelager"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
@@ -244,7 +270,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LEVERAND&#xd8;R"/>
                 <Property name="actionCommand" type="java.lang.String" value="leverand&#xf8;r"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
@@ -260,7 +288,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="PERSONALE"/>
                 <Property name="actionCommand" type="java.lang.String" value="personale"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
@@ -276,7 +306,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="STATISTIK"/>
                 <Property name="actionCommand" type="java.lang.String" value="statistik"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[97, 27]"/>
                 </Property>
@@ -301,7 +333,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="E-HANDEL"/>
                 <Property name="actionCommand" type="java.lang.String" value="ehandel"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[97, 27]"/>
                 </Property>
@@ -326,7 +360,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LINKS"/>
                 <Property name="actionCommand" type="java.lang.String" value="links"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[97, 27]"/>
                 </Property>
@@ -351,7 +387,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOG OUT"/>
                 <Property name="actionCommand" type="java.lang.String" value="logout"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="jButton2" name="border" type="property"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
@@ -359,10 +397,21 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton13">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Anita\Desktop\1.sem. projekt\Sale\VBSystem.jpg"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="jButton13"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="66" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="VBSystem"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                    <EmptyBorder/>
+                  </Border>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
@@ -372,6 +421,9 @@
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="5">
@@ -384,15 +436,44 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="565" max="32767" attributes="0"/>
+                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="716" max="32767" attributes="0"/>
+                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="VBSystem">
+                      <Font PropertyName="font" name="Verdana" size="11" style="0"/>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="509" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="730" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+            </Container>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
