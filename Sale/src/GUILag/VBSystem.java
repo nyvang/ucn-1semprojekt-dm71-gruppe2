@@ -24,18 +24,18 @@ public class VBSystem extends javax.swing.JFrame {
     {
         initComponents();
     //    jButton13.setEnabled(false);
-        jButton1.setEnabled(false);
-        jButton2.setEnabled(true);
-        jButton3.setEnabled(false);
-        jButton4.setEnabled(false);
-        jButton5.setEnabled(false);
-        jButton6.setEnabled(false);
-        jButton7.setEnabled(false);
-        jButton8.setEnabled(false);
-        jButton9.setEnabled(false);
-        jButton10.setEnabled(false);
-        jButton11.setEnabled(false);
-        jButton12.setEnabled(false);
+//        jButton1.setEnabled(false);
+//        jButton2.setEnabled(true);
+//        jButton3.setEnabled(false);
+//        jButton4.setEnabled(false);
+//        jButton5.setEnabled(false);
+//        jButton6.setEnabled(false);
+//        jButton7.setEnabled(false);
+//        jButton8.setEnabled(false);
+//        jButton9.setEnabled(false);
+//        jButton10.setEnabled(false);
+//        jButton11.setEnabled(false);
+//        jButton12.setEnabled(false);
     }
 
     /** This method is called from within the constructor to
@@ -403,7 +403,7 @@ public class VBSystem extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     Login l = new Login();
     insertPanel(l);
-    setButtonLoggedIn();
+//    setButtonLoggedIn();
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -428,21 +428,21 @@ public class VBSystem extends javax.swing.JFrame {
         );
     }
 
-    private void setButtonLoggedIn()
-    {
-        jButton1.setEnabled(true);
-        jButton2.setEnabled(false);
-        jButton3.setEnabled(true);
-        jButton4.setEnabled(true);
-        jButton5.setEnabled(true);
-        jButton6.setEnabled(true);
-        jButton7.setEnabled(true);
-        jButton8.setEnabled(true);
-        jButton9.setEnabled(true);
-        jButton10.setEnabled(true);
-        jButton11.setEnabled(true);
-        jButton12.setEnabled(true);
-    }
+//    private void setButtonLoggedIn()
+//    {
+//        jButton1.setEnabled(true);
+//        jButton2.setEnabled(false);
+//        jButton3.setEnabled(true);
+//        jButton4.setEnabled(true);
+//        jButton5.setEnabled(true);
+//        jButton6.setEnabled(true);
+//        jButton7.setEnabled(true);
+//        jButton8.setEnabled(true);
+//        jButton9.setEnabled(true);
+//        jButton10.setEnabled(true);
+//        jButton11.setEnabled(true);
+//        jButton12.setEnabled(true);
+//    }
     /**
     * @param args the command line arguments
     */
