@@ -24,18 +24,7 @@ public class VBSystem extends javax.swing.JFrame {
     {
         initComponents();
     //    jButton13.setEnabled(false);
-//        jButton1.setEnabled(false);
-//        jButton2.setEnabled(true);
-//        jButton3.setEnabled(false);
-//        jButton4.setEnabled(false);
-//        jButton5.setEnabled(false);
-//        jButton6.setEnabled(false);
-//        jButton7.setEnabled(false);
-//        jButton8.setEnabled(false);
-//        jButton9.setEnabled(false);
-//        jButton10.setEnabled(false);
-//        jButton11.setEnabled(false);
-//        jButton12.setEnabled(false);
+        setButtonsLoggedOut();
     }
 
     /** This method is called from within the constructor to
@@ -70,7 +59,7 @@ public class VBSystem extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 204));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1201, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel2.setBackground(getBackground());
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 5, true));
@@ -282,7 +271,7 @@ public class VBSystem extends javax.swing.JFrame {
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(530, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
@@ -290,29 +279,29 @@ public class VBSystem extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VBSystem", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 11))); // NOI18N
-        jPanel4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jPanel4.setFont(new java.awt.Font("Verdana", 0, 11));
         jPanel4.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1012, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 996, Short.MAX_VALUE)
+            .addGap(0, 578, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -334,61 +323,71 @@ public class VBSystem extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1034, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+        // Used for logo VBSystem
 }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-    Logout l = new Logout();
-    insertPanel(l);
+    clearPanel();
+    Logout lo = new Logout();
+    insertPanel(lo);
+    setButtonsLoggedOut();
 }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-    Links l = new Links();
-    insertPanel(l);
+    clearPanel();
+    Links li = new Links();
+    insertPanel(li);
 }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    clearPanel();
     Ehandel e = new Ehandel();
     insertPanel(e);
 }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-    Statistik s = new Statistik();
-    insertPanel(s);
+    clearPanel();
+    Statistik st = new Statistik();
+    insertPanel(st);
 }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    clearPanel();
     Personale p = new Personale();
     insertPanel(p);
 }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-    Leverandoer l = new Leverandoer();
-    insertPanel(l);
+    clearPanel();
+    Leverandoer le = new Leverandoer();
+    insertPanel(le);
 }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    clearPanel();
     Varelager v = new Varelager();
     insertPanel(v);
 }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    clearPanel();
     Kunder k = new Kunder();
     insertPanel(k);
 }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    clearPanel();
     Udlejning u = new Udlejning();
     insertPanel(u);
 }//GEN-LAST:event_jButton4ActionPerformed
@@ -396,17 +395,20 @@ public class VBSystem extends javax.swing.JFrame {
  * Catches mouse-click, creates object of Salg, inserts Panel from Salg
  */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    Salg s = new Salg();
-    insertPanel(s);
+    clearPanel();
+    Salg sa = new Salg();
+    insertPanel(sa);
 }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    Login l = new Login();
-    insertPanel(l);
-//    setButtonLoggedIn();
+    clearPanel();
+    Login li = new Login();
+    insertPanel(li);
+    setButtonsLoggedIn();
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    clearPanel();
     Forside f = new Forside();
     insertPanel(f);
 }//GEN-LAST:event_jButton1ActionPerformed
@@ -427,22 +429,51 @@ public class VBSystem extends javax.swing.JFrame {
             .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
     }
+ private void clearPanel()
+ {
+//     javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+//        jPanel4.setLayout(jPanel4Layout);
+//        jPanel4Layout.setHorizontalGroup(
+//            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+//            .addComponent(null, javax.swing.GroupLayout.DEFAULT_SIZE, 1012, Short.MAX_VALUE)
+//        );
+//        jPanel4Layout.setVerticalGroup(
+//            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+//            .addComponent(null, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
+//        );
+ }
 
-//    private void setButtonLoggedIn()
-//    {
-//        jButton1.setEnabled(true);
-//        jButton2.setEnabled(false);
-//        jButton3.setEnabled(true);
-//        jButton4.setEnabled(true);
-//        jButton5.setEnabled(true);
-//        jButton6.setEnabled(true);
-//        jButton7.setEnabled(true);
-//        jButton8.setEnabled(true);
-//        jButton9.setEnabled(true);
-//        jButton10.setEnabled(true);
-//        jButton11.setEnabled(true);
-//        jButton12.setEnabled(true);
-//    }
+ private void setButtonsLoggedIn()
+    {
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(true);
+        jButton4.setEnabled(true);
+        jButton5.setEnabled(true);
+        jButton6.setEnabled(true);
+        jButton7.setEnabled(true);
+        jButton8.setEnabled(true);
+        jButton9.setEnabled(true);
+        jButton10.setEnabled(true);
+        jButton11.setEnabled(true);
+        jButton12.setEnabled(true);
+    }
+
+    private void setButtonsLoggedOut()
+    {
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(false);
+        jButton4.setEnabled(false);
+        jButton5.setEnabled(false);
+        jButton6.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton9.setEnabled(false);
+        jButton10.setEnabled(false);
+        jButton11.setEnabled(false);
+        jButton12.setEnabled(false);
+    }
     /**
     * @param args the command line arguments
     */
