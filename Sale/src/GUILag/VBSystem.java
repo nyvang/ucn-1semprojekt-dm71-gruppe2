@@ -24,6 +24,18 @@ public class VBSystem extends javax.swing.JFrame {
     {
         initComponents();
     //    jButton13.setEnabled(false);
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(false);
+        jButton4.setEnabled(false);
+        jButton5.setEnabled(false);
+        jButton6.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton9.setEnabled(false);
+        jButton10.setEnabled(false);
+        jButton11.setEnabled(false);
+        jButton12.setEnabled(false);
     }
 
     /** This method is called from within the constructor to
@@ -337,39 +349,48 @@ public class VBSystem extends javax.swing.JFrame {
 }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+    Logout l = new Logout();
+    insertPanel(l);
 }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+    Links l = new Links();
+    insertPanel(l);
 }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+    Ehandel e = new Ehandel();
+    insertPanel(e);
 }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+    Statistik s = new Statistik();
+    insertPanel(s);
 }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+    Personale p = new Personale();
+    insertPanel(p);
 }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+    Leverandoer l = new Leverandoer();
+    insertPanel(l);
 }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+    Varelager v = new Varelager();
+    insertPanel(v);
 }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+    Kunder k = new Kunder();
+    insertPanel(k);
 }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+    Udlejning u = new Udlejning();
+    insertPanel(u);
 }//GEN-LAST:event_jButton4ActionPerformed
 /**
  * Catches mouse-click, creates object of Salg, inserts Panel from Salg
@@ -382,6 +403,7 @@ public class VBSystem extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     Login l = new Login();
     insertPanel(l);
+    setButtonLoggedIn();
 }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -405,6 +427,22 @@ public class VBSystem extends javax.swing.JFrame {
             .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
     }
+
+    private void setButtonLoggedIn()
+    {
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(true);
+        jButton4.setEnabled(true);
+        jButton5.setEnabled(true);
+        jButton6.setEnabled(true);
+        jButton7.setEnabled(true);
+        jButton8.setEnabled(true);
+        jButton9.setEnabled(true);
+        jButton10.setEnabled(true);
+        jButton11.setEnabled(true);
+        jButton12.setEnabled(true);
+    }
     /**
     * @param args the command line arguments
     */
@@ -415,6 +453,7 @@ public class VBSystem extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
