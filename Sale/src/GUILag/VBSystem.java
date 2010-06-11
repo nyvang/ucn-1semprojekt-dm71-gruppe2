@@ -429,18 +429,13 @@ public class VBSystem extends javax.swing.JFrame {
             .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
     }
+ 
+ /**
+  * Clear panel for all components
+  */
  private void clearPanel()
  {
-//     javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-//        jPanel4.setLayout(jPanel4Layout);
-//        jPanel4Layout.setHorizontalGroup(
-//            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-//            .addComponent(null, javax.swing.GroupLayout.DEFAULT_SIZE, 1012, Short.MAX_VALUE)
-//        );
-//        jPanel4Layout.setVerticalGroup(
-//            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-//            .addComponent(null, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
-//        );
+     jPanel4.removeAll();
  }
 
  private void setButtonsLoggedIn()
