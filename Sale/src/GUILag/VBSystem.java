@@ -11,6 +11,8 @@
 
 package GUILag;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Anita
@@ -18,7 +20,8 @@ package GUILag;
 public class VBSystem extends javax.swing.JFrame {
 
     /** Creates new form VBSystem */
-    public VBSystem() {
+    public VBSystem()
+    {
         initComponents();
     //    jButton13.setEnabled(false);
     }
@@ -61,7 +64,7 @@ public class VBSystem extends javax.swing.JFrame {
         jPanel2.setFont(new java.awt.Font("Verdana", 0, 11));
 
         jButton1.setBackground(new java.awt.Color(255, 153, 51));
-        jButton1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton1.setText("FORSIDE");
         jButton1.setActionCommand("forside");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -72,7 +75,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton2.setText("LOGIN");
         jButton2.setActionCommand("login");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -83,7 +86,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(jButton2.getBackground());
-        jButton3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton3.setText("SALG");
         jButton3.setActionCommand("salg");
         jButton3.setBorder(jButton2.getBorder());
@@ -94,7 +97,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(jButton2.getBackground());
-        jButton4.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton4.setText("UDLEJNING");
         jButton4.setActionCommand("udlejning");
         jButton4.setBorder(jButton2.getBorder());
@@ -105,7 +108,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton5.setBackground(jButton2.getBackground());
-        jButton5.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton5.setText("KUNDER");
         jButton5.setActionCommand("kunder");
         jButton5.setBorder(jButton2.getBorder());
@@ -116,7 +119,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(jButton2.getBackground());
-        jButton6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton6.setText("VARELAGER");
         jButton6.setActionCommand("varelager");
         jButton6.setBorder(jButton2.getBorder());
@@ -149,7 +152,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton9.setBackground(jButton2.getBackground());
-        jButton9.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton9.setText("STATISTIK");
         jButton9.setActionCommand("statistik");
         jButton9.setBorder(jButton2.getBorder());
@@ -202,7 +205,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton13.setBackground(new java.awt.Color(255, 255, 204));
-        jButton13.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        jButton13.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18));
         jButton13.setForeground(new java.awt.Color(255, 102, 0));
         jButton13.setText("VBSystem");
         jButton13.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -264,7 +267,7 @@ public class VBSystem extends javax.swing.JFrame {
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(530, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
@@ -272,27 +275,29 @@ public class VBSystem extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VBSystem", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 11))); // NOI18N
+        jPanel4.setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel4.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGap(0, 1012, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
+            .addGap(0, 996, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -363,9 +368,12 @@ public class VBSystem extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
 }//GEN-LAST:event_jButton4ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Salg, inserts Panel from Salg
+ */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+    Salg s = new Salg();
+    insertPanel(s);
 }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -375,7 +383,28 @@ public class VBSystem extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 }//GEN-LAST:event_jButton1ActionPerformed
-
+/**
+ *
+ * @param panel inserts new JPanel panel in jPanel4
+ */
+ private void insertPanel(JPanel panel)
+    {
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
+        );
+    }
     /**
     * @param args the command line arguments
     */
