@@ -20,6 +20,15 @@ public class Login
     }
 
     /**
+     * Construct class Person with parameters
+     */
+    public Login(String userName, String password)
+    {
+        instance = EmployeeContainer.getInstance();
+        this.nameOfLogin = findEmployee(userName, password);
+
+    }
+    /**
      * Construct class Person without parameters
      */
     public Login()
@@ -55,9 +64,9 @@ public class Login
     /**
      * @param employeeId - find employee by using employeeId
      */
-    public Employee findEmployee(int employeeId)
+    public Employee findEmployee(String userName, String password)
     {
-        Employee employee = instance.findEmployee(employeeId);
+        Employee employee = instance.findEmployee(userName, password);
         return employee;
     }
 
