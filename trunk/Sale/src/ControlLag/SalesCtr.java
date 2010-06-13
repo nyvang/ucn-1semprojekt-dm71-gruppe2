@@ -91,13 +91,14 @@ public class SalesCtr
 
      /**
      * Creates a new object of the LoginCtr class and calls the doLogin() method
-     * @param id the id of the new user
+     * @param userName the username of the new user
+     * @param password the password of the new user
      */
-     public Employee alterLogin(int id)
+     public Employee alterLogin(String userName, String password)
         {
          Employee login = new Employee();
          LoginCtr newLogin = new LoginCtr();
-         login = newLogin.doLogin(id);
+         login = newLogin.doLogin(userName, password);
          return login;
         }
 

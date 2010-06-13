@@ -12,6 +12,9 @@ public class EmployeeContainer
     private ArrayList<Employee> employeeList;
     private static EmployeeContainer instance;
 
+    /**
+     * Constructs EmployeeContainer witout parameters
+     */
     public EmployeeContainer()
     {
         employeeList = new ArrayList<Employee>();
@@ -58,11 +61,12 @@ public class EmployeeContainer
     }
 
     /**
-     * finds the emlpoyee in the employeeList with "id" using a while loop
-     * @param id
-     * @return null
+     * finds the emlpoyee in the employeeList using userName and password by using a while loop
+     * @param userName userName of the employee
+     * @param password password of the employee
+     * @return Employee
      */
-    public Employee findEmployee(int id)
+    public Employee findEmployee(String userName, String password)
     {
         Employee supObjekt = null;
         int index = 0;
@@ -70,16 +74,16 @@ public class EmployeeContainer
         while(index < employeeList.size() && !found)
         {
            supObjekt = employeeList.get(index);
-           if(supObjekt.getAccount() == id)
+           if(supObjekt.getUserName().equals(userName) && supObjekt.getPassword().equals(password))
            {
-               employeeList.get(index);
+               supObjekt = employeeList.get(index);
            }//end if
             else
-            {
-                index++;
-            }//end else
+           {
+               index++;
+           }//end else
         }//end while
-        return null;
+        return supObjekt;
     }
 
     /**
