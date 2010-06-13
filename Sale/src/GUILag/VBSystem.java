@@ -336,38 +336,51 @@ public class VBSystem extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // Used for logo VBSystem
 }//GEN-LAST:event_jButton13ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Logout, inserts Panel from Logout,
+ * deactivates all buttons except loginbutton
+ */
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
     clearPanel();
     Logout lo = new Logout();
     insertPanel(lo);
     setButtonsLoggedOut();
 }//GEN-LAST:event_jButton12ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Links, inserts Panel from Links
+ */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
     clearPanel();
     Links li = new Links();
     insertPanel(li);
 }//GEN-LAST:event_jButton11ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Ehandel, inserts Panel from Ehandel
+ */
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
     clearPanel();
     Ehandel e = new Ehandel();
     insertPanel(e);
 }//GEN-LAST:event_jButton10ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Statistik, inserts Panel from Statistik
+ */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
     clearPanel();
     Statistik st = new Statistik();
     insertPanel(st);
 }//GEN-LAST:event_jButton9ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Personale, inserts Panel from Personale
+ */
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
     clearPanel();
     Personale p = new Personale();
     insertPanel(p);
 }//GEN-LAST:event_jButton8ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Leverandoer, inserts Panel from Leverandoer
+ */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
     clearPanel();
     Leverandoer le = new Leverandoer();
@@ -379,13 +392,17 @@ public class VBSystem extends javax.swing.JFrame {
     Varelager v = new Varelager();
     insertPanel(v);
 }//GEN-LAST:event_jButton6ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Kunder, inserts Panel from Kunder
+ */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
     clearPanel();
     Kunder k = new Kunder();
     insertPanel(k);
 }//GEN-LAST:event_jButton5ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Udlejning, inserts Panel from Udlejning
+ */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     clearPanel();
     Udlejning u = new Udlejning();
@@ -399,14 +416,19 @@ public class VBSystem extends javax.swing.JFrame {
     Salg sa = new Salg();
     insertPanel(sa);
 }//GEN-LAST:event_jButton3ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Login, inserts Panel from Login,
+ * activates all other buttons and deactivates loginbutton
+ */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     clearPanel();
     Login li = new Login();
     insertPanel(li);
     setButtonsLoggedIn();
 }//GEN-LAST:event_jButton2ActionPerformed
-
+/**
+ * Catches mouse-click, creates object of Forside, inserts Panel from Forside
+ */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     clearPanel();
     Forside f = new Forside();
@@ -431,13 +453,15 @@ public class VBSystem extends javax.swing.JFrame {
     }
  
  /**
-  * Clear panel for all components
+  * Clear jPanel4 of all components
   */
  private void clearPanel()
  {
      jPanel4.removeAll();
  }
-
+ /**
+  * Activates all buttons but deactivates loginbutton
+  */
  private void setButtonsLoggedIn()
     {
         jButton1.setEnabled(true);
@@ -453,7 +477,9 @@ public class VBSystem extends javax.swing.JFrame {
         jButton11.setEnabled(true);
         jButton12.setEnabled(true);
     }
-
+ /**
+  * Deactivates all buttons but activates loginbutton
+  */
     private void setButtonsLoggedOut()
     {
         jButton1.setEnabled(false);
