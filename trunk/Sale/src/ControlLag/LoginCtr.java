@@ -12,7 +12,7 @@ public class LoginCtr
     private Employee createTestEmployee2;
     private EmployeeContainer employeeList;
     /*
-     * Constructer of the LoginCtr
+     * Constructer of the LoginCtr and creates test objects
      */
     public LoginCtr()
     {

@@ -68,12 +68,12 @@ public class EmployeeContainer
      */
     public Employee findEmployee(String userName, String password)
     {
-        Employee supObjekt = null;
+        Employee supObjekt = new Employee();
         int index = 0;
         boolean found = false;
         while(index < employeeList.size() && !found)
         {
-           supObjekt = employeeList.get(index);
+           supObjekt = null;
            if(supObjekt.getUserName().equals(userName) && supObjekt.getPassword().equals(password))
            {
                supObjekt = employeeList.get(index);

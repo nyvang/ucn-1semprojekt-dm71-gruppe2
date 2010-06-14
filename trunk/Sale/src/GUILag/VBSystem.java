@@ -424,7 +424,7 @@ public class VBSystem extends javax.swing.JFrame {
     clearPanel();
     Login li = new Login();
     insertPanel(li);
-    setButtonsLoggedIn();
+    
 }//GEN-LAST:event_jButton2ActionPerformed
 /**
  * Catches mouse-click, creates object of Forside, inserts Panel from Forside
@@ -495,6 +495,17 @@ public class VBSystem extends javax.swing.JFrame {
         jButton11.setEnabled(false);
         jButton12.setEnabled(false);
     }
+
+    /**
+     * perform after login checked out OK
+     */
+    public void loginCheckedOut()
+    {
+        clearPanel();
+        Forside f = new Forside();
+        insertPanel(f);
+    }
+
     /**
     * @param args the command line arguments
     */
