@@ -150,4 +150,33 @@ public class ProductContainer
         this.stockList = stockList;
     }
 
+    public ProductDescription updateProduct(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount)
+    {
+        int index = 0;
+        boolean found = false;
+        while(index < stockList.size() && !found)
+        {
+            if(stockList.get(index).getBarCode() ==  barCode)
+            {
+                stockList.get(index).setName(name);
+                stockList.get(index).setSalesPrice(salesPrice);
+                stockList.get(index).setBuyPrice(buyPrice);
+                stockList.get(index).setMinStock(minStock);
+                stockList.get(index).setMaxStock(maxStock);
+                stockList.get(index).setBarCode(barCode);
+                stockList.get(index).setSupplier(supplier);
+                stockList.get(index).setRow(row);
+                stockList.get(index).setShelve(shelve);
+                stockList.get(index).setAmount(amount);
+
+                found = true;
+            }//end if
+            else
+            {
+                index++;
+            }//end
+        }// end while
+        return stockList.get(index);
+    }
+
 }
