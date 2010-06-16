@@ -87,7 +87,6 @@ public class ProductContainer
         ProductDescription productD = null;
         int index = 0;
         boolean found = false;
-
         while(index < stockList.size() && !found)
         {
             productD = stockList.get(index);
@@ -110,6 +109,30 @@ public class ProductContainer
     {
         getStockList().add(proddescr);
     }
+
+    /**
+     * @param barCode remove the productDescription with this barcode from ProductContainer to OldProductContainer
+     */
+     public ProductDescription removeProductDescription(int barCode)
+     {
+        ProductDescription pd = new ProductDescription();
+        int index = 0;
+        boolean found = false;
+        while(index < stockList.size() && !found)
+        {
+           pd = stockList.get(index);
+           if(pd.getBarCode() == barCode)
+           {
+               OldProductContainer.getInstance().addOldProduct(pd);
+               stockList.remove(index);
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
+        return pd;
+     }
 
     /**
      * @return the stockList
