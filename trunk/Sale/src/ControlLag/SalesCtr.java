@@ -19,7 +19,7 @@ public class SalesCtr
     private Business createBusinessTestCustomer;
 
     /*
-     * Constructer of the Sales Controler
+     * Constructer of the Sales Controller
      */
     public SalesCtr()
     {
