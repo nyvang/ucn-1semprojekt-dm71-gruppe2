@@ -85,4 +85,23 @@ public class CustomerContainer
         return null;
     }
 
+    public Customer findCustomer(int id)
+    {
+        Customer supObjekt = null;
+        int index = 0;
+        boolean found = false;
+        while(index < customerList.size() && !found)
+        {
+           if(customerList.get(index).getCustomerID() == id)
+           {
+               supObjekt = customerList.get(index);
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
+        return supObjekt;
+    }
 }
+

@@ -108,13 +108,14 @@ public class SalesUI
       */
      public void payForSale()
         {
+            int id = 0;
             Scanner keyboard = new Scanner(System.in);
             System.out.println(" Choose payment method:");
             System.out.println(" (1) Credit Card");
             System.out.println(" (2) Cash");
             System.out.println(" (3) Account");
             int paymentMethod = keyboard.nextInt();
-            salesCtr.endSale(paymentMethod);
+            salesCtr.endSale(paymentMethod, id);
         }
 
 }

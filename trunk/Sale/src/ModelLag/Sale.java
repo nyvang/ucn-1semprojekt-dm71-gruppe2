@@ -16,6 +16,7 @@ public class Sale
     private double subtotal;
     private ArrayList<SalesLineItem> quantitylist;
     private SalesLineItem newSalesLine;
+    private String paymentMethode;
 
     /**
      * Construct class Sale with parameters
@@ -28,6 +29,7 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = new SalesLineItem();
+        this.paymentMethode = null;
     }
 
 //    /**
@@ -54,6 +56,7 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = new SalesLineItem();
+        this.paymentMethode = null;
     }
 
     /**
@@ -67,6 +70,7 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = null;
+        this.paymentMethode = null;
     }
 
     /**
@@ -233,7 +237,7 @@ public class Sale
      */
     public void payForSaleCreditCard()
     {
-
+        setPaymentMethode("CreditCard");
     }
 
     /**
@@ -241,15 +245,21 @@ public class Sale
      */
     public void payForSaleCash()
     {
-
+        setPaymentMethode("Cash");
     }
 
     /**
      * @param
      */
-    public void payForSaleAccount()
+    public Customer payForSaleAccount(int id)
     {
-
+        Customer account = new Customer();
+        account = CustomerContainer.getInstance().findCustomer(id);
+        if(account != null)
+        {
+            setPaymentMethode("Account");
+        }
+        return account;
     }
     
     /**
@@ -258,6 +268,33 @@ public class Sale
     public int antalSalesLine()
     {
         return quantitylist.size();
+    }
+
+    /**
+     * @return the paymentMethode
+     */
+    public String getPaymentMethode()
+    {
+        return paymentMethode;
+    }
+
+    /**
+     * @param paymentMethode the paymentMethode to set
+     */
+    public void setPaymentMethode(String paymentMethode)
+    {
+        this.paymentMethode = paymentMethode;
+    }
+
+    public void clearAll()
+    {
+        this.saleID = 0;
+        this.clerk = null;
+        this.time = null;
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = null;
+        this.paymentMethode = null;
     }
 
 }

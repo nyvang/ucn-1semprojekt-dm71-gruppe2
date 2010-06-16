@@ -23,6 +23,12 @@ public class Customer extends Person
         this.customerID = customerID;
     }
 
+    public Customer()
+    {
+        super(null, null, 0);
+        this.customerID = 0;
+    }
+
     /**
      * @return the customerID
      */

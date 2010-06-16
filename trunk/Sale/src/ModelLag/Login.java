@@ -66,7 +66,8 @@ public class Login
      */
     public Employee findEmployee(String userName, String password)
     {
-        Employee employee = instance.findEmployee(userName, password);
+        Employee employee = new Employee();
+        employee = instance.findEmployee(userName, password);
         return employee;
     }
 

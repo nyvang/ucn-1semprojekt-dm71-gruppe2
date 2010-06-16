@@ -73,10 +73,11 @@ public class EmployeeContainer
         boolean found = false;
         while(index < employeeList.size() && !found)
         {
-           supObjekt = null;
-           if(supObjekt.getUserName().equals(userName) && supObjekt.getPassword().equals(password))
+//           supObjekt = null;
+           if(employeeList.get(index).getUserName().equals(userName) && employeeList.get(index).getPassword().equals(password))
            {
                supObjekt = employeeList.get(index);
+               found = true;
            }//end if
             else
            {
