@@ -106,18 +106,21 @@ public class SalesCtr
      * Chose the payment method
      * @param choice the choice from the SalesUI (user input)
      */
-     public Sale endSale(int choice)
-        {
+     public Sale endSale(int choice ,int id)
+     {
          Sale endSale = new Sale();
+
          if(choice < 1 || choice > 3)
          {
              endSale = salesObject;
          }//metoden fra SalesUI
          if(choice == 1)
             {
+                
                 salesObject.payForSaleCreditCard();
                 endSale = salesObject;
                 salesList.addSale(salesObject);
+                salesObject.clearAll();
                 salesObject = null;
             }// end if
          if(choice == 2)
@@ -129,13 +132,27 @@ public class SalesCtr
             }// end if
          if(choice == 3)
             {
-                salesObject.payForSaleAccount();
-                endSale = salesObject;
-                salesList.addSale(salesObject);
-                salesObject = null;
+                salesObject.payForSaleAccount(id);
+            endSale = salesObject;
+            salesList.addSale(salesObject);
+            salesObject = null;
             }// end if
          return endSale;
      }
+
+    public Sale payForSaleAccount(int id)
+    {
+//        Customer c = new Customer();
+//        c = salesObject.payForSaleAccount(int id);
+//        if(c != null)
+//        {
+//            salesObject.payForSaleAccount();
+//            endSale = salesObject;
+//            salesList.addSale(salesObject);
+//            salesObject = null;
+//        }
+       return salesObject;
+    }
 
 
     public void getCustomer()
