@@ -13,6 +13,7 @@ package GUILag;
 
 import ControlLag.LoginCtr;
 import ModelLag.Employee;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -202,8 +203,10 @@ public class Login extends javax.swing.JPanel {
     String userName = jTextField2.getText();
     String password = jTextField3.getText();
     e = login.doLogin(userName, password);
-    if(e != null)
+    if(e.getUserName() != null)
     {
+        JOptionPane.showMessageDialog(null, "Velkommen " + e.getName() + "\nDu er nu logget ind i VBSystem." , "Velkommen", JOptionPane.WARNING_MESSAGE);
+        clearTextFields();
         setFindlogin("ok");
     }
     else
@@ -242,7 +245,16 @@ private void clearTextFields()
 
 private void setFailJTextField1()
 {
-    jTextField1.setText("Username eller password findes ikke.");
+    JOptionPane.showMessageDialog(null, "Username eller password findes ikke!", "Fejl", JOptionPane.WARNING_MESSAGE);
+    clearTextFields();
+//    jTextField1.setText("Username eller password findes ikke.");
+}
+
+private void setOKPopUpText()
+{
+    JOptionPane.showMessageDialog(null, "Username eller password findes ikke!", "Fejl", JOptionPane.INFORMATION_MESSAGE);
+    clearTextFields();
+//    jTextField1.setText("Username eller password findes ikke.");
 }
 
 /**
