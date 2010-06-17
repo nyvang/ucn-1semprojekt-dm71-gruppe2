@@ -15,21 +15,39 @@ public class PersonCtr
     private Supplier supplierObject;
     private Login loginObject;
 
-public void addEmployee()
+/*
+ * Create
+ */
+public Employee addEmployee(String name, String address, int phone, String userName, String password)
 {
-    if(EmployeeContainer.getInstance() != null)
-        {
-        employeeCont.addEmployee(employeeObject);
-        }
-    else
-        {
-        employeeCont.setEmployeeList(null);
-        }
+    Employee empObject = new Employee();
+    empObject.setName(name);
+    empObject.setAddress(address);
+    empObject.setPhone(phone);
+    empObject.setUserName(userName);
+    empObject.setPassword(password);
+    employeeCont.addEmployee(empObject);
+    return empObject;
+}
+
+/*
+ * Read
+ */
+
+public Employee findEmployee(String name, String userName)
+{
+    
 }
 
 
+/*
+ * Update
+ */
 
 
+/*
+ * Delete
+ */
 
 }
 
