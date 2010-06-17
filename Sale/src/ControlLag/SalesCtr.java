@@ -17,6 +17,7 @@ public class SalesCtr
     private CustomerContainer customerList;
     private Private createPrivateTestCustomer;
     private Business createBusinessTestCustomer;
+    private Supplier createTestSupplier;
 
     /*
      * Constructer of the Sales Controller
@@ -25,9 +26,10 @@ public class SalesCtr
     {
         salesList = SalesContainer.getInstance();
         salesObject = null;
+        createTestSupplier = new Supplier("Hans Ibsen", "Hejvej 10", 34567890, 234567, "Ibsen's depot");
 //        createTestProduct = new ProductDescription(String name, double salesPrice, double buyPrice, int minStock, int maxStock, int barCode, Supplier supplier, int row, int shelve, int amount);
-        createTestProduct1 = new ProductDescription("Hammer", 45.67, 10, 15, 50, 1, null, 3, 2, 30);
-        createTestProduct2 = new ProductDescription("Søm", 10.7, 5, 50, 100, 2, null, 7, 3, 75);
+        createTestProduct1 = new ProductDescription("Hammer", 45.67, 10, 15, 50, 1, createTestSupplier, 3, 2, 30);
+        createTestProduct2 = new ProductDescription("Søm", 10.7, 5, 50, 100, 2, createTestSupplier, 7, 3, 75);
         productList = ProductContainer.getInstance();
         productList.addProductDescription(createTestProduct1);
         productList.addProductDescription(createTestProduct2);
