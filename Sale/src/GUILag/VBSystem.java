@@ -754,7 +754,7 @@ private class Login extends javax.swing.JPanel
         clearTextFields();
         setFindlogin("ok");
         setButtonsLoggedIn();
-        
+        loginCheckedOut();
     }
     else
     {
