@@ -560,7 +560,7 @@ public class VBSystem extends javax.swing.JFrame {
  *
  * @author Anita
  */
-public class Login extends javax.swing.JPanel
+private class Login extends javax.swing.JPanel
 {
 
     /** Creates new form Login */
