@@ -51,7 +51,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PANELTESTER", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 11))); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(255, 153, 51));
-        jButton1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton1.setText("Annuller");
         jButton1.setActionCommand("forside");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -73,7 +73,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton3.setBackground(new java.awt.Color(255, 153, 51));
-        jButton3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton3.setText("Kort");
         jButton3.setActionCommand("forside");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -84,7 +84,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton4.setBackground(new java.awt.Color(255, 153, 51));
-        jButton4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton4.setText("Hjælp");
         jButton4.setActionCommand("forside");
         jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -95,7 +95,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton5.setBackground(new java.awt.Color(255, 153, 51));
-        jButton5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton5.setText("Kontant");
         jButton5.setActionCommand("forside");
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -117,7 +117,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton7.setBackground(new java.awt.Color(255, 153, 51));
-        jButton7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton7.setText("Konto");
         jButton7.setActionCommand("forside");
         jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -128,7 +128,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton8.setBackground(new java.awt.Color(255, 153, 51));
-        jButton8.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton8.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton8.setText("Rediger");
         jButton8.setActionCommand("forside");
         jButton8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -139,7 +139,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton9.setBackground(new java.awt.Color(255, 153, 51));
-        jButton9.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton9.setText("Slet");
         jButton9.setActionCommand("forside");
         jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -150,7 +150,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton10.setBackground(new java.awt.Color(255, 153, 51));
-        jButton10.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton10.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton10.setText("Find");
         jButton10.setActionCommand("forside");
         jButton10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -161,7 +161,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton11.setBackground(new java.awt.Color(255, 153, 51));
-        jButton11.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton11.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton11.setText("Tilføj");
         jButton11.setActionCommand("forside");
         jButton11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -172,7 +172,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton12.setBackground(new java.awt.Color(255, 153, 51));
-        jButton12.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton12.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton12.setText("????");
         jButton12.setActionCommand("forside");
         jButton12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -183,7 +183,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton13.setBackground(new java.awt.Color(255, 153, 51));
-        jButton13.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton13.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton13.setText("???");
         jButton13.setActionCommand("forside");
         jButton13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -194,7 +194,7 @@ public class PANELTESTER extends javax.swing.JPanel {
         });
 
         jButton14.setBackground(new java.awt.Color(255, 153, 51));
-        jButton14.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton14.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton14.setText("Tilbage");
         jButton14.setActionCommand("forside");
         jButton14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -277,14 +277,12 @@ public class PANELTESTER extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 511, Short.MAX_VALUE)
+            .addGap(0, 511, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
             .addGap(0, 430, Short.MAX_VALUE)
             .addGap(0, 430, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
