@@ -424,7 +424,12 @@ public class VBSystem extends javax.swing.JFrame {
     clearPanel();
     Login li = new Login();
     insertPanel(li);
-    
+    if(li.getFindlogin() != null)
+    {
+        setButtonsLoggedIn();
+        loginCheckedOut();
+    }
+
 }//GEN-LAST:event_jButton2ActionPerformed
 /**
  * Catches mouse-click, creates object of Forside, inserts Panel from Forside
