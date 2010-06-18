@@ -16,6 +16,7 @@ public class Sale
     private double subtotal;
     private ArrayList<SalesLineItem> quantitylist;
     private SalesLineItem newSalesLine;
+    private String paymentMethode;
 
     /**
      * Construct class Sale with parameters
@@ -28,6 +29,7 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = new SalesLineItem();
+        this.paymentMethode = null;
     }
 
 //    /**
@@ -54,10 +56,11 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = new SalesLineItem();
+        this.paymentMethode = null;
     }
 
     /**
-     * Construct class Sale with parameters
+     * Construct class Sale without parameters
      */
     public Sale()
     {
@@ -67,6 +70,7 @@ public class Sale
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = null;
+        this.paymentMethode = null;
     }
 
     /**
@@ -157,6 +161,14 @@ public class Sale
         this.quantitylist = quantitylist;
     }
 
+    /*
+     * if the salescontainer "quantitylist" is empty, a new sale is created. If the list isnt
+     * empty, a new salesLineItem is created
+     * @patam quantity
+     * @param barCode
+     * @param serial
+     * @return quantitylist
+     */
     public ArrayList<SalesLineItem> startSale(int quantity, int barCode, String serial)
     {
         if(getQuantitylist().size() == 0)
@@ -177,21 +189,22 @@ public class Sale
 
     /**
      * @param newID generate a new ID for this Sale
+     * @return newID
      */
     public int generateID()
     {
         int index = 0;
         int newID = 0;
         if(SalesContainer.getInstance().getSalesList().size() != 0)
-        {
-        index = SalesContainer.getInstance().getSalesList().size() - 1;
-        Sale s = SalesContainer.getInstance().getSalesList().get(index);
-        newID = s.getSaleID() + 1;
-        }//end if
+            {
+            index = SalesContainer.getInstance().getSalesList().size() - 1;
+            Sale s = SalesContainer.getInstance().getSalesList().get(index);
+            newID = s.getSaleID() + 1;
+            }//end if
         else
-        {
+            {
             newID = 1;
-        }//end else
+            }//end else
         return newID;
     }
 
@@ -224,7 +237,7 @@ public class Sale
      */
     public void payForSaleCreditCard()
     {
-
+        setPaymentMethode("CreditCard");
     }
 
     /**
@@ -232,15 +245,21 @@ public class Sale
      */
     public void payForSaleCash()
     {
-
+        setPaymentMethode("Cash");
     }
 
     /**
      * @param
      */
-    public void payForSaleAccount()
+    public Customer payForSaleAccount(int id)
     {
-
+        Customer account = new Customer();
+        account = CustomerContainer.getInstance().findCustomer(id);
+        if(account != null)
+        {
+            setPaymentMethode("Account");
+        }
+        return account;
     }
     
     /**
@@ -249,6 +268,33 @@ public class Sale
     public int antalSalesLine()
     {
         return quantitylist.size();
+    }
+
+    /**
+     * @return the paymentMethode
+     */
+    public String getPaymentMethode()
+    {
+        return paymentMethode;
+    }
+
+    /**
+     * @param paymentMethode the paymentMethode to set
+     */
+    public void setPaymentMethode(String paymentMethode)
+    {
+        this.paymentMethode = paymentMethode;
+    }
+
+    public void clearAll()
+    {
+        this.saleID = 0;
+        this.clerk = null;
+        this.time = null;
+        this.subtotal = 0;
+        this.quantitylist = new ArrayList<SalesLineItem>();
+        this.newSalesLine = null;
+        this.paymentMethode = null;
     }
 
 }

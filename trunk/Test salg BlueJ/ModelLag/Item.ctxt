@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.params=serialNumber
 comment0.target=Item(String)
+comment0.text=\n\n@param\ serialNumber\ sets\ the\ serialNumber\n\n
 comment1.target=String\ getSerialNumber()
+comment1.text=\n\n@return\ the\ serialNumber\n\n
 comment2.params=serialNumber
 comment2.target=void\ setSerialNumber(String)
+comment2.text=\n\n@param\ sets\ the\ serialNumber\n\n
 numComments=3

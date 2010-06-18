@@ -1,9 +1,12 @@
 package ModelLag;
 
 /**
- *
- * @author gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
+ */
+
+/*
+ * Subcalss that enherits name, address, phone and customerID from the Customer class
  */
 public class Private extends Customer
 {

@@ -1,48 +1,71 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
-
 import java.util.ArrayList;
+
 /**
- *
- * @author nn119171
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
-public class CustomerContainer {
+
+public class CustomerContainer
+{
 
     private ArrayList<Customer> customerList;
     private static CustomerContainer instance;
 
+    /**
+     * Constructing the CustomerContainer
+     */
     public CustomerContainer()
     {
         customerList = new ArrayList<Customer>();
     }
 
+    /**
+     *
+     * @return instance (singleton)
+     */
     public static CustomerContainer getInstance()
     {
         if(instance == null)
            {
               instance = new CustomerContainer();
-            }
+           }//end if
         return instance;
     }
 
-    public ArrayList<Customer> getcustomerList() {
+    /**
+     *
+     * @return customerList
+     */
+    public ArrayList<Customer> getCustomerList()
+    {
         return customerList;
     }
 
-    public void setcustomerList(ArrayList<Customer> customerList) {
+    /**
+     *
+     * @param sets the customerList to this.customerList
+     */
+    public void setCustomerList(ArrayList<Customer> customerList)
+    {
         this.customerList = customerList;
     }
 
+    /**
+     *
+     * @param adds newCustomer to customerList
+     */
     public void addCustomer(Customer newCustomer)
     {
         customerList.add(newCustomer);
     }
 
-     public Customer removeCustomer(int id)
+    /**
+     * removes customer with this.id from the customerList using a while loop
+     * @param id 
+     * @return null
+     */
+    public Customer removeCustomer(int id)
     {
         Customer supObjekt = null;
         int index = 0;
@@ -53,11 +76,32 @@ public class CustomerContainer {
            if(supObjekt.getCustomerID() == id)
            {
                customerList.remove(index);
-           }
-           else {
-           index++;
-        }
-        }
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
         return null;
     }
+
+    public Customer findCustomer(int id)
+    {
+        Customer supObjekt = null;
+        int index = 0;
+        boolean found = false;
+        while(index < customerList.size() && !found)
+        {
+           if(customerList.get(index).getCustomerID() == id)
+           {
+               supObjekt = customerList.get(index);
+           }//end if
+            else
+            {
+                index++;
+            }//end else
+        }//end while
+        return supObjekt;
+    }
 }
+

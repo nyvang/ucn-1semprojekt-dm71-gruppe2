@@ -81,17 +81,17 @@ public class SalesCtr
      *
      * @param Changes the login
      */
-     public void alterLogin(int id)
+     public void alterLogin(String username, String password)
         {
          LoginCtr newLogin = new LoginCtr();
-         newLogin.doLogin(id);
+         newLogin.doLogin(username, password);
         }
 
      /**
      *
      * @param Closes the sale, and chooses paymentmethod
      */
-     public void endSale(int choice)
+     public void endSale(int choice, int id)
         {
          if(choice < 1 || choice > 3)
          {}//metoden fra SalesUI
@@ -109,7 +109,7 @@ public class SalesCtr
             }// end if
          if(choice == 3)
             {
-                salesObject.payForSaleAccount();
+                salesObject.payForSaleAccount(id);
                 salesList.addSale(salesObject);
                 salesObject = null;
             }// end if

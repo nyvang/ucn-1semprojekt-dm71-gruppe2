@@ -1,9 +1,10 @@
 package ModelLag;
 
 /**
-* @author Gruppe 2 / DM71
-* @date May 2010
-*/
+ * @author Gruppe 2 / DM71
+ * @date May 2010
+ */
+
 public class SalesLineItem
 {
 
@@ -124,18 +125,19 @@ public class SalesLineItem
     /**
      * @param barCode the barCode to find rigth ProductDesription
      * @param serial the serial to find in ProductDesription
+     * @return product
      */
     public ProductDescription findProductDescription(int barCode, String serial)
     {
         ProductContainer productcont = ProductContainer.getInstance();
-//        ProductContainer productcont = new ProductContainer();
         ProductDescription newProd = productcont.findProductDescription(barCode, serial);
         setProduct(newProd);
         return getProduct();
     }
 
     /**
-     * @param amount calculat the subtotal using the amount of items to get rigth subTotal
+     * @param amount - calculate the subtotal using the amount to get new subTotal
+     * @return subTotal
      */
     public double calculateSubtotal(int amount)
     {

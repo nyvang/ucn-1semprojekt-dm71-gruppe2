@@ -1,39 +1,62 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ModelLag;
 
 /**
- *
- * @author nn119171
+ * @author Gruppe 2 / DM71
+ * @date May 2010
  */
-public class Business extends Customer {
 
-    int cvrNumber;
-    String businessName;
+public class Business extends Customer
+{
+    private int cvrNumber;
+    private String businessName;
 
-    public Business(String name, String addres, int phone, int customerID, int cvrNumber, String businessName) {
+    /**
+     * @param name name of the contact person
+     * @param addres address of the business customer
+     * @param phone phone of the business customer
+     * @param customerID customerID of the business customer
+     * @param cvrNumber CVR number of the business customer
+     * @param businessName name of the business customer
+     */
+    public Business(String name, String addres, int phone, int customerID, int cvrNumber, String businessName)
+    {
         super(name, addres, phone, customerID);
         this.cvrNumber = cvrNumber;
         this.businessName = businessName;
     }
 
+    /**
+     * @return the businessName 
+     */
 
-    public String getBusinessName() {
+    public String getBusinessName()
+    {
         return businessName;
     }
+    
+    /**
+     * @param sets the businessName 
+     */
 
-    public void setBusinessName(String businessName) {
+    public void setBusinessName(String businessName)
+    {
         this.businessName = businessName;
     }
 
-    public int getCvrNumber() {
+    /**
+     * @return the CVR number of the Business customer
+     */
+
+    public int getCvrNumber()
+    {
         return cvrNumber;
     }
 
-    public void setCvrNumber(int cvrNumber) {
+    /**
+     * @param sets the cvrNumber of the business customer
+     */
+    public void setCvrNumber(int cvrNumber)
+    {
         this.cvrNumber = cvrNumber;
     }
 

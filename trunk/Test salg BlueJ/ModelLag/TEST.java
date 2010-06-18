@@ -52,7 +52,7 @@ public class TEST extends junit.framework.TestCase
 		productD1 = new ModelLag.ProductDescription();
 		productC1 = ProductContainer.getInstance();
 		productC1.addProductDescription(productD1);
-		productD2 = new ModelLag.ProductDescription(supplier1);
+
 		productC1.addProductDescription(productD2);
     }
     
@@ -70,7 +70,7 @@ public class TEST extends junit.framework.TestCase
 		productD1 = new ModelLag.ProductDescription();
 		productC1 = ProductContainer.getInstance();
 		productC1.addProductDescription(productD1);
-		productD2 = new ModelLag.ProductDescription(supplier1);
+
 		productC1.addProductDescription(productD2);
     //    Sale saleObj = new Sale(1,1,null);
     }
@@ -94,7 +94,7 @@ public class TEST extends junit.framework.TestCase
 		productD1 = new ModelLag.ProductDescription();
 		productC1 = ProductContainer.getInstance();
 		productC1.addProductDescription(productD1);
-		productD2 = new ModelLag.ProductDescription(supplier1);
+
 		productC1.addProductDescription(productD2);
 	}
 

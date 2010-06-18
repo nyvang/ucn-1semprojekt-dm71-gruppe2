@@ -1,15 +1,24 @@
 #BlueJ class context
 comment0.params=discount\ daysOfCredit\ maxCredit
 comment0.target=Group(double,\ int,\ double)
+comment0.text=@param\ discount\ the\ discount\ of\ the\ specific\ customer\n@param\ daysOfCredit\ the\ days\ of\ credit\ on\ the\ specific\ customer\n@param\ maxCredit\ the\ max\ amount\ of\ days\ the\ customer\ has\ credit\n\n
 comment1.target=int\ generateID()
+comment1.text=\nGenerates\ newID,\ the\ loop\ ensures\ that\ the\ next\ unused\ id\ is\ chosen\n@return\ newID\ \n\n
 comment2.target=int\ getId()
+comment2.text=\n\n@return\ Id\ for\ a\ specific\ group\n\n
 comment3.target=int\ getDaysOfCredit()
+comment3.text=\n\n@return\ daysOfCredit\ for\ a\ specific\ group\n\n
 comment4.params=daysOfCredit
 comment4.target=void\ setDaysOfCredit(int)
+comment4.text=\n\n@param\ sets\ daysOfCredit\ for\ at\ specific\ group\n\n
 comment5.target=double\ getDiscount()
+comment5.text=\n\n@return\ discount\ for\ at\ specific\ group\n\n
 comment6.params=discount
 comment6.target=void\ setDiscount(double)
+comment6.text=\n\n@param\ sets\ discount\ for\ at\ specific\ group\n\n
 comment7.target=double\ getMaxCredit()
+comment7.text=\n\n@return\ maxCredit\ for\ at\ specific\ group\n\n
 comment8.params=maxCredit
 comment8.target=void\ setMaxCredit(double)
+comment8.text=\n\n@param\ sets\ maxCredit\ for\ at\ specific\ group\n\n
 numComments=9

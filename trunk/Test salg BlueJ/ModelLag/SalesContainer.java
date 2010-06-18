@@ -2,10 +2,10 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- *
- * @author Anita gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class SalesContainer
 {
 
@@ -13,7 +13,7 @@ public class SalesContainer
     private static SalesContainer instance;
 
     /**
-     * @param construct class SalesContainer without parameters
+     * Construct class SalesContainer without parameters
      */
     public SalesContainer()
     {
@@ -21,7 +21,7 @@ public class SalesContainer
     }
 
     /**
-     * @param instance create singleton
+     * Instance creates singleton
      */
     public static SalesContainer getInstance()
     {
