@@ -2,10 +2,10 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- *
- * @author gruppe 2, dm 71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class SupplierContainer
 {
 
@@ -13,7 +13,7 @@ public class SupplierContainer
     private static SupplierContainer instance;
 
     /**
-     * @param construct class Supplier with parameters
+     * Construct class Supplier 
      */
     public SupplierContainer()
     {
@@ -21,7 +21,7 @@ public class SupplierContainer
     }
 
     /**
-     * @param instance create singleton
+     * Instance - ensures singleton
      */
     public static SupplierContainer getInstance()
     {
@@ -62,39 +62,31 @@ public class SupplierContainer
            if(supObjekt.getiD() == id)
            {
                found = true;
-                getSupplierList().remove(index);
+               getSupplierList().remove(index);
                System.out.println("Object removed"); //Skal fjernes
            }//end if
-                else {
-                    index++;
-                }//end else
+           else
+           {
+               index++;
+           }//end else
         }//end while
         return null;
     }
 
     /**
-     *main to test
+     *  main method to test the Supplier- and SupplierContainer class
      */
-//     public static void main(String[] args)
-//     {
-//        SupplierContainer supContainer = SupplierContainer.getInstance();
-//        //create customer
-//        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
-//        supContainer.addSupplier(supObj1);
-//        String obj2 = supObj1.getInfo();
-//        System.out.println("Customer: " + obj2);
-//        //delete customer
-//        supContainer.removeSupplier(1);
-
-
-//        //prints for test
-//        System.out.println(cusObj1.getName());
-//        System.out.println(cusObj1.getTotalBalance());
-//        System.out.println(cusObj1.getTotalDisp());
-//        accontObj.withdraw(4500);
-//        System.out.println(cusObj1.getTotalBalance());
-//        System.out.println(cusObj1.getTotalDisp());
-//    }
+     public static void main(String[] args)
+     {
+        SupplierContainer supContainer = SupplierContainer.getInstance();
+        //create customer
+        Supplier supObj1 = new Supplier("Ole", "Olegade 5", 12345678, 59595956, "Oles auto");
+        supContainer.addSupplier(supObj1);
+        String obj2 = supObj1.getInfo();
+        System.out.println("Customer: " + obj2);
+        //delete customer
+        supContainer.removeSupplier(1);
+    }
 
    
 

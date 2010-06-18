@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=SalesContainer()
-comment0.text=\n@param\ construct\ class\ SalesContainer\ without\ parameters\n\n
+comment0.text=\nConstruct\ class\ SalesContainer\ without\ parameters\n\n
 comment1.target=SalesContainer\ getInstance()
-comment1.text=\n@param\ instance\ create\ singleton\n\n
+comment1.text=\nInstance\ creates\ singleton\n\n
 comment2.target=ArrayList<Sale>\ getSalesList()
 comment2.text=\n@return\ the\ salesList\n\n
 comment3.target=int\ generateID()

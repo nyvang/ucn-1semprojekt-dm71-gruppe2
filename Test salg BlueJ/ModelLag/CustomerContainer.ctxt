@@ -1,11 +1,19 @@
 #BlueJ class context
 comment0.target=CustomerContainer()
+comment0.text=\nConstructing\ the\ CustomerContainer\n\n
 comment1.target=CustomerContainer\ getInstance()
-comment2.target=ArrayList<Customer>\ getcustomerList()
+comment1.text=\n\n@return\ instance\ (singleton)\n\n
+comment2.target=ArrayList<Customer>\ getCustomerList()
+comment2.text=\n\n@return\ customerList\n\n
 comment3.params=customerList
-comment3.target=void\ setcustomerList(ArrayList<Customer>)
+comment3.target=void\ setCustomerList(ArrayList<Customer>)
+comment3.text=\n\n@param\ sets\ the\ customerList\ to\ this.customerList\n\n
 comment4.params=newCustomer
 comment4.target=void\ addCustomer(Customer)
+comment4.text=\n\n@param\ adds\ newCustomer\ to\ customerList\n\n
 comment5.params=id
 comment5.target=Customer\ removeCustomer(int)
-numComments=6
+comment5.text=\nremoves\ customer\ with\ this.id\ from\ the\ customerList\ using\ a\ while\ loop\n@param\ id\ \n@return\ null\n\n
+comment6.params=id
+comment6.target=Customer\ findCustomer(int)
+numComments=7

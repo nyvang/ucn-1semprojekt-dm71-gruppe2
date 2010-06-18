@@ -2,9 +2,10 @@ package ModelLag;
 import java.util.ArrayList;
 
 /**
- * @author gruppe 2, dm71
+ * @author Gruppe 2 / DM71
  * @date May 2010
  */
+
 public class ProductDescription
 {
     private String name;
@@ -38,7 +39,7 @@ public class ProductDescription
     }
 
     /**
-     * @param construct class ProductDescription without parameters
+     * Construct class ProductDescription without parameters
      */
     public ProductDescription()
     {
@@ -52,24 +53,6 @@ public class ProductDescription
         this.row = 0;
         this.shelve = 0;
         this.amount = 0;
-        this.serials = null;
-    }
-    
-    /**
-     * @param construct class ProductDescription without parameters
-     */
-    public ProductDescription(Supplier supplier)
-    {
-        this.name = "hammer";
-        this.salesPrice = 45.56;
-        this.buyPrice = 10;
-        this.minStock = 4;
-        this.maxStock = 9;
-        this.barCode = 1;
-        this.supplier = supplier;
-        this.row = 3;
-        this.shelve = 5;
-        this.amount = 7;
         this.serials = null;
     }
 
@@ -256,13 +239,13 @@ public class ProductDescription
     {
         getSerials().add(i);
     }
-    
+
     /**
      * @param serial find out if the serial is correct
+     * @return serial
      */
     public String findItemSerial(String serialNum)
     {
-        
         String serial = null;
         if(serialNum != null)
         {
@@ -270,12 +253,10 @@ public class ProductDescription
             {
                 if(serialNums.getSerialNumber().equals(serialNum))
                 {
-                serial = serialNum;
-            }//end if
-            
-        }//end for
-    }//end if
-        
+                    serial = serialNum;
+                }//end if
+            }//end for
+        }//end if
         return serial;
     }
 

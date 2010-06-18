@@ -1,13 +1,20 @@
 #BlueJ class context
 comment0.target=EmployeeContainer()
+comment0.text=\nConstructs\ EmployeeContainer\ witout\ parameters\n\n
 comment1.target=EmployeeContainer\ getInstance()
+comment1.text=\n\n@return\ instance\ (singleton)\n\n
 comment2.target=ArrayList<Employee>\ getEmployeeList()
+comment2.text=\n\n@return\ employeeList\n\n
 comment3.params=employeeList
 comment3.target=void\ setEmployeeList(ArrayList<Employee>)
+comment3.text=\n\n@param\ sets\ the\ employeeList\n\n
 comment4.params=newEmployee
 comment4.target=void\ addEmployee(Employee)
-comment5.params=id
-comment5.target=Employee\ findEmployee(int)
+comment4.text=\n\n@param\ adds\ newEmployee\ to\ the\ employeeList\n\n
+comment5.params=userName\ password
+comment5.target=Employee\ findEmployee(String,\ String)
+comment5.text=\nfinds\ the\ emlpoyee\ in\ the\ employeeList\ using\ userName\ and\ password\ by\ using\ a\ while\ loop\n@param\ userName\ userName\ of\ the\ employee\n@param\ password\ password\ of\ the\ employee\n@return\ Employee\n\n
 comment6.params=id
 comment6.target=Employee\ removeEmployee(int)
+comment6.text=\nremoves\ the\ employee\ with\ "id"\ from\ the\ employeeList\n@param\ id\n@return\ null\n\n
 numComments=7
