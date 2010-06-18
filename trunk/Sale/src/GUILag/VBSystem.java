@@ -611,7 +611,7 @@ private class Login extends javax.swing.JPanel
         });
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Verdana", 0, 11));
+        jButton2.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jButton2.setText("OK");
         jButton2.setActionCommand("forside");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -634,6 +634,11 @@ private class Login extends javax.swing.JPanel
 
         jPasswordField1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -704,35 +709,29 @@ private class Login extends javax.swing.JPanel
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-    }// </editor-fold>
+    }// </editor-fold>                        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)
+    {
 
-    Employee e = new Employee();
-    String userName = jTextField2.getText();
-    String password = jPasswordField1.getText();
-    e = login.doLogin(userName, password);
-    if(e.getUserName() != null)
-    {
-        JOptionPane.showMessageDialog(null, "Velkommen " + e.getName() + "\nDu er nu logget ind i VBSystem." , "Velkommen", JOptionPane.WARNING_MESSAGE);
-        clearTextFields();
-        setButtonsLoggedIn();
-        loginCheckedOut();
-    }
-    else
-    {
-        setFailJTextField1();
+    loggingIn();
+
+
     }
 
-
-}
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
+    {
     clearTextFields();
-}
+    }
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt)
+    {
+        
+    }
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt)
+    {
+        loggingIn();
     }
 
 /**
@@ -749,6 +748,25 @@ private void setFailJTextField1()
     JOptionPane.showMessageDialog(null, "Username eller password findes ikke!", "Fejl", JOptionPane.WARNING_MESSAGE);
     clearTextFields();
 //    jTextField1.setText("Username eller password findes ikke.");
+}
+
+private void loggingIn()
+{
+     Employee e = new Employee();
+     String userName = jTextField2.getText();
+     String password = jPasswordField1.getText();
+     e = login.doLogin(userName, password);
+     if(e.getUserName() != null)
+     {
+         JOptionPane.showMessageDialog(null, "Velkommen " + e.getName() + "\nDu er nu logget ind i VBSystem." , "Velkommen", JOptionPane.WARNING_MESSAGE);
+         clearTextFields();
+         setButtonsLoggedIn();
+         loginCheckedOut();
+     }
+     else
+     {
+         setFailJTextField1();
+     }
 }
 
     // Variables declaration - do not modify
