@@ -91,7 +91,7 @@ public class Login extends javax.swing.JPanel
             }
         });
 
-        jPasswordField1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jPasswordField1.setFont(new java.awt.Font("Verdana", 0, 11));
         jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
