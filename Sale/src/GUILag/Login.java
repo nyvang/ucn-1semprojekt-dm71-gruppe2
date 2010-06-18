@@ -70,7 +70,7 @@ public class Login extends javax.swing.JPanel
         });
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Verdana", 0, 11));
+        jButton2.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jButton2.setText("OK");
         jButton2.setActionCommand("forside");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -91,8 +91,13 @@ public class Login extends javax.swing.JPanel
             }
         });
 
-        jPasswordField1.setFont(new java.awt.Font("Verdana", 0, 11));
+        jPasswordField1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -166,7 +171,8 @@ public class Login extends javax.swing.JPanel
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+    login();
+    /**
     Employee e = new Employee();
     String userName = jTextField2.getText();
     String password = jPasswordField1.getPassword().toString();
@@ -182,6 +188,7 @@ public class Login extends javax.swing.JPanel
     {
         setFailJTextField1();
     }
+     **/
 
 
 }//GEN-LAST:event_jButton2ActionPerformed
@@ -193,6 +200,11 @@ public class Login extends javax.swing.JPanel
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
 /**
  * Clear all text fields
@@ -223,5 +235,26 @@ private void setFailJTextField1()
 
     private LoginCtr login;
 
+
+    private void login()
+    {
+
+        Employee e = new Employee();
+        String userName = jTextField2.getText();
+        String password = jPasswordField1.getPassword().toString();
+        e = login.doLogin(userName, password);
+        if(e.getUserName() != null)
+        {
+            JOptionPane.showMessageDialog(null, "Velkommen " + e.getName() + "\nDu er nu logget ind i VBSystem." , "Velkommen", JOptionPane.WARNING_MESSAGE);
+            clearTextFields();
+    //        setButtonsLoggedIn();
+    //        loginCheckedOut();
+        }
+        else
+        {
+            setFailJTextField1();
+        }
+
+    }
 
 }
