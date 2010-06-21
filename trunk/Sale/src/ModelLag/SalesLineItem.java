@@ -16,9 +16,9 @@ public class SalesLineItem
     /**
      * Construct class SalesLineItem with parameters
      */
-    public SalesLineItem(double subTotal, int quantity, int barCode, String serial)
+    public SalesLineItem(double subTotal, int quantity, int barCode)
     {
-        this.product = findProductDescription(barCode, serial);
+        this.product = findProductDescription(barCode);
         this.subTotal = subTotal;
         this.quantity = quantity;
         this.barCode = barCode;
@@ -27,9 +27,9 @@ public class SalesLineItem
     /**
      * Construct class SalesLineItem with parameters
      */
-    public SalesLineItem(int quantity, int barCode, String serial)
+    public SalesLineItem(int quantity, int barCode)
     {
-        this.product = findProductDescription(barCode, serial);
+        this.product = findProductDescription(barCode);
         this.subTotal = calculateSubtotal(quantity);
         this.quantity = quantity;
         this.barCode = barCode;
@@ -39,13 +39,13 @@ public class SalesLineItem
     /**
      * Construct class SalesLineItem with parameters
      */
-    public SalesLineItem(int quantity, int barCode)
-    {
-        this.subTotal = 0;
-        this.quantity = quantity;
-        this.barCode = barCode;
-        this.product = new ProductDescription();
-    }
+//    public SalesLineItem(int quantity, int barCode)
+//    {
+//        this.subTotal = 0;
+//        this.quantity = quantity;
+//        this.barCode = barCode;
+//        this.product = new ProductDescription();
+//    }
 
     /**
      * Construct class SalesLineItem without parameters
@@ -127,10 +127,10 @@ public class SalesLineItem
      * @param serial the serial to find in ProductDesription
      * @return product
      */
-    public ProductDescription findProductDescription(int barCode, String serial)
+    public ProductDescription findProductDescription(int barCode)
     {
         ProductContainer productcont = ProductContainer.getInstance();
-        ProductDescription newProd = productcont.findProductDescription(barCode, serial);
+        ProductDescription newProd = productcont.findProductDescription(barCode);
         setProduct(newProd);
         return getProduct();
     }

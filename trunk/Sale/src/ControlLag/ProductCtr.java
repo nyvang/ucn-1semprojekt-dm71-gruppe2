@@ -58,9 +58,9 @@ public class ProductCtr
      * @param serial the serial of the product
      * @return ProductDesription
      */
-    public ProductDescription findProductdescription(int barCode, String serial)
+    public ProductDescription findProductdescription(int barCode)
     {
-        return productList.findProductDescription(barCode, serial);
+        return productList.findProductDescription(barCode);
     }
 
     /**

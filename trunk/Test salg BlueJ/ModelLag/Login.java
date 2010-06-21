@@ -8,7 +8,8 @@ package ModelLag;
 public class Login
 {
     private Employee nameOfLogin;
-    private static EmployeeContainer instance;
+    private EmployeeContainer instance;
+    
 
     /**
      * Construct class Person with parameters
@@ -26,6 +27,7 @@ public class Login
     {
         instance = EmployeeContainer.getInstance();
         this.nameOfLogin = findEmployee(userName, password);
+
 
     }
     /**
@@ -68,6 +70,7 @@ public class Login
     {
         Employee employee = new Employee();
         employee = instance.findEmployee(userName, password);
+        setNameOfLogin(employee);
         return employee;
     }
 
