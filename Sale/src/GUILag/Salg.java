@@ -13,6 +13,7 @@ package GUILag;
 
 import ControlLag.SalesCtr;
 import ModelLag.Sale;
+import java.math.BigDecimal;
 import javax.swing.JOptionPane;
 
 /**
@@ -64,6 +65,7 @@ public class Salg extends javax.swing.JPanel {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 204));
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 51), 1, true));
@@ -85,7 +87,7 @@ public class Salg extends javax.swing.JPanel {
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +95,7 @@ public class Salg extends javax.swing.JPanel {
             }
         });
 
-        jTextField3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +122,7 @@ public class Salg extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -195,7 +197,7 @@ public class Salg extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Antal", "Varenavn", "Stk. pris", "Moms ", "I alt"
+                "Antal", "Varenavn", "Stk. pris u. moms", "Moms ", "I alt m. moms"
             }
         ));
         jTable1.setGridColor(new java.awt.Color(255, 204, 0));
@@ -223,9 +225,8 @@ public class Salg extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(550, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+                .addComponent(jLabel4))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,7 +241,7 @@ public class Salg extends javax.swing.JPanel {
         jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 51), 1, true));
 
         jButton3.setBackground(new java.awt.Color(255, 153, 51));
-        jButton3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton3.setText("Kort");
         jButton3.setActionCommand("forside");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -251,7 +252,7 @@ public class Salg extends javax.swing.JPanel {
         });
 
         jButton5.setBackground(new java.awt.Color(255, 153, 51));
-        jButton5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton5.setText("Kontant");
         jButton5.setActionCommand("forside");
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -262,7 +263,7 @@ public class Salg extends javax.swing.JPanel {
         });
 
         jButton7.setBackground(new java.awt.Color(255, 153, 51));
-        jButton7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Verdana", 0, 11));
         jButton7.setText("Konto");
         jButton7.setActionCommand("forside");
         jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -277,7 +278,7 @@ public class Salg extends javax.swing.JPanel {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -300,24 +301,24 @@ public class Salg extends javax.swing.JPanel {
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 51), 1, true));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 204));
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        jLabel3.setText("Køb I alt");
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 11));
+        jLabel3.setText("Køb m. moms");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 204));
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel5.setText("Moms I alt");
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 204));
-        jLabel6.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel6.setText("Sælger:");
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 204));
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel7.setText("Dato:");
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 204));
         jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 153, 51), 1, true));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,7 +328,7 @@ public class Salg extends javax.swing.JPanel {
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 204));
         jTextField4.setEditable(false);
-        jTextField4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 153, 51), 1, true));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,11 +340,26 @@ public class Salg extends javax.swing.JPanel {
         jTextField5.setEditable(false);
         jTextField5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jTextField5.setBorder(null);
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
 
         jTextField6.setBackground(new java.awt.Color(255, 255, 204));
         jTextField6.setEditable(false);
-        jTextField6.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField6.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField6.setBorder(null);
+
+        jTextField7.setBackground(new java.awt.Color(255, 255, 204));
+        jTextField7.setEditable(false);
+        jTextField7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField7.setBorder(null);
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -356,37 +372,41 @@ public class Salg extends javax.swing.JPanel {
                     .addComponent(jLabel5)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
-                .addGap(6, 6, 6)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel6)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -398,14 +418,13 @@ public class Salg extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
@@ -415,25 +434,25 @@ public class Salg extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(99, 99, 99))
+                .addGap(109, 109, 109))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -456,23 +475,30 @@ public class Salg extends javax.swing.JPanel {
             int antal = s.getNewSalesLine().getQuantity();
             String varenavn = s.getNewSalesLine().getProduct().getName();
             double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
-            double moms = stkpris * 0.2;
-            double ialt = s.getNewSalesLine().getSubTotal();
+            double stkprisD = round(stkpris,2);
+            double moms = stkpris * 0.25;
+            double momsD = round(moms,2);
+            double ialt = s.getNewSalesLine().getSubTotal() * 1.25;
+            double ialtD = round(ialt,2);
             jTable1.setValueAt(antal, tableRow, tableColumn);
             tableColumn++;
             jTable1.setValueAt(varenavn, tableRow, tableColumn);
             tableColumn++;
-            jTable1.setValueAt(stkpris, tableRow, tableColumn);
+            jTable1.setValueAt(stkprisD, tableRow, tableColumn);
             tableColumn++;
-            jTable1.setValueAt(moms, tableRow, tableColumn);
+            jTable1.setValueAt(momsD, tableRow, tableColumn);
             tableColumn++;
-            jTable1.setValueAt(ialt, tableRow, tableColumn);
+            jTable1.setValueAt(ialtD, tableRow, tableColumn);
             tableColumn = 0;
             tableRow++;
-            jTextField1.setText(Double.toString(s.getSubtotal()));
-            jTextField4.setText(Double.toString(s.getSubtotal()* 0.2));
+            Double subtotal = s.getSubtotal() * 1.25;
+            Double subtotalD = round(subtotal,2);
+            Double ialtMoms = s.getSubtotal() * 0.25;
+            Double ialtMomsD = round(ialtMoms,2);
+            jTextField1.setText(Double.toString(subtotalD));
+            jTextField4.setText(Double.toString(ialtMomsD));
             jTextField5.setText(s.getClerk().getName());
-            jTextField6.setText(s.getRealTime());
+            jTextField7.setText(s.getRealTime());
             jTextField2.setText(null);
             jTextField3.setText(null);
         }
@@ -515,6 +541,14 @@ public class Salg extends javax.swing.JPanel {
         // TODO add your handling code here:
 }//GEN-LAST:event_jTextField4ActionPerformed
 
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
     private void hjaelpSalg()
     {
         JOptionPane.showMessageDialog(null, "Indtast eller indscan varens stregkode.\nAngiv antal af varen, hvis der er mere end en.\nNår alle varer er indtastet eller indscannet\nangives betalingsmetoden" , "Hjælp", JOptionPane.INFORMATION_MESSAGE);
@@ -547,6 +581,7 @@ public class Salg extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
     private int tableRow;
     private int tableColumn;
@@ -582,5 +617,15 @@ public class Salg extends javax.swing.JPanel {
     public void setTableColumn(int tableColumn)
     {
         this.tableColumn = tableColumn;
+    }
+
+    /**
+     *
+     */
+    private static double round(double d, int decimalPlace)
+    {
+        BigDecimal bd = new BigDecimal(Double.toString(d));
+        bd = bd.setScale(decimalPlace,BigDecimal.ROUND_HALF_UP);
+        return bd.doubleValue();
     }
 }
