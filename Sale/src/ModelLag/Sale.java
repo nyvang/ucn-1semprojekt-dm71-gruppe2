@@ -239,6 +239,7 @@ public class Sale
     public void payForSaleCreditCard()
     {
         setPaymentMethode("CreditCard");
+
     }
 
     /**
@@ -293,7 +294,7 @@ public class Sale
         this.clerk = null;
         this.time = null;
         this.subtotal = 0;
-        this.setQuantitylist(new ArrayList<SalesLineItem>());
+        this.quantitylist = new ArrayList<SalesLineItem>();
         this.setNewSalesLine(null);
         this.paymentMethode = null;
     }
@@ -321,6 +322,20 @@ public class Sale
     public void setNewSalesLine(SalesLineItem newSalesLine)
     {
         this.newSalesLine = newSalesLine;
+    }
+
+    public void setAllAmounts()
+    {
+        double account = clerk.getAccount();
+        account += subtotal;
+        clerk.setAccount(account);
+
+        for(SalesLineItem s : quantitylist)
+        {
+            int amount = s.getProduct().getAmount();
+            amount -= s.getQuantity();
+            s.getProduct().setAmount(amount);
+        }
     }
 
 }
