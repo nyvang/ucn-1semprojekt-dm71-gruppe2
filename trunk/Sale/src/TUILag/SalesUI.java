@@ -97,7 +97,7 @@ public class SalesUI
             int barCode = keyboard.nextInt();
             System.out.println("Enter serialnumber : ");
             String serialNumber = keyboard.nextLine();
-            salesCtr.startNewSale(newQuantity, barCode, serialNumber); // skal være startNewSale
+            salesCtr.startNewSale(newQuantity, barCode); // skal være startNewSale
             System.out.println("Number of goods : " + salesCtr.getAmount());
             System.out.println("Subtotal : " + salesCtr.getSubtotal());
 

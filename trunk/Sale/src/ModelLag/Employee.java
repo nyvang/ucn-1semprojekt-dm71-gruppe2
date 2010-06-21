@@ -12,7 +12,7 @@ package ModelLag;
 public class Employee extends Person
 {
 
-    private int account;
+    private double account;
     private String userName;
     private String password;
 
@@ -56,7 +56,7 @@ public class Employee extends Person
      *
      * @return accountnumber
      */
-    public int getAccount()
+    public double getAccount()
     {
         return account;
     }
@@ -65,7 +65,7 @@ public class Employee extends Person
      *
      * @param sets the account to "acount"
      */
-    public void setAccount(int account)
+    public void setAccount(double account)
     {
         this.account = account;
     }
