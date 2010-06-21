@@ -87,6 +87,27 @@ public class EmployeeContainer
         return supObjekt;
     }
 
+        public Employee findEmployee(String userName)
+    {
+        Employee supObjekt = new Employee();
+        int index = 0;
+        boolean found = false;
+        while(index < employeeList.size() && !found)
+        {
+//           supObjekt = null;
+           if(employeeList.get(index).getUserName().equals(userName))
+           {
+               supObjekt = employeeList.get(index);
+               found = true;
+           }//end if
+            else
+           {
+               index++;
+           }//end else
+        }//end while
+        return supObjekt;
+    }
+
     /**
      * removes the employee with "id" from the employeeList
      * @param id

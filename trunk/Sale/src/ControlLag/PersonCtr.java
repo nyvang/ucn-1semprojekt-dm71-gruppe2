@@ -12,7 +12,7 @@ public class PersonCtr
     private CustomerContainer customerCont;
     private Customer customerObject;
     private SupplierContainer supplierCont;
-    private Supplier supplierObject;
+    //private Supplier supplierObject;
     private Login loginObject;
 
 /*
@@ -30,6 +30,18 @@ public class PersonCtr
      return custObject;
  }
 
+ public Customer findCustomer(int id)
+ {
+    return customerCont.findCustomer(id);
+
+ }
+
+ public Customer removeCustomer(int id)
+ {
+    return customerCont.removeCustomer(id);
+ }
+
+
     public Employee addEmployee(String name, String address, int phone, String userName, String password)
 {
     Employee empObject = new Employee();
@@ -46,15 +58,24 @@ public class PersonCtr
  * Read
  */
 
-public Employee findEmployee(String name, String userName)
+public Employee findEmployee(String userName)
 {
-    return null;
+    return employeeCont.findEmployee(userName);
+}
+
+public Employee removeEmployee(int id)
+{
+    return employeeCont.removeEmployee(id);
+}
+
+public Supplier addSupplier(String name, String addres, int phone, int cvrNumber, String businessName)
+{
+    Supplier supObject = new Supplier(name, addres, phone, cvrNumber, businessName);
+    supplierCont.addSupplier(supObject);
+    return supObject;
 }
 
 
-/*
- * Update
- */
 
 
 /*
