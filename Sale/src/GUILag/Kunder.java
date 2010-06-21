@@ -134,6 +134,7 @@ public class Kunder extends javax.swing.JPanel {
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
 
+        setMaximumSize(new java.awt.Dimension(1025, 768));
         setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
@@ -162,6 +163,7 @@ public class Kunder extends javax.swing.JPanel {
         );
 
         jTabbedPane6.setBackground(new java.awt.Color(0, 0, 0));
+        jTabbedPane6.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPane6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jTabbedPane8.setBackground(new java.awt.Color(255, 255, 204));
