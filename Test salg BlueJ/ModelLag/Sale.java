@@ -11,20 +11,21 @@ public class Sale
 {
 
     private int saleID;
-    private Login clerk;
+    private Employee clerk;
     private Date time;
     private double subtotal;
     private ArrayList<SalesLineItem> quantitylist;
     private SalesLineItem newSalesLine;
     private String paymentMethode;
+  
 
     /**
      * Construct class Sale with parameters
      */
-    public Sale(Login clerk)
+    public Sale(Employee clerk)
     {
         this.saleID = generateID();
-        this.clerk = new Login();
+        this.clerk = clerk;
         this.time = new Date();
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
@@ -48,7 +49,7 @@ public class Sale
     /**
      * Construct class Sale with parameters
      */
-    public Sale(Login clerk, Date time) //Tilføjet af NN
+    public Sale(Employee clerk, Date time) //Tilføjet af NN
     {
         this.saleID = generateID();
         this.clerk = clerk;
@@ -71,6 +72,7 @@ public class Sale
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = null;
         this.paymentMethode = null;
+
     }
 
     /**
@@ -92,7 +94,7 @@ public class Sale
     /**
      * @return the clerk
      */
-    public Login getClerk()
+    public Employee getClerk()
     {
         return clerk;
     }
@@ -100,7 +102,7 @@ public class Sale
     /**
      * @param clerk the clerk to set
      */
-    public void setClerk(Login clerk)
+    public void setClerk(Employee clerk)
     {
         this.clerk = clerk;
     }
@@ -174,7 +176,7 @@ public class Sale
         if(getQuantitylist().size() == 0)
          {
             saleID = generateID();
-            clerk = new Login();
+            clerk =  EmployeeContainer.getInstance().getEmployeeList().get(1);
             time = new Date();
             subtotal = 0;
             quantitylist = new ArrayList<SalesLineItem>();

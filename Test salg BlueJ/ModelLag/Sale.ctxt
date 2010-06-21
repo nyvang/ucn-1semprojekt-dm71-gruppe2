@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.params=clerk
-comment0.target=Sale(Login)
+comment0.target=Sale(Employee)
 comment0.text=\nConstruct\ class\ Sale\ with\ parameters\n\n
 comment1.params=clerk\ time
-comment1.target=Sale(Login,\ Date)
+comment1.target=Sale(Employee,\ Date)
 comment1.text=\nConstruct\ class\ Sale\ with\ parameters\n\n
 comment10.target=double\ getSubtotal()
 comment10.text=\n@return\ the\ subtotal\n\n
@@ -46,10 +46,10 @@ comment3.target=int\ getSaleID()
 comment3.text=\n@return\ the\ saleID\n\n
 comment4.target=void\ setSaleID()
 comment4.text=\n@param\ saleID\ the\ saleID\ to\ set\n\n
-comment5.target=Login\ getClerk()
+comment5.target=Employee\ getClerk()
 comment5.text=\n@return\ the\ clerk\n\n
 comment6.params=clerk
-comment6.target=void\ setClerk(Login)
+comment6.target=void\ setClerk(Employee)
 comment6.text=\n@param\ clerk\ the\ clerk\ to\ set\n\n
 comment7.target=Date\ getTime()
 comment7.text=\n@return\ the\ time\n\n

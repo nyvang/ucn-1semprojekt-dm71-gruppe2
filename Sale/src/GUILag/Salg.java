@@ -26,6 +26,7 @@ public class Salg extends javax.swing.JPanel {
         initComponents();
         tableRow = 0;
         tableColumn = 0;
+        sales = new SalesCtr();
     }
 
     /** This method is called from within the constructor to
@@ -304,15 +305,15 @@ public class Salg extends javax.swing.JPanel {
         }
         else
         {
-//            int quantity = Integer.parseInt(jTextField2.getText());
-//            int barCode = 1;
+            int quantity = Integer.parseInt(jTextField2.getText());
+            int barCode = Integer.parseInt(jTextField3.getText());
 //            String serial = null;
-//            s = sales.startNewSale(quantity, barCode, serial);
-            int antal = 0;
-            String varenavn = "Test";
-            double stkpris = 107.00;
-            double moms = 0;
-            double ialt = 0;
+            s = sales.startNewSale(quantity, barCode);
+            int antal = s.getNewSalesLine().getQuantity();
+            String varenavn = s.getNewSalesLine().getProduct().getName();
+            double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
+            double moms = stkpris * 0.2;
+            double ialt = s.getNewSalesLine().getSubTotal();
             jTable1.setValueAt(antal, tableRow, tableColumn);
             tableColumn++;
             jTable1.setValueAt(varenavn, tableRow, tableColumn);

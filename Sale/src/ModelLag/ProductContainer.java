@@ -82,7 +82,7 @@ public class ProductContainer
      *@param find ProductDescription
      * @return productdescription of productD
      */
-    public ProductDescription findProductDescription(int barCode, String serial)
+    public ProductDescription findProductDescription(int barCode)
     {
         ProductDescription productD = null;
         int index = 0;

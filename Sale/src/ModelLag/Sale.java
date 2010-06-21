@@ -11,20 +11,21 @@ public class Sale
 {
 
     private int saleID;
-    private Login clerk;
+    private Employee clerk;
     private Date time;
     private double subtotal;
     private ArrayList<SalesLineItem> quantitylist;
     private SalesLineItem newSalesLine;
     private String paymentMethode;
 
+
     /**
      * Construct class Sale with parameters
      */
-    public Sale(Login clerk)
+    public Sale(Employee clerk)
     {
         this.saleID = generateID();
-        this.clerk = new Login();
+        this.clerk = clerk;
         this.time = new Date();
         this.subtotal = 0;
         this.quantitylist = new ArrayList<SalesLineItem>();
@@ -48,7 +49,7 @@ public class Sale
     /**
      * Construct class Sale with parameters
      */
-    public Sale(Login clerk, Date time) //Tilføjet af NN
+    public Sale(Employee clerk, Date time) //Tilføjet af NN
     {
         this.saleID = generateID();
         this.clerk = clerk;
@@ -71,6 +72,7 @@ public class Sale
         this.quantitylist = new ArrayList<SalesLineItem>();
         this.newSalesLine = null;
         this.paymentMethode = null;
+
     }
 
     /**
@@ -86,13 +88,13 @@ public class Sale
      */
     public void setSaleID()
     {
-        this.saleID = generateID();
+        this.setSaleID(generateID());
     }
 
     /**
      * @return the clerk
      */
-    public Login getClerk()
+    public Employee getClerk()
     {
         return clerk;
     }
@@ -100,7 +102,7 @@ public class Sale
     /**
      * @param clerk the clerk to set
      */
-    public void setClerk(Login clerk)
+    public void setClerk(Employee clerk)
     {
         this.clerk = clerk;
     }
@@ -158,7 +160,7 @@ public class Sale
      */
     public void setQuantitylist(ArrayList<SalesLineItem> quantitylist)
     {
-        this.quantitylist = quantitylist;
+        this.setQuantitylist(quantitylist);
     }
 
     /*
@@ -169,20 +171,19 @@ public class Sale
      * @param serial
      * @return quantitylist
      */
-    public ArrayList<SalesLineItem> startSale(int quantity, int barCode, String serial)
+    public ArrayList<SalesLineItem> startSale(int quantity, int barCode)
     {
         if(getQuantitylist().size() == 0)
          {
-            saleID = generateID();
-            clerk = new Login();
+            setSaleID(generateID());
+            clerk =  EmployeeContainer.getInstance().getEmployeeList().get(1);
             time = new Date();
             subtotal = 0;
-            quantitylist = new ArrayList<SalesLineItem>();
-            newSalesLine = newSalesLine(quantity, barCode, serial);
+            setNewSalesLine(newSalesLine(quantity, barCode));
          }//end if
          else
          {
-            newSalesLine = newSalesLine(quantity, barCode, serial);
+            setNewSalesLine(newSalesLine(quantity, barCode));
          }//end else
         return quantitylist;
     }
@@ -215,12 +216,12 @@ public class Sale
      * @param newSalesLine is added to quantitylist
      * @param calulateSubTotal adds SalesLineItem subTotal to Sale subtotal
      */
-    public SalesLineItem newSalesLine(int quantity, int barCode, String serial)
+    public SalesLineItem newSalesLine(int quantity, int barCode)
     {
-        newSalesLine = new SalesLineItem(quantity, barCode, serial);
-        getQuantitylist().add(newSalesLine);
+        setNewSalesLine(new SalesLineItem(quantity, barCode));
+        getQuantitylist().add(getNewSalesLine());
         calculateSubTotal();
-        return newSalesLine;
+        return getNewSalesLine();
     }
 
     /**
@@ -228,7 +229,7 @@ public class Sale
      */
     public double calculateSubTotal()
     {
-        subtotal +=  newSalesLine.getSubTotal();
+        subtotal +=  getNewSalesLine().getSubTotal();
         return subtotal;
     }
 
@@ -261,7 +262,7 @@ public class Sale
         }
         return account;
     }
-    
+
     /**
      * Get size of quantityList
      */
@@ -288,13 +289,38 @@ public class Sale
 
     public void clearAll()
     {
-        this.saleID = 0;
+        this.setSaleID(0);
         this.clerk = null;
         this.time = null;
         this.subtotal = 0;
-        this.quantitylist = new ArrayList<SalesLineItem>();
-        this.newSalesLine = null;
+        this.setQuantitylist(new ArrayList<SalesLineItem>());
+        this.setNewSalesLine(null);
         this.paymentMethode = null;
+    }
+
+    /**
+     * @param saleID the saleID to set
+     */
+    public void setSaleID(int saleID)
+    {
+        this.saleID = saleID;
+    }
+
+
+    /**
+     * @return the newSalesLine
+     */
+    public SalesLineItem getNewSalesLine()
+    {
+        return newSalesLine;
+    }
+
+    /**
+     * @param newSalesLine the newSalesLine to set
+     */
+    public void setNewSalesLine(SalesLineItem newSalesLine)
+    {
+        this.newSalesLine = newSalesLine;
     }
 
 }
