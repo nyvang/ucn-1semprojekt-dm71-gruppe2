@@ -18,7 +18,19 @@ public class PersonCtr
 /*
  * Create
  */
-public Employee addEmployee(String name, String address, int phone, String userName, String password)
+ public Customer addCustomer(String name, String addres, int phone, int customerID)
+ {
+ 
+     Customer custObject = new Customer();
+     custObject.setName(name);
+     custObject.setAddress(addres);
+     custObject.setPhone(phone);
+     custObject.setCustomerID(customerID);
+     customerCont.addCustomer(custObject);
+     return custObject;
+ }
+
+    public Employee addEmployee(String name, String address, int phone, String userName, String password)
 {
     Employee empObject = new Employee();
     empObject.setName(name);
@@ -36,7 +48,7 @@ public Employee addEmployee(String name, String address, int phone, String userN
 
 public Employee findEmployee(String name, String userName)
 {
-    
+    return null;
 }
 
 
