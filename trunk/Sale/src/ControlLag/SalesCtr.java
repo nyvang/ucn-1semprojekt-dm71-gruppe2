@@ -177,5 +177,9 @@ public class SalesCtr
 
     }
 
+    public void endThisSale()
+    {
+        salesObject.setAllAmounts();
+    }
 
-}
+ }
