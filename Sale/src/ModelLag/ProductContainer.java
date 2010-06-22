@@ -84,7 +84,7 @@ public class ProductContainer
      */
     public ProductDescription findProductDescription(int barCode)
     {
-        ProductDescription productD = null;
+        ProductDescription productD = new ProductDescription();
         int index = 0;
         boolean found = false;
         while(index < stockList.size() && !found)
@@ -92,10 +92,12 @@ public class ProductContainer
             productD = stockList.get(index);
             if(productD.getBarCode() ==  barCode)// && productD.findItemSerial(serial).equals(serial))
             {
+                productD = stockList.get(index);
                 found = true;
             }//end if
             else
             {
+                productD = new ProductDescription();
                 index++;
             }//end
         }// end while
