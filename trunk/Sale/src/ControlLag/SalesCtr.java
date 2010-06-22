@@ -180,6 +180,14 @@ public class SalesCtr
     public void endThisSale()
     {
         salesObject.setAllAmounts();
+        salesList.addSale(salesObject);
+        clearSale();
     }
+
+    public void clearSale()
+    {
+        salesObject = new Sale();
+    }
+
 
  }

@@ -219,8 +219,11 @@ public class Sale
     public SalesLineItem newSalesLine(int quantity, int barCode)
     {
         setNewSalesLine(new SalesLineItem(quantity, barCode));
+        if(getNewSalesLine().getBarCode() != 0)
+        {
         getQuantitylist().add(getNewSalesLine());
         calculateSubTotal();
+        }
         return getNewSalesLine();
     }
 
