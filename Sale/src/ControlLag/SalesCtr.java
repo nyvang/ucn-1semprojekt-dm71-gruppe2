@@ -172,9 +172,11 @@ public class SalesCtr
     }
 
 
-    public void getCustomer()
+    public Customer getCustomer(int id)
     {
-
+        Customer c = new Customer();
+        c = customerList.findCustomer(id);
+        return c;
     }
 
     public void endThisSale()
