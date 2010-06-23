@@ -68,7 +68,7 @@ public class VBSystem extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 204));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jPanel2.setBackground(getBackground());
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 5, true));
@@ -86,15 +86,25 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Verdana", 0, 14));
+        jButton2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jButton2.setText("LOGIN");
         jButton2.setActionCommand("login");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+        jButton2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton2KeyPressed(evt);
             }
         });
 
@@ -108,6 +118,11 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jButton3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton3KeyPressed(evt);
+            }
+        });
 
         jButton4.setBackground(jButton2.getBackground());
         jButton4.setFont(new java.awt.Font("Verdana", 0, 14));
@@ -117,6 +132,11 @@ public class VBSystem extends javax.swing.JFrame {
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
+            }
+        });
+        jButton4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton4KeyPressed(evt);
             }
         });
 
@@ -130,6 +150,11 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        jButton5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton5KeyPressed(evt);
+            }
+        });
 
         jButton6.setBackground(jButton2.getBackground());
         jButton6.setFont(new java.awt.Font("Verdana", 0, 14));
@@ -139,6 +164,11 @@ public class VBSystem extends javax.swing.JFrame {
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
+            }
+        });
+        jButton6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton6KeyPressed(evt);
             }
         });
 
@@ -152,6 +182,11 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
+        jButton7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton7KeyPressed(evt);
+            }
+        });
 
         jButton8.setBackground(jButton2.getBackground());
         jButton8.setFont(new java.awt.Font("Verdana", 0, 14));
@@ -161,6 +196,11 @@ public class VBSystem extends javax.swing.JFrame {
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
+            }
+        });
+        jButton8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton8KeyPressed(evt);
             }
         });
 
@@ -177,6 +217,11 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
+        jButton9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton9KeyPressed(evt);
+            }
+        });
 
         jButton10.setBackground(jButton2.getBackground());
         jButton10.setFont(new java.awt.Font("Verdana", 0, 14));
@@ -189,6 +234,11 @@ public class VBSystem extends javax.swing.JFrame {
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
+            }
+        });
+        jButton10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton10KeyPressed(evt);
             }
         });
 
@@ -205,15 +255,25 @@ public class VBSystem extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
+        jButton11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton11KeyPressed(evt);
+            }
+        });
 
         jButton12.setBackground(jButton2.getBackground());
-        jButton12.setFont(new java.awt.Font("Verdana", 0, 14));
+        jButton12.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jButton12.setText("LOG OUT");
         jButton12.setActionCommand("logout");
         jButton12.setBorder(jButton2.getBorder());
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
+            }
+        });
+        jButton12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton12KeyPressed(evt);
             }
         });
 
@@ -280,7 +340,7 @@ public class VBSystem extends javax.swing.JFrame {
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
@@ -295,22 +355,22 @@ public class VBSystem extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 697, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 611, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -341,11 +401,11 @@ public class VBSystem extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 886, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
         );
 
         pack();
@@ -407,8 +467,8 @@ public class VBSystem extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
     clearPanel();
-    Varelager v = new Varelager();
-    insertPanel(v);
+    Kunder k = new Kunder();
+    insertPanel(k);
 }//GEN-LAST:event_jButton6ActionPerformed
 /**
  * Catches mouse-click, creates object of Kunder, inserts Panel from Kunder
@@ -455,6 +515,79 @@ public class VBSystem extends javax.swing.JFrame {
     Forside f = new Forside();
     insertPanel(f);
 }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton2KeyPressed
+    clearPanel();
+    Login li = new Login();
+    insertPanel(li);
+    }//GEN-LAST:event_jButton2KeyPressed
+
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+    clearPanel();
+    Forside f = new Forside();
+    insertPanel(f);
+    }//GEN-LAST:event_jButton1KeyPressed
+
+    private void jButton3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton3KeyPressed
+    clearPanel();
+    Salg sa = new Salg();
+    insertPanel(sa);
+    }//GEN-LAST:event_jButton3KeyPressed
+
+    private void jButton4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton4KeyPressed
+    clearPanel();
+    Udlejning u = new Udlejning();
+    insertPanel(u);
+    }//GEN-LAST:event_jButton4KeyPressed
+
+    private void jButton5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton5KeyPressed
+    clearPanel();
+    Kunder k = new Kunder();
+    insertPanel(k);
+    }//GEN-LAST:event_jButton5KeyPressed
+
+    private void jButton6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton6KeyPressed
+    clearPanel();
+    Kunder k = new Kunder();
+    insertPanel(k);
+    }//GEN-LAST:event_jButton6KeyPressed
+
+    private void jButton7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton7KeyPressed
+    clearPanel();
+    Leverandoer le = new Leverandoer();
+    insertPanel(le);
+    }//GEN-LAST:event_jButton7KeyPressed
+
+    private void jButton8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton8KeyPressed
+    clearPanel();
+    Personale p = new Personale();
+    insertPanel(p);
+    }//GEN-LAST:event_jButton8KeyPressed
+
+    private void jButton9KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton9KeyPressed
+    clearPanel();
+    Statistik st = new Statistik();
+    insertPanel(st);
+    }//GEN-LAST:event_jButton9KeyPressed
+
+    private void jButton10KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton10KeyPressed
+    clearPanel();
+    Ehandel e = new Ehandel();
+    insertPanel(e);
+    }//GEN-LAST:event_jButton10KeyPressed
+
+    private void jButton11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton11KeyPressed
+    clearPanel();
+    Links li = new Links();
+    insertPanel(li);
+    }//GEN-LAST:event_jButton11KeyPressed
+
+    private void jButton12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyPressed
+    clearPanel();
+    Logout lo = new Logout();
+    insertPanel(lo);
+    setButtonsLoggedOut();
+    }//GEN-LAST:event_jButton12KeyPressed
 /**
  *
  * @param panel inserts new JPanel panel in jPanel4
@@ -763,7 +896,7 @@ private void setFailJTextField1()
 {
     JOptionPane.showMessageDialog(null, "Username eller password findes ikke!", "Fejl", JOptionPane.WARNING_MESSAGE);
     clearTextFields();
-//    jTextField1.setText("Username eller password findes ikke.");
+
 }
 
 private void loggingIn()
@@ -801,11 +934,5 @@ private void loggingIn()
 
 }
 
-//private void makeMenuBar()
-//{
-//    JMenuBar menubar = new JMenuBar();
-//    frame.setJMenuBar(menubar);
-//
-//}
 
 }
