@@ -13,6 +13,7 @@ package GUILag;
 
 import javax.swing.JOptionPane;
 import ControlLag.*;
+import ModelLag.Customer;
 /**
  *
  * @author Anita
@@ -1421,14 +1422,20 @@ public class Kunder extends javax.swing.JPanel {
 
     private PersonCtr createCustomer()
     {
-       // String name, String addres, int phone, int customerID
+
+        // String name, String addres, int phone, int customerID
         PersonCtr c = new PersonCtr();
         String name = jTextField3.getText();
         String address = jTextPane1.getText();
         int phone = Integer.parseInt(jTextField2.getText());
         int customerID = phone;
-        c.addCustomer(name, address, phone, customerID);
+        Customer cu = new Customer();
+        cu = c.addCustomer(name, address, phone, customerID);
+        JOptionPane.showMessageDialog(null, cu.getName() + ", " + cu.getAddress()
+                + ", tlf.nr.: " + cu.getPhone() + " er oprettet med ID nummer: " + cu.getCustomerID()
+                , "Kunde opretttet", JOptionPane.INFORMATION_MESSAGE);
         return c;
+
 
     }
 }

@@ -665,36 +665,46 @@ private void hjaelpSalg()
             s = sales.startNewSale(quantity, barCode);
             if(s.getNewSalesLine().getProduct().getBarCode() != 0)
             {
-                int antal = s.getNewSalesLine().getQuantity();
-                String varenavn = s.getNewSalesLine().getProduct().getName();
-                double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
-                double stkprisD = round(stkpris,2);
-                double moms = stkpris * 0.25;
-                double momsD =round(moms,2);
-                double ialt = s.getNewSalesLine().getSubTotal() * 1.25;
-                double ialtD = round(ialt,2);
-                getjTable1().setValueAt(antal, tableRow, tableColumn);
-                tableColumn++;
-                getjTable1().setValueAt(varenavn, tableRow, tableColumn);
-                tableColumn++;
-                getjTable1().setValueAt(stkprisD + setZeroes(getNumberOfDecimalPlace(stkprisD)), tableRow, tableColumn);
-                tableColumn++;
-                getjTable1().setValueAt(momsD + setZeroes(getNumberOfDecimalPlace(momsD)), tableRow, tableColumn);
-                tableColumn++;
-                getjTable1().setValueAt(ialtD + setZeroes(getNumberOfDecimalPlace(ialtD)), tableRow, tableColumn);
-                tableColumn = 0;
-                tableRow++;
-                double subtotal = s.getSubtotal() * 1.25;
-                double subtotalD = round(subtotal,2);
-                double ialtMoms = s.getSubtotal() * 0.25;
-                double ialtMomsD = round(ialtMoms,2);
-                jTextField1.setText(Double.toString(subtotalD) + setZeroes(getNumberOfDecimalPlace(subtotalD)));
-                jTextField4.setText(Double.toString(ialtMomsD) + setZeroes(getNumberOfDecimalPlace(ialtMomsD)));
-                jTextField5.setText(s.getClerk().getName());
-                jTextField7.setText(s.getRealTime());
-                jTextField2.setText(null);
-                jTextField3.setText(null);
-                notPaid();
+                if(s.getNewSalesLine().getProduct().getAmount() < quantity)
+                {
+                    JOptionPane.showMessageDialog(null, quantity + " stk. " + s.getNewSalesLine().getProduct().getName() + " har vi slet ikke!!\n" +
+                            "Vi har kun " + s.getNewSalesLine().getProduct().getAmount() + " stk. "
+                            + s.getNewSalesLine().getProduct().getName(), "Hovsa",
+                    JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    int antal = s.getNewSalesLine().getQuantity();
+                    String varenavn = s.getNewSalesLine().getProduct().getName();
+                    double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
+                    double stkprisD = round(stkpris,2);
+                    double moms = stkpris * 0.25;
+                    double momsD =round(moms,2);
+                    double ialt = s.getNewSalesLine().getSubTotal() * 1.25;
+                    double ialtD = round(ialt,2);
+                    getjTable1().setValueAt(antal, tableRow, tableColumn);
+                    tableColumn++;
+                    getjTable1().setValueAt(varenavn, tableRow, tableColumn);
+                    tableColumn++;
+                    getjTable1().setValueAt(stkprisD + setZeroes(getNumberOfDecimalPlace(stkprisD)), tableRow, tableColumn);
+                    tableColumn++;
+                    getjTable1().setValueAt(momsD + setZeroes(getNumberOfDecimalPlace(momsD)), tableRow, tableColumn);
+                    tableColumn++;
+                    getjTable1().setValueAt(ialtD + setZeroes(getNumberOfDecimalPlace(ialtD)), tableRow, tableColumn);
+                    tableColumn = 0;
+                    tableRow++;
+                    double subtotal = s.getSubtotal() * 1.25;
+                    double subtotalD = round(subtotal,2);
+                    double ialtMoms = s.getSubtotal() * 0.25;
+                    double ialtMomsD = round(ialtMoms,2);
+                    jTextField1.setText(Double.toString(subtotalD) + setZeroes(getNumberOfDecimalPlace(subtotalD)));
+                    jTextField4.setText(Double.toString(ialtMomsD) + setZeroes(getNumberOfDecimalPlace(ialtMomsD)));
+                    jTextField5.setText(s.getClerk().getName());
+                    jTextField7.setText(s.getRealTime());
+                    jTextField2.setText(null);
+                    jTextField3.setText(null);
+                    notPaid();
+                }//end else
             }//end if
             else
             {
