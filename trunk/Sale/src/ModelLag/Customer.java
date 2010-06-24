@@ -21,6 +21,7 @@ public class Customer extends Person
     {
         super(name, addres, phone);
         this.customerID = customerID;
+        group = new Group();
     }
 
     public Customer()

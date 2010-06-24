@@ -21,13 +21,14 @@ public class PersonCtr
  public Customer addCustomer(String name, String addres, int phone, int customerID)
  {
  
-     Customer custObject = new Customer();
-     custObject.setName(name);
-     custObject.setAddress(addres);
-     custObject.setPhone(phone);
-     custObject.setCustomerID(customerID);
-     customerCont.addCustomer(custObject);
+     Customer custObject = new Customer(name,addres,phone,customerID);
+     customerCont.addCustomer(custObject);//.addCustomer(custObject);
      return custObject;
+ }
+
+ public int getID()
+ {
+    return customerObject.getCustomerID();
  }
 
  public Customer findCustomer(int id)
@@ -54,10 +55,6 @@ public class PersonCtr
     return empObject;
 }
 
-/*
- * Read
- */
-
 public Employee findEmployee(String userName)
 {
     return employeeCont.findEmployee(userName);
@@ -75,7 +72,10 @@ public Supplier addSupplier(String name, String addres, int phone, int cvrNumber
     return supObject;
 }
 
-
+public Supplier removeSupplier(int id)
+{
+    return supplierCont.removeSupplier(id);
+}
 
 
 /*

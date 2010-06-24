@@ -26,6 +26,13 @@ public class Group
         this.maxCredit = maxCredit;
         id = generateID();
     }
+     public Group()
+    {
+        this.discount = 0;
+        this.daysOfCredit = 0;
+        this.maxCredit = 0;
+        id = 0;
+    }
 
     /**
      * Generates newID, the loop ensures that the next unused id is chosen
