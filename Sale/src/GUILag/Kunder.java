@@ -1421,9 +1421,14 @@ public class Kunder extends javax.swing.JPanel {
 
     private PersonCtr createCustomer()
     {
-        PersonCtr cusCtr = new PersonCtr();
-        cusCtr.addCustomer(TOOL_TIP_TEXT_KEY, TOOL_TIP_TEXT_KEY, WIDTH, WIDTH);
-        return cusCtr;
+       // String name, String addres, int phone, int customerID
+        PersonCtr c = new PersonCtr();
+        String name = jTextField3.getText();
+        String address = jTextPane1.getText();
+        int phone = Integer.parseInt(jTextField2.getText());
+        int customerID = phone;
+        c.addCustomer(name, address, phone, customerID);
+        return c;
 
     }
 }
