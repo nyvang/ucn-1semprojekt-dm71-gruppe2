@@ -68,7 +68,7 @@ public class VBSystem extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 204));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 768));
 
         jPanel2.setBackground(getBackground());
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 5, true));
@@ -93,7 +93,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
-        jButton2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton2.setText("LOGIN");
         jButton2.setActionCommand("login");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153), new java.awt.Color(255, 255, 204), new java.awt.Color(255, 255, 153)));
@@ -262,7 +262,7 @@ public class VBSystem extends javax.swing.JFrame {
         });
 
         jButton12.setBackground(jButton2.getBackground());
-        jButton12.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jButton12.setFont(new java.awt.Font("Verdana", 0, 14));
         jButton12.setText("LOG OUT");
         jButton12.setActionCommand("logout");
         jButton12.setBorder(jButton2.getBorder());
@@ -345,11 +345,12 @@ public class VBSystem extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 5, true));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1280, 768));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VBSystem", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 11))); // NOI18N
-        jPanel4.setFont(new java.awt.Font("Verdana", 0, 11));
-        jPanel4.setPreferredSize(new java.awt.Dimension(1024, 768));
+        jPanel4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jPanel4.setPreferredSize(new java.awt.Dimension(1280, 768));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -380,12 +381,12 @@ public class VBSystem extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
         );
 
         jMenu1.setText("File");
@@ -467,8 +468,8 @@ public class VBSystem extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
     clearPanel();
-    Kunder k = new Kunder();
-    insertPanel(k);
+    Varelager l = new Varelager();
+    insertPanel(l);
 }//GEN-LAST:event_jButton6ActionPerformed
 /**
  * Catches mouse-click, creates object of Kunder, inserts Panel from Kunder
