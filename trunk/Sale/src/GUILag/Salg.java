@@ -11,6 +11,7 @@
 
 package GUILag;
 
+import ControlLag.ProductCtr;
 import ControlLag.SalesCtr;
 import ModelLag.Customer;
 import ModelLag.Employee;
@@ -35,6 +36,7 @@ public class Salg extends javax.swing.JPanel {
         sales = new SalesCtr();
         s = new Sale();
         jTable2 = new javax.swing.JTable();
+        products = new ProductCtr();
     }
 
     /** This method is called from within the constructor to
@@ -184,7 +186,7 @@ public class Salg extends javax.swing.JPanel {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 204));
 
         jTable1.setBackground(new java.awt.Color(255, 255, 204));
-        jTable1.setFont(new java.awt.Font("Verdana", 0, 11));
+        jTable1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -208,7 +210,15 @@ public class Salg extends javax.swing.JPanel {
             new String [] {
                 "Antal", "Varenavn", "Stk. pris u. moms", "Moms ", "I alt m. moms"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.setGridColor(new java.awt.Color(255, 204, 0));
         jTable1.setSelectionBackground(new java.awt.Color(255, 255, 204));
         jTable1.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -224,6 +234,7 @@ public class Salg extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        jTable1.getColumnModel().getColumn(4).setResizable(false);
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel4.setText("Salgslinier");
@@ -662,56 +673,58 @@ private void hjaelpSalg()
             int quantity = Integer.parseInt(jTextField2.getText());
             int barCode = Integer.parseInt(jTextField3.getText());
 //            String serial = null;
-            s = sales.startNewSale(quantity, barCode);
-            if(s.getNewSalesLine().getProduct().getBarCode() != 0)
-            {
-                if(s.getNewSalesLine().getProduct().getAmount() < quantity)
+            ProductDescription p = products.findProductdescription(barCode);
+                if(p.getBarCode() == 0)
                 {
-                    JOptionPane.showMessageDialog(null, quantity + " stk. " + s.getNewSalesLine().getProduct().getName() + " har vi slet ikke!!\n" +
-                            "Vi har kun " + s.getNewSalesLine().getProduct().getAmount() + " stk. "
-                            + s.getNewSalesLine().getProduct().getName(), "Hovsa",
-                    JOptionPane.ERROR_MESSAGE);
-                }
-                else
-                {
-                    int antal = s.getNewSalesLine().getQuantity();
-                    String varenavn = s.getNewSalesLine().getProduct().getName();
-                    double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
-                    double stkprisD = round(stkpris,2);
-                    double moms = stkpris * 0.25;
-                    double momsD =round(moms,2);
-                    double ialt = s.getNewSalesLine().getSubTotal() * 1.25;
-                    double ialtD = round(ialt,2);
-                    getjTable1().setValueAt(antal, tableRow, tableColumn);
-                    tableColumn++;
-                    getjTable1().setValueAt(varenavn, tableRow, tableColumn);
-                    tableColumn++;
-                    getjTable1().setValueAt(stkprisD + setZeroes(getNumberOfDecimalPlace(stkprisD)), tableRow, tableColumn);
-                    tableColumn++;
-                    getjTable1().setValueAt(momsD + setZeroes(getNumberOfDecimalPlace(momsD)), tableRow, tableColumn);
-                    tableColumn++;
-                    getjTable1().setValueAt(ialtD + setZeroes(getNumberOfDecimalPlace(ialtD)), tableRow, tableColumn);
-                    tableColumn = 0;
-                    tableRow++;
-                    double subtotal = s.getSubtotal() * 1.25;
-                    double subtotalD = round(subtotal,2);
-                    double ialtMoms = s.getSubtotal() * 0.25;
-                    double ialtMomsD = round(ialtMoms,2);
-                    jTextField1.setText(Double.toString(subtotalD) + setZeroes(getNumberOfDecimalPlace(subtotalD)));
-                    jTextField4.setText(Double.toString(ialtMomsD) + setZeroes(getNumberOfDecimalPlace(ialtMomsD)));
-                    jTextField5.setText(s.getClerk().getName());
-                    jTextField7.setText(s.getRealTime());
-                    jTextField2.setText(null);
-                    jTextField3.setText(null);
-                    notPaid();
-                }//end else
-            }//end if
-            else
-            {
                 JOptionPane.showMessageDialog(null, "Hovsa - stregkoden findes ikke" , "Hovsa",
                     JOptionPane.ERROR_MESSAGE);
-            }//end else
-        }//end else
+                }//end if
+                else
+                {
+                    if(p.getAmount() < quantity)
+                    {
+                        JOptionPane.showMessageDialog(null, quantity + " stk. " + p.getName() + " har vi slet ikke!!\n" +
+                                "Vi har kun " + p.getAmount() + " stk. "
+                                + p.getName(), "Hovsa",
+                        JOptionPane.ERROR_MESSAGE);
+                    }//end if
+                    else
+                    {
+                        s = sales.startNewSale(quantity, barCode);
+                        int antal = s.getNewSalesLine().getQuantity();
+                        String varenavn = s.getNewSalesLine().getProduct().getName();
+                        double stkpris = s.getNewSalesLine().getProduct().getSalesPrice();
+                        double stkprisD = round(stkpris,2);
+                        double moms = stkpris * 0.25;
+                        double momsD =round(moms,2);
+                        double ialt = s.getNewSalesLine().getSubTotal() * 1.25;
+                        double ialtD = round(ialt,2);
+                        getjTable1().setValueAt(antal, tableRow, tableColumn);
+                        tableColumn++;
+                        getjTable1().setValueAt(varenavn, tableRow, tableColumn);
+                        tableColumn++;
+                        getjTable1().setValueAt(stkprisD + setZeroes(getNumberOfDecimalPlace(stkprisD)), tableRow, tableColumn);
+                        tableColumn++;
+                        getjTable1().setValueAt(momsD + setZeroes(getNumberOfDecimalPlace(momsD)), tableRow, tableColumn);
+                        tableColumn++;
+                        getjTable1().setValueAt(ialtD + setZeroes(getNumberOfDecimalPlace(ialtD)), tableRow, tableColumn);
+                        tableColumn = 0;
+                        tableRow++;
+                        double subtotal = s.getSubtotal() * 1.25;
+                        double subtotalD = round(subtotal,2);
+                        double ialtMoms = s.getSubtotal() * 0.25;
+                        double ialtMomsD = round(ialtMoms,2);
+                        jTextField1.setText(Double.toString(subtotalD) + setZeroes(getNumberOfDecimalPlace(subtotalD)));
+                        jTextField4.setText(Double.toString(ialtMomsD) + setZeroes(getNumberOfDecimalPlace(ialtMomsD)));
+                        jTextField5.setText(s.getClerk().getName());
+                        jTextField7.setText(s.getRealTime());
+                        jTextField2.setText(null);
+                        jTextField3.setText(null);
+                        notPaid();
+                    }//end else
+                }//end else
+        }
+
     }
 
     private void checkIfSaleIsStarted()
@@ -1291,6 +1304,7 @@ private void hjaelpSalg()
     private SalesCtr sales;
     private Sale s;
     private javax.swing.JTable jTable2;
+    private ProductCtr products;
 
 
 
