@@ -15,6 +15,14 @@ public class PersonCtr
     //private Supplier supplierObject;
     private Login loginObject;
 
+    public PersonCtr()
+    {
+        employeeCont = EmployeeContainer.getInstance();
+        employeeObject = new Employee();
+        customerCont = CustomerContainer.getInstance();
+        customerObject = new Customer();
+        supplierCont = SupplierContainer.getInstance();
+    }
 /*
  * Create
  */

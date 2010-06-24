@@ -67,7 +67,7 @@ public class CustomerContainer
      */
     public Customer removeCustomer(int id)
     {
-        Customer supObjekt = null;
+        Customer supObjekt = new Customer();
         int index = 0;
         boolean found = false;
         while(index < customerList.size() && !found)
@@ -76,6 +76,7 @@ public class CustomerContainer
            if(supObjekt.getCustomerID() == id)
            {
                customerList.remove(index);
+               found = true;
            }//end if
             else
             {
@@ -87,7 +88,7 @@ public class CustomerContainer
 
     public Customer findCustomer(int id)
     {
-        Customer supObjekt = null;
+        Customer supObjekt = new Customer();
         int index = 0;
         boolean found = false;
         while(index < customerList.size() && !found)
@@ -95,6 +96,7 @@ public class CustomerContainer
            if(customerList.get(index).getCustomerID() == id)
            {
                supObjekt = customerList.get(index);
+               found = true;
            }//end if
             else
             {
