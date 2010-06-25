@@ -23,6 +23,13 @@ public class Supplier extends Person
         iD = generateID();
     }
 
+    public Supplier()
+    {
+        super(null, null, 0);
+        this.cvrNumber = 0;
+        this.businessName = null;
+        iD = 0;
+    }
     /**
      * @return the cvrNumber
      */

@@ -88,6 +88,26 @@ public class SupplierContainer
         supContainer.removeSupplier(1);
     }
 
+    public Supplier findSupplier(int id)
+    {
+        Supplier supObjekt = new Supplier();
+        int index = 0;
+        boolean found = false;
+        while(index < supplierList.size() && !found)
+        {
+//           supObjekt = null;
+           if(supplierList.get(index).getiD() == id)
+           {
+               supObjekt = supplierList.get(index);
+               found = true;
+           }//end if
+            else
+           {
+               index++;
+           }//end else
+        }//end while
+        return supObjekt;
+    }
    
 
 }
