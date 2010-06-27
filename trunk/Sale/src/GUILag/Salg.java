@@ -133,7 +133,7 @@ public class Salg extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -208,7 +208,7 @@ public class Salg extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Antal", "Varenavn", "Stk. pris u. moms", "Moms ", "I alt m. moms"
+                "Antal", "Varenavn", "Stk. pris ex moms", "Moms ", "I alt incl moms"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -234,7 +234,6 @@ public class Salg extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getColumn(4).setResizable(false);
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel4.setText("Salgslinier");
@@ -246,7 +245,7 @@ public class Salg extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,7 +321,7 @@ public class Salg extends javax.swing.JPanel {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 204));
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 11));
-        jLabel3.setText("Køb m. moms");
+        jLabel3.setText("Køb incl moms");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 204));
         jLabel5.setFont(new java.awt.Font("Verdana", 0, 11));
@@ -2633,12 +2632,7 @@ public class BetalingKontant extends javax.swing.JPanel
        jTextField18.setText("er gennemført og godkendt");
     }
 
-    private void accountSet()
-    {
-        Customer c = new Customer();
-//        c = ??;
-        jTextField18.setText(jTextField4.getText() + " er tilføjet " + c.getName() + "s konto");
-    }
+  
 
     private void setPaymentPanel()
     {
