@@ -198,13 +198,13 @@ public class Sale
         int newID = 0;
         if(SalesContainer.getInstance().getSalesList().size() != 0)
             {
-            index = SalesContainer.getInstance().getSalesList().size() - 1;
-            Sale s = SalesContainer.getInstance().getSalesList().get(index);
-            newID = s.getSaleID() + 1;
+                index = SalesContainer.getInstance().getSalesList().size() - 1;
+                Sale s = SalesContainer.getInstance().getSalesList().get(index);
+                newID = s.getSaleID() + 1;
             }//end if
         else
             {
-            newID = 1;
+                newID = 1;
             }//end else
         return newID;
     }
@@ -221,8 +221,8 @@ public class Sale
         setNewSalesLine(new SalesLineItem(quantity, barCode));
         if(getNewSalesLine().getBarCode() != 0)
         {
-        getQuantitylist().add(getNewSalesLine());
-        calculateSubTotal();
+            getQuantitylist().add(getNewSalesLine());
+            calculateSubTotal();
         }
         return getNewSalesLine();
     }

@@ -11,6 +11,10 @@
 
 package GUILag;
 
+import ModelLag.Supplier;
+import ModelLag.SupplierContainer;
+import java.util.ArrayList;
+
 /**
  *
  * @author Anita
@@ -20,6 +24,7 @@ public class Varelager extends javax.swing.JPanel {
     /** Creates new form Varelager */
     public Varelager() {
         initComponents();
+        
     }
 
     /** This method is called from within the constructor to
@@ -84,37 +89,37 @@ public class Varelager extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel1.setText("Varenavn");
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel2.setText("Salgspris");
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel3.setText("Købspris");
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel4.setText("Minimumslager");
 
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel5.setText("Maximumslager");
 
-        jLabel6.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel6.setText("Stregkode");
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel7.setText("Leverandør");
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel8.setText("jLabel1");
 
-        jLabel9.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel9.setText("jLabel1");
 
-        jLabel10.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel10.setText("jLabel1");
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Verdana", 0, 11));
         jLabel11.setText("jLabel1");
 
-        jTextField3.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +127,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField4.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +135,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField5.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField5.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +143,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField6.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField6.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +151,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField7.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField7.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +159,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField8.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField8.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +167,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField9.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField9.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +175,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField10.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField10.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +183,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField11.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField11.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +191,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField12.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField12.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +199,7 @@ public class Varelager extends javax.swing.JPanel {
             }
         });
 
-        jTextField13.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        jTextField13.setFont(new java.awt.Font("Verdana", 0, 11));
         jTextField13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 102), 1, true));
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +208,11 @@ public class Varelager extends javax.swing.JPanel {
         });
 
         jComboBox1.setBackground(getBackground());
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -378,6 +387,20 @@ public class Varelager extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField13ActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    
+
+    private void setComboboxString()
+    {
+        String[] str1 = null;
+        String str = null;
+        SupplierContainer subCont = SupplierContainer.getInstance();
+        ArrayList<Supplier> supplierList = subCont.getSupplierList();
+        str1.toString();//(supplierList.get(0).getBusinessName());
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox jComboBox1;
