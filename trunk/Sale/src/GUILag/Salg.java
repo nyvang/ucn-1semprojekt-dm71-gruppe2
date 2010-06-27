@@ -622,7 +622,6 @@ private void hjaelpSalg()
    {
         final BigDecimal bigDecimal = new BigDecimal("" + value);
         final String s = bigDecimal.toPlainString();
-        System.out.println(s);
         final int index = s.indexOf('.');
         if (index < 0) {
             return 0;
